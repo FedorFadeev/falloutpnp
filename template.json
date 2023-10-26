@@ -1,0 +1,206 @@
+{
+  "Actor": {
+    "types": [
+      "character",
+      "enemy",
+      "boss",
+      "trap"
+    ],
+    "templates": {
+      "common": {
+        "race": "",
+        "special": {
+          "str": {
+            "value": 5,
+            "maxValue": 1,
+            "diffPositive": 0,
+            "diffNegative": 0
+          },
+          "per": {
+            "value": 5,
+            "maxValue": 1,
+            "diffPositive": 0,
+            "diffNegative": 0
+          },
+          "end": {
+            "value": 5,
+            "maxValue": 1,
+            "diffPositive": 0,
+            "diffNegative": 0
+          },
+          "cha": {
+            "value": 5,
+            "maxValue": 1,
+            "diffPositive": 0,
+            "diffNegative": 0
+          },
+          "int": {
+            "value": 5,
+            "maxValue": 1,
+            "diffPositive": 0,
+            "diffNegative": 0
+          },
+          "agi": {
+            "value": 5,
+            "maxValue": 1,
+            "diffPositive": 0,
+            "diffNegative": 0
+          },
+          "luc": {
+            "value": 5,
+            "maxValue": 1,
+            "diffPositive": 0,
+            "diffNegative": 0
+          }
+        },
+        "skills": {
+          "smallGuns": 0,
+          "bigGuns": 0,
+          "energyWeapons": 0,
+          "unarmed": 0,
+          "meleeWeapons": 0,
+          "throwing": 0,
+          "firstAid": 0,
+          "doctor": 0,
+          "sneak": 0,
+          "lockpick": 0,
+          "steal": 0,
+          "traps": 0,
+          "science": 0,
+          "repair": 0,
+          "pilot": 0,
+          "speech": 0,
+          "barter": 0,
+          "gambling": 0,
+          "outdoorsman": 0
+        },
+        "status": {
+          "health": {
+            "current": 0,
+            "maximum": 0
+          },
+          "rads": {
+            "current": 0,
+            "resist": 0
+          },
+          "poison": {
+            "current": 0,
+            "resist": 0
+          },
+          "electricity": {
+            "resist": 0
+          },
+          "gas": {
+            "resist": 0
+          }
+        },
+        "armor": {
+          "baseAc": 0,
+          "helmet": {
+            "name": "",
+            "ac": 0,
+            "condition": 0,
+            "damageThreshold": {
+              "normal": 0,
+              "laser": 0,
+              "fire": 0,
+              "plasma": 0
+            },
+            "damageResistance": {
+              "normal": 0,
+              "laser": 0,
+              "fire": 0,
+              "plasma": 0
+            }
+          },
+          "armor": {
+            "name": "",
+            "ac": 0,
+            "condition": 0,
+            "damageThreshold": {
+              "normal": 0,
+              "laser": 0,
+              "fire": 0,
+              "plasma": 0,
+              "explode": 0
+            },
+            "damageResistance": {
+              "normal": 0,
+              "laser": 0,
+              "fire": 0,
+              "plasma": 0,
+              "explode": 0
+            }
+          }
+        }
+      },
+      "concept": "",
+      "enemy": {
+        "health": 0,
+        "sequence": 0,
+        "actionPoints": 0,
+        "xp": 0,
+        "criticalChance": 0,
+        "armorClass": 0,
+        "armor": {
+          "damageThreshold": {
+            "normal": 0,
+            "laser": 0,
+            "fire": 0,
+            "plasma": 0,
+            "explode": 0
+          },
+          "damageResistance": {
+            "normal": 0,
+            "laser": 0,
+            "fire": 0,
+            "plasma": 0,
+            "explode": 0
+          }
+        },
+        "resistance": {
+          "poison": 0,
+          "radiation": 0,
+          "gas": 0
+        }
+      }
+    },
+    "enemy": {
+      "templates": ["enemy", "concept"]
+    },
+    "boss": {
+      "templates": ["enemy", "concept"]
+    },
+    "character": {
+      "templates": ["common"]
+    }
+  },
+  "Item": {
+    "types": [
+      "weapon",
+      "vehicle"
+    ],
+    "templates": {
+      "itemDescription": {
+        "description": ""
+      }
+    },
+    "weapon": {
+      "templates": [
+        "itemDescription"
+      ],
+      "attackWith": "guns",
+      "type": 0,
+      "damage": 0,
+      "single": 0
+    },
+    "vehicle": {
+      "templates": [
+        "itemDescription"
+      ],
+      "acceleration": 0,
+      "turn": 0,
+      "brake": 0
+    }
+  }
+}

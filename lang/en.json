@@ -1,0 +1,18 @@
+{
+  "fpnp": {
+    "attack": {
+      "unarmed": "unarmed",
+      "melee": "melee",
+      "lightGuns": "Light Guns",
+      "heavyGuns": "Heavy Guns",
+      "energyWeapon": "Energy Weapon",
+      "throwable": "Throwable"
+    },
+    "weapon": {
+      "attackWith": "Attack with:",
+      "type": "Type",
+      "damage": "Damage",
+      "single": "Single"
+    }
+  }
+}

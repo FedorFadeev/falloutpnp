@@ -1,0 +1,337 @@
+<form class="{{cssClass}} fpnp character sheet" autocomplete="off">
+    <div class="left-side">
+        <div class="left-bio">
+            {{log data}}
+            {{log system}}
+           <h2>Bio</h2>
+            <div class="bio-top">
+                top
+            </div>
+            <div class="bio-bottom">
+                <div class="bio-image">
+                    <img src="{{data.actor.img}}" title="{{data.actor.name}}" data-edit="img">
+                </div>
+                <div class="bio-list">
+                    <div class="bio-row">
+                        row1
+                    </div>
+                    <div class="bio-row">
+                        row2
+                    </div>
+                    <div class="bio-row">
+                        row3
+                    </div>
+                    <div class="bio-row">
+                        row4
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="left-special">
+            <div class="special-info">
+                <h2>S.P.E.C.I.A.L.</h2>
+                <div class="special-list">
+                    <table>
+                        <tr>
+                            <th><p>Min</p></th>
+                            <th><p>Max</p></th>
+                            <th><p>Base</p></th>
+                            <th><p>+</p></th>
+                            <th><p>-</p></th>
+                            <th><p>&nbsp;</p></th>
+                            <th><p>Total</p></th>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="text" name="str.minValue" value="1" data-dtype="Number" >
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.str.maxValue" value="{{system.special.str.maxValue}}" data-dtype="Number">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.str.value" value="{{system.special.str.value}}" data-dtype="Number">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.str.diffPositive" value="{{system.special.str.diffPositive}}" data-dtype="Number">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.str.diffNegative" value="{{system.special.str.diffNegative}}" data-dtype="Number">
+                            </td>
+                            <td>
+                                <p>STR</p>
+                            </td>
+                            <td>
+                                <input
+                                    type="text"
+                                    name="str.total"
+                                    value="{{statCounter system.special.str.value system.special.str.diffPositive system.special.str.diffNegative}}"
+                                    data-dtype="Number"
+                                >
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="text" name="per.minValue" value="1">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.per.maxValue" value="{{system.special.per.maxValue}}">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.per.value" value="{{system.special.per.value}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.per.diffPositive" value="{{system.special.per.diffPositive}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.per.diffNegative" value="{{system.special.per.diffNegative}}">
+                            </td>
+                            <td>
+                                <p>PE</p>
+                            </td>
+                            <td><input type="text" name="per.total" value="{{statCounter system.special.per.value system.special.per.diffPositive system.special.per.diffNegative}}" ></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="text" name="end.minValue" value="1">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.end.maxValue" value="{{system.special.end.maxValue}}">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.end.value" value="{{system.special.end.value}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.end.diffPositive" value="{{system.special.end.diffPositive}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.end.diffNegative" value="{{system.special.end.diffNegative}}">
+                            </td>
+                            <td>
+                                <p>EN</p>
+                            </td>
+                            <td><input type="text" name="end.total" value="{{statCounter system.special.end.value system.special.end.diffPositive system.special.end.diffNegative}}" ></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="text" name="cha.minValue" value="1">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.cha.maxValue" value="{{system.special.cha.maxValue}}">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.cha.value" value="{{system.special.cha.value}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.cha.diffPositive" value="{{system.special.cha.diffPositive}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.cha.diffNegative" value="{{system.special.cha.diffNegative}}">
+                            </td>
+                            <td>
+                                <p>CH</p>
+                            </td>
+                            <td><input type="text" name="cha.total" value="{{statCounter system.special.cha.value system.special.cha.diffPositive system.special.cha.diffNegative}}" ></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="text" name="int.minValue" value="1">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.int.maxValue" value="{{system.special.int.maxValue}}">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.int.value" value="{{system.special.int.value}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.int.diffPositive" value="{{system.special.int.diffPositive}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.int.diffNegative" value="{{system.special.int.diffNegative}}">
+                            </td>
+                            <td>
+                                <p>IN</p>
+                            </td>
+                            <td><input type="text" name="int.total" value="{{statCounter system.special.int.value system.special.int.diffPositive system.special.int.diffNegative}}" ></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="text" name="agi.minValue" value="1">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.agi.maxValue" value="{{system.special.agi.maxValue}}">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.agi.value" value="{{system.special.agi.value}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.agi.diffPositive" value="{{system.special.agi.diffPositive}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.agi.diffNegative" value="{{system.special.agi.diffNegative}}">
+                            </td>
+                            <td>
+                                <p>AG</p>
+                            </td>
+                            <td><input type="text" name="agi.total" value="{{statCounter system.special.agi.value system.special.agi.diffPositive system.special.agi.diffNegative}}" ></td>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <input type="text" name="luc.minValue" value="1">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.luc.maxValue" value="{{system.special.luc.maxValue}}">
+                            </td>
+                            <td>
+                                <input type="text" name="system.special.luc.value" value="{{system.special.luc.value}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.luc.diffPositive" value="{{system.special.luc.diffPositive}}">
+                            </td>
+                            <td class="special-cell special-cell_small">
+                                <input type="text" name="system.special.luc.diffNegative" value="{{system.special.luc.diffNegative}}">
+                            </td>
+                            <td>
+                                <p>LK</p>
+                            </td>
+                            <td><input type="text" name="luc.total" value="{{statCounter system.special.luc.value system.special.luc.diffPositive system.special.luc.diffNegative}}" ></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="secondary-info">
+                <h2>Secondary</h2>
+                <div class="secondary-list">
+                    <table>
+                        <tr>
+                            <th><p>&nbsp;</p></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="secondary-box">
+                                    <input type="text" name="secondary.meleedmg" value="{{meleeDamage system.special.str.value system.special.str.diffPositive system.special.str.diffNegative}}" disabled>
+                                    <span>Melee dmg</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="secondary-box">
+                                    <input type="text" name="secondary.sequence" value="{{sequence system.special.per.value system.special.per.diffPositive system.special.per.diffNegative}}" disabled>
+                                    <span>Sequence</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="secondary-box">
+                                    <input type="text" name="secondary.healingRate" value="{{healingRate system.special.end.value system.special.end.diffPositive system.special.end.diffNegative}}" disabled>
+                                    <span>Healing rate</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="secondary-box">
+                                    <input type="text" name="secondary.hpPerLevel" value="{{hpPerLevel system.special.end.value system.special.end.diffPositive system.special.end.diffNegative}}" disabled>
+                                    <span>Hit points / level</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="secondary-box">
+                                    <input type="text" name="secondary.spPerLevel" value="{{spPerLevel system.special.int.value system.special.int.diffPositive system.special.int.diffNegative}}" disabled>
+                                    <span>Skill points / level</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="secondary-box">
+                                    <input type="text" name="secondary.actionPoints" value="{{actionPoints system.special.agi.value system.special.agi.diffPositive system.special.agi.diffNegative}}" disabled>
+                                    <span>Action Points</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="secondary-box">
+                                    <input type="text" name="secondary.criticalChance" value="{{statCounter system.special.luc.value system.special.luc.diffPositive system.special.luc.diffNegative}}" disabled>
+                                    <span>Critical Chance</span>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="left-skills">
+            <div class="skills-info">
+                <h2>Skills</h2>
+                <div class="skills-list">
+                    <table>
+                        <tr>
+                            <th><p>Tag</p></th>
+                            <th><p>&nbsp;</p></th>
+                            <th><p>Skill</p></th>
+                            <th><p>Base</p></th>
+                            <th><p>+</p></th>
+                            <th><p>-</p></th>
+                            <th><p>+++</p></th>
+                            <th><p>Total</p></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="tag">
+                            </td>
+                            <td>
+                                icon
+                            </td>
+                            <td>
+                                <p>Small Guns</p>
+                            </td>
+                            <td>
+                                <input type="text" name="skills.smallGuns.value" value="">
+                            </td>
+                            <td class="skills-cell skills-cell_small">
+                                <input type="text" name="skills.smallGuns.diffPositive" value="">
+                            </td>
+                            <td class="skills-cell skills-cell_small">
+                                <input type="text" name="skills.smallGuns.diffNegative" value="">
+                            </td>
+                            <td class="skills-cell skills-cell_small">
+                                <input type="text" name="skills.smallGuns.upping" value="">
+                            </td>
+                            <td>
+                                <input type="text" name="skills.smallGuns.total" value="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-side">
+        <div class="right-status">
+            status
+        </div>
+        <div class="right-armor">
+            armor
+        </div>
+        <div class="right-weapons">
+            <div>weapons here</div>
+            <section class="weapon-list">
+                {{#each weapons as |weapon id|}}
+                {{> "systems/fpnp/templates/partials/weapon-card.html" weapon}}
+                {{/each}}
+            </section>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,37 @@
+{
+  "id": "fpnp",
+  "title": "Fallout Pen and Paper",
+  "description": "hand made",
+  "version": "0.01",
+  "compatibility": {
+    "minimum": "11",
+    "verified": "11",
+    "maximum": "11"
+  },
+  "authors": [
+    {
+      "name": "Valasky"
+    }
+  ],
+  "esmodules": [
+    "fpnp.js"
+  ],
+
+  "styles": [
+    "fpnp.css"
+  ],
+  "packs" : [
+
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ],
+  "gridDistance": 5,
+  "gridUnits": "ft",
+  "primaryTokenAttribute": "wounds",
+  "initiative": "1d6 + @speed"
+}
