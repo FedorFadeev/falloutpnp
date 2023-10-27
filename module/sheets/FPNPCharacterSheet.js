@@ -12,6 +12,9 @@ export default class FPNPCharacterSheet extends ActorSheet {
         return `systems/fpnp/templates/sheets/character-sheet.html`
     }
 
+    prepareDerivedData () {
+        console.log('prepareDerivedData');
+    }
     // prepareDerivedData() {
     //     const str = this.object.system.special.str;
     //     console.log('str is', str);
