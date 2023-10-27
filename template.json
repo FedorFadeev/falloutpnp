@@ -11,43 +11,36 @@
         "race": "",
         "special": {
           "str": {
-            "value": 5,
             "maxValue": 1,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "per": {
-            "value": 5,
             "maxValue": 1,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "end": {
-            "value": 5,
             "maxValue": 1,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "cha": {
-            "value": 5,
             "maxValue": 1,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "int": {
-            "value": 5,
             "maxValue": 1,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "agi": {
-            "value": 5,
             "maxValue": 1,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "luc": {
-            "value": 5,
             "maxValue": 1,
             "diffPositive": 0,
             "diffNegative": 0

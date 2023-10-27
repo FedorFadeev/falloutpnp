@@ -46,6 +46,21 @@
     text-align: center;
 }
 
+.fpnp.sheet.character .styled-div_input-like{
+    width: calc(100% - 2px);
+    min-width: 45px;
+    height: var(--form-field-height);
+    background: rgba(0, 0, 0, 0.05);
+    padding: 1px 3px;
+    margin: 0;
+    color: var(--color-text-dark-primary);
+    font-family: inherit;
+    font-size: inherit;
+    text-align: inherit;
+    line-height: var(--form-field-height);
+    border-radius: 3px;
+}
+
 /*Left*/
 
 .fpnp.sheet.character .left-side{
@@ -103,7 +118,12 @@
 }
 
 .fpnp.sheet.character .special-list table .special-cell_small{
-    width: 24px;
+    width: 30px;
+    /*width: 24px;*/
+}
+
+.fpnp.sheet.character .special-list table .special-cell_small input{
+    min-width: 30px;
 }
 
 .fpnp.sheet.character .special-list table td p{
@@ -116,6 +136,7 @@
 .fpnp.sheet.character .secondary-info{
     padding: 5px 0 5px 5px;
     border-left: 1px solid #525252;
+    width: 25%;
 }
 
 .fpnp.sheet.character .secondary-list table{
