@@ -55,7 +55,9 @@
                     <tr>
                         <td>
                             <div class="bio-box">
-                                <input type="text" name="system.general.race" value="{{system.general.race}}">
+                                <select name="system.general.race">
+                                    {{selectOptions data.config.races selected=system.general.race nameAttr="key" labelAttr="label"}}
+                                </select>
                                 <span class="bio-box-undertext">Race</span>
                             </div>
                         </td>
