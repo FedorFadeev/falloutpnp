@@ -7,7 +7,9 @@ import { CustomActor } from "./module/documents/actor.js";
 
 async function preloadHandlebarsTemplates() {
     const templatePaths = [
-        "systems/fpnp/templates/partials/weapon-card.html"
+        "systems/fpnp/templates/partials/weapon-card.html",
+        "systems/fpnp/templates/partials/actor/skills.html",
+        "systems/fpnp/templates/partials/actor/bio.html"
     ];
 
     return loadTemplates(templatePaths);
