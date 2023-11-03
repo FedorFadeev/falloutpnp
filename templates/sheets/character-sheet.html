@@ -1,31 +1,9 @@
 <form class="{{cssClass}} fpnp character sheet" autocomplete="off">
     <div class="left-side">
+        {{log data}}
+        {{log system}}
         <div class="left-bio">
-            {{log data}}
-            {{log system}}
-           <h2>Bio</h2>
-            <div class="bio-top">
-                top
-            </div>
-            <div class="bio-bottom">
-                <div class="bio-image">
-                    <img src="{{data.actor.img}}" title="{{data.actor.name}}" data-edit="img">
-                </div>
-                <div class="bio-list">
-                    <div class="bio-row">
-                        row1
-                    </div>
-                    <div class="bio-row">
-                        row2
-                    </div>
-                    <div class="bio-row">
-                        row3
-                    </div>
-                    <div class="bio-row">
-                        row4
-                    </div>
-                </div>
-            </div>
+            {{> "systems/fpnp/templates/partials/actor/bio.html"}}
         </div>
         <div class="left-special">
             <div class="special-info">
@@ -265,7 +243,7 @@
                             <td>
                                 <div class="secondary-box">
                                     <div class="styled-div_input-like">
-                                        {{system.meleeDamage}}
+                                        {{system.secondary.meleeDamage}}
                                     </div>
                                     <span>Melee dmg</span>
                                 </div>
@@ -275,7 +253,7 @@
                             <td>
                                 <div class="secondary-box">
                                     <div class="styled-div_input-like">
-                                        {{system.sequence}}
+                                        {{system.secondary.sequence}}
                                     </div>
                                     <span>Sequence</span>
                                 </div>
@@ -285,7 +263,7 @@
                             <td>
                                 <div class="secondary-box">
                                     <div class="styled-div_input-like">
-                                        {{system.healingRate}}
+                                        {{system.secondary.healingRate}}
                                     </div>
                                     <span>Healing rate</span>
                                 </div>
@@ -295,7 +273,7 @@
                             <td>
                                 <div class="secondary-box">
                                     <div class="styled-div_input-like">
-                                        {{system.hpPerLevel}}
+                                        {{system.secondary.hpPerLevel}}
                                     </div>
                                     <span>Hit points / level</span>
                                 </div>
@@ -305,7 +283,7 @@
                             <td>
                                 <div class="secondary-box">
                                     <div class="styled-div_input-like">
-                                        {{system.spPerLevel}}
+                                        {{system.secondary.spPerLevel}}
                                     </div>
                                     <span>Skill points / level</span>
                                 </div>
@@ -315,7 +293,7 @@
                             <td>
                                 <div class="secondary-box">
                                     <div class="styled-div_input-like">
-                                        {{system.actionPoints}}
+                                        {{system.secondary.actionPoints}}
                                     </div>
                                     <span>Action Points</span>
                                 </div>
@@ -324,7 +302,9 @@
                         <tr>
                             <td>
                                 <div class="secondary-box">
-                                    {{system.special.luc.total}}
+                                    <div class="styled-div_input-like">
+                                        {{system.special.luc.total}}
+                                    </div>
                                     <span>Critical Chance</span>
                                 </div>
                             </td>
@@ -334,49 +314,7 @@
             </div>
         </div>
         <div class="left-skills">
-            <div class="skills-info">
-                <h2>Skills</h2>
-                <div class="skills-list">
-                    <table>
-                        <tr>
-                            <th><p>Tag</p></th>
-                            <th><p>&nbsp;</p></th>
-                            <th><p>Skill</p></th>
-                            <th><p>Base</p></th>
-                            <th><p>+</p></th>
-                            <th><p>-</p></th>
-                            <th><p>+++</p></th>
-                            <th><p>Total</p></th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <input type="checkbox" name="tag">
-                            </td>
-                            <td>
-                                icon
-                            </td>
-                            <td>
-                                <p>Small Guns</p>
-                            </td>
-                            <td>
-                                <input type="text" name="skills.smallGuns.value" value="">
-                            </td>
-                            <td class="skills-cell skills-cell_small">
-                                <input type="text" name="skills.smallGuns.diffPositive" value="">
-                            </td>
-                            <td class="skills-cell skills-cell_small">
-                                <input type="text" name="skills.smallGuns.diffNegative" value="">
-                            </td>
-                            <td class="skills-cell skills-cell_small">
-                                <input type="text" name="skills.smallGuns.upping" value="">
-                            </td>
-                            <td>
-                                <input type="text" name="skills.smallGuns.total" value="">
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+            {{> "systems/fpnp/templates/partials/actor/skills.html"}}
         </div>
     </div>
     <div class="right-side">

@@ -30,8 +30,8 @@
       "path": "lang/en.json"
     }
   ],
-  "gridDistance": 5,
-  "gridUnits": "ft",
+  "gridDistance": 1,
+  "gridUnits": "m",
   "primaryTokenAttribute": "wounds",
   "initiative": "1d6 + @speed"
 }

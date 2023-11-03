@@ -84,8 +84,55 @@
 }
 
 .fpnp.sheet.character .bio-image{
+    min-width: 125px;
     width: 125px;
     height: 125px;
+}
+
+.fpnp.sheet.character .bio-top table,
+.fpnp.sheet.character .bio-row table{
+    border: 0;
+    border-spacing: 5px 0;
+    border-collapse: separate;
+    background: none;
+}
+
+.fpnp.sheet.character .bio-row:first-child table{
+    margin: 0;
+}
+.fpnp.sheet.character .bio-row:first-child table td{
+    padding: 0;
+}
+
+.fpnp.sheet.character .bio-top table tr,
+.fpnp.sheet.character .bio-row table tr{
+    background: none;
+}
+
+.fpnp.sheet.character .bio-top input,
+.fpnp.sheet.character .bio-row input{
+    border: 0
+}
+
+.fpnp.sheet.character .bio-box{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.fpnp.sheet.character .bio-box .bio-box-undertext{
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    font-size: 10px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.fpnp.sheet.character .bio-box .span-text{
+    font: 22px 'Overseer';
+    line-height: 26px;
+    margin-right: 5px;
 }
 
 /*special*/
@@ -186,7 +233,7 @@
 
 .fpnp.sheet.character .left-skills table td p{
     font: 18px 'Overseer';
-    text-align: center;
+    /*text-align: center;*/
     white-space: nowrap;
 }
 
