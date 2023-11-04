@@ -62,10 +62,7 @@
           }
         },
         "secondary": {},
-        "tagged": {
-          "total": 0,
-          "disabled": true
-        },
+        "isTaggingDisabled":false,
         "skills": {
           "smallGuns": {
             "tagged": false,

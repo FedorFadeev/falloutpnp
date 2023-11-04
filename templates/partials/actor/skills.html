@@ -14,20 +14,12 @@
             </tr>
             <tr>
                 <td>
-                    {{#if system.skills.smallGuns.tagged}}
                     <input
-                            type="checkbox"
-                            name="system.skills.smallGuns.tagged"
-                            {{checked system.skills.smallGuns.tagged}}
+                        type="checkbox"
+                        name="system.skills.smallGuns.tagged"
+                        {{checked system.skills.smallGuns.tagged}}
+                        {{disabled (ifThen system.skills.smallGuns.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.smallGuns.tagged"
-                            {{checked system.skills.smallGuns.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -42,13 +34,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.smallGuns.diffPositive" value="{{system.skills.smallGuns.diffPositive}}">
+                    <input type="number" name="system.skills.smallGuns.diffPositive" value="{{system.skills.smallGuns.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.smallGuns.diffNegative" value="{{system.skills.smallGuns.diffNegative}}">
+                    <input type="number" name="system.skills.smallGuns.diffNegative" value="{{system.skills.smallGuns.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.smallGuns.lvlUp" value="{{system.skills.smallGuns.lvlUp}}">
+                    <input type="number" name="system.skills.smallGuns.lvlUp" value="{{system.skills.smallGuns.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -59,20 +51,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.bigGuns.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.bigGuns.tagged"
                             {{checked system.skills.bigGuns.tagged}}
+                            {{disabled (ifThen system.skills.bigGuns.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.bigGuns.tagged"
-                            {{checked system.skills.bigGuns.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
                 </td>
                 <td>
                     icon
@@ -86,13 +70,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.bigGuns.diffPositive" value="{{system.skills.bigGuns.diffPositive}}">
+                    <input type="number" name="system.skills.bigGuns.diffPositive" value="{{system.skills.bigGuns.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.bigGuns.diffNegative" value="{{system.skills.bigGuns.diffNegative}}">
+                    <input type="number" name="system.skills.bigGuns.diffNegative" value="{{system.skills.bigGuns.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.bigGuns.lvlUp" value="{{system.skills.bigGuns.lvlUp}}">
+                    <input type="number" name="system.skills.bigGuns.lvlUp" value="{{system.skills.bigGuns.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -103,20 +87,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.energyWeapons.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.energyWeapons.tagged"
                             {{checked system.skills.energyWeapons.tagged}}
+                            {{disabled (ifThen system.skills.energyWeapons.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.energyWeapons.tagged"
-                            {{checked system.skills.energyWeapons.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
                 </td>
                 <td>
                     icon
@@ -130,13 +106,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.energyWeapons.diffPositive" value="{{system.skills.energyWeapons.diffPositive}}">
+                    <input type="number" name="system.skills.energyWeapons.diffPositive" value="{{system.skills.energyWeapons.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.energyWeapons.diffNegative" value="{{system.skills.energyWeapons.diffNegative}}">
+                    <input type="number" name="system.skills.energyWeapons.diffNegative" value="{{system.skills.energyWeapons.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.energyWeapons.lvlUp" value="{{system.skills.energyWeapons.lvlUp}}">
+                    <input type="number" name="system.skills.energyWeapons.lvlUp" value="{{system.skills.energyWeapons.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -147,20 +123,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.unarmed.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.unarmed.tagged"
                             {{checked system.skills.unarmed.tagged}}
+                            {{disabled (ifThen system.skills.unarmed.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.unarmed.tagged"
-                            {{checked system.skills.unarmed.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -175,13 +143,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.unarmed.diffPositive" value="{{system.skills.unarmed.diffPositive}}">
+                    <input type="number" name="system.skills.unarmed.diffPositive" value="{{system.skills.unarmed.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.unarmed.diffNegative" value="{{system.skills.unarmed.diffNegative}}">
+                    <input type="number" name="system.skills.unarmed.diffNegative" value="{{system.skills.unarmed.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.unarmed.lvlUp" value="{{system.skills.unarmed.lvlUp}}">
+                    <input type="number" name="system.skills.unarmed.lvlUp" value="{{system.skills.unarmed.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -192,20 +160,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.meleeWeapons.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.meleeWeapons.tagged"
                             {{checked system.skills.meleeWeapons.tagged}}
+                            {{disabled (ifThen system.skills.meleeWeapons.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.meleeWeapons.tagged"
-                            {{checked system.skills.meleeWeapons.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -220,13 +180,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.meleeWeapons.diffPositive" value="{{system.skills.meleeWeapons.diffPositive}}">
+                    <input type="number" name="system.skills.meleeWeapons.diffPositive" value="{{system.skills.meleeWeapons.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.meleeWeapons.diffNegative" value="{{system.skills.meleeWeapons.diffNegative}}">
+                    <input type="number" name="system.skills.meleeWeapons.diffNegative" value="{{system.skills.meleeWeapons.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.meleeWeapons.lvlUp" value="{{system.skills.meleeWeapons.lvlUp}}">
+                    <input type="number" name="system.skills.meleeWeapons.lvlUp" value="{{system.skills.meleeWeapons.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -237,20 +197,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.throwing.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.throwing.tagged"
                             {{checked system.skills.throwing.tagged}}
+                            {{disabled (ifThen system.skills.throwing.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.throwing.tagged"
-                            {{checked system.skills.throwing.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -265,13 +217,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.throwing.diffPositive" value="{{system.skills.throwing.diffPositive}}">
+                    <input type="number" name="system.skills.throwing.diffPositive" value="{{system.skills.throwing.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.throwing.diffNegative" value="{{system.skills.throwing.diffNegative}}">
+                    <input type="number" name="system.skills.throwing.diffNegative" value="{{system.skills.throwing.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.throwing.lvlUp" value="{{system.skills.throwing.lvlUp}}">
+                    <input type="number" name="system.skills.throwing.lvlUp" value="{{system.skills.throwing.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -282,20 +234,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.firstAid.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.firstAid.tagged"
                             {{checked system.skills.firstAid.tagged}}
+                            {{disabled (ifThen system.skills.firstAid.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.firstAid.tagged"
-                            {{checked system.skills.firstAid.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -310,13 +254,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.firstAid.diffPositive" value="{{system.skills.firstAid.diffPositive}}">
+                    <input type="number" name="system.skills.firstAid.diffPositive" value="{{system.skills.firstAid.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.firstAid.diffNegative" value="{{system.skills.firstAid.diffNegative}}">
+                    <input type="number" name="system.skills.firstAid.diffNegative" value="{{system.skills.firstAid.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.firstAid.lvlUp" value="{{system.skills.firstAid.lvlUp}}">
+                    <input type="number" name="system.skills.firstAid.lvlUp" value="{{system.skills.firstAid.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -327,20 +271,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.doctor.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.doctor.tagged"
                             {{checked system.skills.doctor.tagged}}
+                            {{disabled (ifThen system.skills.doctor.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.doctor.tagged"
-                            {{checked system.skills.doctor.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -355,13 +291,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.doctor.diffPositive" value="{{system.skills.doctor.diffPositive}}">
+                    <input type="number" name="system.skills.doctor.diffPositive" value="{{system.skills.doctor.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.doctor.diffNegative" value="{{system.skills.doctor.diffNegative}}">
+                    <input type="number" name="system.skills.doctor.diffNegative" value="{{system.skills.doctor.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.doctor.lvlUp" value="{{system.skills.doctor.lvlUp}}">
+                    <input type="number" name="system.skills.doctor.lvlUp" value="{{system.skills.doctor.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -372,20 +308,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.sneak.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.sneak.tagged"
                             {{checked system.skills.sneak.tagged}}
+                            {{disabled (ifThen system.skills.sneak.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.sneak.tagged"
-                            {{checked system.skills.sneak.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -400,13 +328,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.sneak.diffPositive" value="{{system.skills.sneak.diffPositive}}">
+                    <input type="number" name="system.skills.sneak.diffPositive" value="{{system.skills.sneak.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.sneak.diffNegative" value="{{system.skills.sneak.diffNegative}}">
+                    <input type="number" name="system.skills.sneak.diffNegative" value="{{system.skills.sneak.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.sneak.lvlUp" value="{{system.skills.sneak.lvlUp}}">
+                    <input type="number" name="system.skills.sneak.lvlUp" value="{{system.skills.sneak.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -417,20 +345,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.lockpick.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.lockpick.tagged"
                             {{checked system.skills.lockpick.tagged}}
+                            {{disabled (ifThen system.skills.lockpick.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.lockpick.tagged"
-                            {{checked system.skills.lockpick.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -445,13 +365,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.lockpick.diffPositive" value="{{system.skills.lockpick.diffPositive}}">
+                    <input type="number" name="system.skills.lockpick.diffPositive" value="{{system.skills.lockpick.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.lockpick.diffNegative" value="{{system.skills.lockpick.diffNegative}}">
+                    <input type="number" name="system.skills.lockpick.diffNegative" value="{{system.skills.lockpick.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.lockpick.lvlUp" value="{{system.skills.lockpick.lvlUp}}">
+                    <input type="number" name="system.skills.lockpick.lvlUp" value="{{system.skills.lockpick.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -462,20 +382,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.steal.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.steal.tagged"
                             {{checked system.skills.steal.tagged}}
+                            {{disabled (ifThen system.skills.steal.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.steal.tagged"
-                            {{checked system.skills.steal.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -490,13 +402,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.steal.diffPositive" value="{{system.skills.steal.diffPositive}}">
+                    <input type="number" name="system.skills.steal.diffPositive" value="{{system.skills.steal.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.steal.diffNegative" value="{{system.skills.steal.diffNegative}}">
+                    <input type="number" name="system.skills.steal.diffNegative" value="{{system.skills.steal.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.steal.lvlUp" value="{{system.skills.steal.lvlUp}}">
+                    <input type="number" name="system.skills.steal.lvlUp" value="{{system.skills.steal.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -507,20 +419,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.traps.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.traps.tagged"
                             {{checked system.skills.traps.tagged}}
+                            {{disabled (ifThen system.skills.traps.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.traps.tagged"
-                            {{checked system.skills.traps.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -535,13 +439,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.traps.diffPositive" value="{{system.skills.traps.diffPositive}}">
+                    <input type="number" name="system.skills.traps.diffPositive" value="{{system.skills.traps.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.traps.diffNegative" value="{{system.skills.traps.diffNegative}}">
+                    <input type="number" name="system.skills.traps.diffNegative" value="{{system.skills.traps.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.traps.lvlUp" value="{{system.skills.traps.lvlUp}}">
+                    <input type="number" name="system.skills.traps.lvlUp" value="{{system.skills.traps.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -552,20 +456,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.science.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.science.tagged"
                             {{checked system.skills.science.tagged}}
+                            {{disabled (ifThen system.skills.science.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.science.tagged"
-                            {{checked system.skills.science.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -580,13 +476,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.science.diffPositive" value="{{system.skills.science.diffPositive}}">
+                    <input type="number" name="system.skills.science.diffPositive" value="{{system.skills.science.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.science.diffNegative" value="{{system.skills.science.diffNegative}}">
+                    <input type="number" name="system.skills.science.diffNegative" value="{{system.skills.science.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.science.lvlUp" value="{{system.skills.science.lvlUp}}">
+                    <input type="number" name="system.skills.science.lvlUp" value="{{system.skills.science.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -597,20 +493,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.repair.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.repair.tagged"
                             {{checked system.skills.repair.tagged}}
+                            {{disabled (ifThen system.skills.repair.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.repair.tagged"
-                            {{checked system.skills.repair.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -625,13 +513,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.repair.diffPositive" value="{{system.skills.repair.diffPositive}}">
+                    <input type="number" name="system.skills.repair.diffPositive" value="{{system.skills.repair.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.repair.diffNegative" value="{{system.skills.repair.diffNegative}}">
+                    <input type="number" name="system.skills.repair.diffNegative" value="{{system.skills.repair.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.repair.lvlUp" value="{{system.skills.repair.lvlUp}}">
+                    <input type="number" name="system.skills.repair.lvlUp" value="{{system.skills.repair.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -642,20 +530,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.pilot.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.pilot.tagged"
                             {{checked system.skills.pilot.tagged}}
+                            {{disabled (ifThen system.skills.pilot.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.pilot.tagged"
-                            {{checked system.skills.pilot.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -670,13 +550,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.pilot.diffPositive" value="{{system.skills.pilot.diffPositive}}">
+                    <input type="number" name="system.skills.pilot.diffPositive" value="{{system.skills.pilot.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.pilot.diffNegative" value="{{system.skills.pilot.diffNegative}}">
+                    <input type="number" name="system.skills.pilot.diffNegative" value="{{system.skills.pilot.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.pilot.lvlUp" value="{{system.skills.pilot.lvlUp}}">
+                    <input type="number" name="system.skills.pilot.lvlUp" value="{{system.skills.pilot.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -687,20 +567,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.speech.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.speech.tagged"
                             {{checked system.skills.speech.tagged}}
+                            {{disabled (ifThen system.skills.speech.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.speech.tagged"
-                            {{checked system.skills.speech.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -715,13 +587,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.speech.diffPositive" value="{{system.skills.speech.diffPositive}}">
+                    <input type="number" name="system.skills.speech.diffPositive" value="{{system.skills.speech.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.speech.diffNegative" value="{{system.skills.speech.diffNegative}}">
+                    <input type="number" name="system.skills.speech.diffNegative" value="{{system.skills.speech.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.speech.lvlUp" value="{{system.skills.speech.lvlUp}}">
+                    <input type="number" name="system.skills.speech.lvlUp" value="{{system.skills.speech.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -732,20 +604,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.barter.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.barter.tagged"
                             {{checked system.skills.barter.tagged}}
+                            {{disabled (ifThen system.skills.barter.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.barter.tagged"
-                            {{checked system.skills.barter.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -760,13 +624,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.barter.diffPositive" value="{{system.skills.barter.diffPositive}}">
+                    <input type="number" name="system.skills.barter.diffPositive" value="{{system.skills.barter.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.barter.diffNegative" value="{{system.skills.barter.diffNegative}}">
+                    <input type="number" name="system.skills.barter.diffNegative" value="{{system.skills.barter.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.barter.lvlUp" value="{{system.skills.barter.lvlUp}}">
+                    <input type="number" name="system.skills.barter.lvlUp" value="{{system.skills.barter.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -777,20 +641,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.gambling.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.gambling.tagged"
                             {{checked system.skills.gambling.tagged}}
+                            {{disabled (ifThen system.skills.gambling.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.gambling.tagged"
-                            {{checked system.skills.gambling.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -805,13 +661,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.gambling.diffPositive" value="{{system.skills.gambling.diffPositive}}">
+                    <input type="number" name="system.skills.gambling.diffPositive" value="{{system.skills.gambling.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.gambling.diffNegative" value="{{system.skills.gambling.diffNegative}}">
+                    <input type="number" name="system.skills.gambling.diffNegative" value="{{system.skills.gambling.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.gambling.lvlUp" value="{{system.skills.gambling.lvlUp}}">
+                    <input type="number" name="system.skills.gambling.lvlUp" value="{{system.skills.gambling.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
@@ -822,20 +678,12 @@
 
             <tr>
                 <td>
-                    {{#if system.skills.outdoorsman.tagged}}
                     <input
                             type="checkbox"
                             name="system.skills.outdoorsman.tagged"
                             {{checked system.skills.outdoorsman.tagged}}
+                            {{disabled (ifThen system.skills.outdoorsman.tagged false system.isTaggingDisabled) }}
                     >
-                    {{else}}
-                    <input
-                            type="checkbox"
-                            name="system.skills.outdoorsman.tagged"
-                            {{checked system.skills.outdoorsman.tagged}}
-                            {{disabled this.system.tagged.disabled}}
-                    >
-                    {{/if}}
 
                 </td>
                 <td>
@@ -850,13 +698,13 @@
                     </div>
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.outdoorsman.diffPositive" value="{{system.skills.outdoorsman.diffPositive}}">
+                    <input type="number" name="system.skills.outdoorsman.diffPositive" value="{{system.skills.outdoorsman.diffPositive}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.outdoorsman.diffNegative" value="{{system.skills.outdoorsman.diffNegative}}">
+                    <input type="number" name="system.skills.outdoorsman.diffNegative" value="{{system.skills.outdoorsman.diffNegative}}">
                 </td>
                 <td class="skills-cell skills-cell_small">
-                    <input type="text" name="system.skills.outdoorsman.lvlUp" value="{{system.skills.outdoorsman.lvlUp}}">
+                    <input type="number" name="system.skills.outdoorsman.lvlUp" value="{{system.skills.outdoorsman.lvlUp}}">
                 </td>
                 <td>
                     <div class="styled-div_input-like">
