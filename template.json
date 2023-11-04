@@ -14,15 +14,17 @@
           "karma": 0,
           "experience": 0,
           "experienceToLevel": 1000,
-          "wandererName": "",
+          "name": "",
           "race": "human",
           "gender": "",
-          "age": 1,
-          "height": 1,
-          "weight": 1,
+          "age": "",
+          "height": "",
+          "weight": "",
           "skinTone": "",
           "hair": "",
-          "eyes": 1
+          "eyes": "",
+          "remainingSpecial": 5,
+          "remainingSkillPoints": 0
         },
         "special": {
           "str": {
@@ -62,121 +64,121 @@
           }
         },
         "secondary": {},
-        "isTaggingDisabled":false,
+        "isTaggingDisabled": false,
         "skills": {
           "smallGuns": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "bigGuns": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "energyWeapons": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "unarmed": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "meleeWeapons": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "throwing": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "firstAid": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "doctor": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "sneak": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "lockpick": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "steal": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "traps": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "science": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "repair": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "pilot": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "speech": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "barter": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "gambling": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           },
           "outdoorsman": {
-            "tagged": false,
+            "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "lvlUp": 0
+            "skillPoints": 0
           }
         },
         "status": {

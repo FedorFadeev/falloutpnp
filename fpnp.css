@@ -1,33 +1,33 @@
 @font-face {
-    font-family: "Overseer";
-    src: url("fonts/Overseer Bold.otf");
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold.otf");
 }
 
 @font-face {
-    font-family: "Overseer";
-    src: url("fonts/Overseer Bold Italic.otf");
-    font-style: italic;
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold Italic.otf");
+  font-style: italic;
 }
 
-.fpnp.sheet.item form{
-    display: flex;
-    flex-direction: column;
+.fpnp.sheet.item form {
+  display: flex;
+  flex-direction: column;
 }
 
 .fpnp.sheet.item .sheet-content {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
-.fpnp.sheet.item .sheet-content .editor{
-    height: 100%;
+.fpnp.sheet.item .sheet-content .editor {
+  height: 100%;
 }
 
 /*Character sheet*/
-.fpnp.sheet.character form{
-    display: flex;
-    flex-direction: row;
+.fpnp.sheet.character form {
+  display: flex;
+  flex-direction: row;
 }
 
 .fpnp.sheet.character form h1,
@@ -35,225 +35,239 @@
 .fpnp.sheet.character form h3,
 .fpnp.sheet.character form h4,
 .fpnp.sheet.character form p,
-.fpnp.sheet.character form h5{
-    border: 0;
-    margin: 0 auto;
+.fpnp.sheet.character form h5 {
+  border: 0;
+  margin: 0 auto;
 }
 
-.fpnp.sheet.character form h2{
-    font: italic 24px 'Overseer';
-    margin-bottom: 4px;
-    text-align: center;
+.fpnp.sheet.character form h2 {
+  font: italic 24px "Overseer";
+  margin-bottom: 4px;
+  text-align: center;
 }
 
-.fpnp.sheet.character .styled-div_input-like{
-    width: calc(100% - 2px);
-    min-width: 45px;
-    height: var(--form-field-height);
-    background: rgba(0, 0, 0, 0.05);
-    padding: 1px 3px;
-    margin: 0;
-    color: var(--color-text-dark-primary);
-    font-family: inherit;
-    font-size: inherit;
-    text-align: inherit;
-    line-height: var(--form-field-height);
-    border-radius: 3px;
+.fpnp.sheet.character .styled-div_input-like {
+  width: calc(100% - 2px);
+  min-width: 45px;
+  height: var(--form-field-height);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 3px;
+  margin: 0;
+  color: var(--color-text-dark-primary);
+  font-family: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  line-height: var(--form-field-height);
+  border-radius: 3px;
 }
 
 /*Left*/
 
-.fpnp.sheet.character .left-side{
-    border: 1px solid #525252;
+.fpnp.sheet.character .left-side {
+  border: 1px solid #525252;
 }
 
 /*bio*/
 
-.fpnp.sheet.character .left-bio{
-    border-bottom: 1px solid #525252;
-    padding: 5px 7px;
+.fpnp.sheet.character .left-bio {
+  border-bottom: 1px solid #525252;
+  padding: 5px 7px;
 }
 
 /*padding: 7px*/
 /*height 24px*/
 /*width 36px*/
 
-.fpnp.sheet.character .bio-bottom{
-    display: flex;
-    flex-direction: row;
+.fpnp.sheet.character .bio-bottom {
+  display: flex;
+  flex-direction: row;
 }
 
-.fpnp.sheet.character .bio-image{
-    min-width: 125px;
-    width: 125px;
-    height: 125px;
+.fpnp.sheet.character .bio-image {
+  min-width: 125px;
+  width: 125px;
+  height: 125px;
 }
 
 .fpnp.sheet.character .bio-top table,
-.fpnp.sheet.character .bio-row table{
-    border: 0;
-    border-spacing: 5px 0;
-    border-collapse: separate;
-    background: none;
+.fpnp.sheet.character .bio-row table {
+  border: 0;
+  border-spacing: 5px 0;
+  border-collapse: separate;
+  background: none;
 }
 
-.fpnp.sheet.character .bio-row:first-child table{
-    margin: 0;
+.fpnp.sheet.character .bio-row:first-child table {
+  margin: 0;
 }
-.fpnp.sheet.character .bio-row:first-child table td{
-    padding: 0;
+.fpnp.sheet.character .bio-row:first-child table td {
+  padding: 0;
 }
 
 .fpnp.sheet.character .bio-top table tr,
-.fpnp.sheet.character .bio-row table tr{
-    background: none;
+.fpnp.sheet.character .bio-row table tr {
+  background: none;
 }
 
 .fpnp.sheet.character .bio-top input,
-.fpnp.sheet.character .bio-row input{
-    border: 0
+.fpnp.sheet.character .bio-row input {
+  border: 0;
 }
 
-.fpnp.sheet.character .bio-box{
-    position: relative;
-    display: flex;
-    flex-direction: row;
+.fpnp.sheet.character .bio-box {
+  position: relative;
+  display: flex;
+  flex-direction: row;
 }
 
-.fpnp.sheet.character .bio-box .bio-box-undertext{
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    font-size: 10px;
-    font-weight: bold;
-    color: #000000;
+.fpnp.sheet.character .bio-box .bio-box-undertext {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000000;
 }
 
-.fpnp.sheet.character .bio-box .span-text{
-    font: 22px 'Overseer';
-    line-height: 26px;
-    margin-right: 5px;
+.fpnp.sheet.character .bio-box .span-text {
+  font: 22px "Overseer";
+  line-height: 26px;
+  margin-right: 5px;
 }
 
 /*special*/
 
-.fpnp.sheet.character .left-special{
-    border-bottom: 1px solid #525252;
-    padding: 0 7px;
-    display: flex;
-    flex-direction: row;
+.fpnp.sheet.character .special-info {
+  position: relative;
+  width: 75%;
+  padding: 5px 5px 5px 0;
 }
 
-.fpnp.sheet.character .special-info{
-    width: 75%;
-    padding: 5px 5px 5px 0;
+.fpnp.sheet.character .special-unassigned {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4px;
 }
 
-.fpnp.sheet.character .special-list{
-
+.fpnp.sheet.character .left-special {
+  border-bottom: 1px solid #525252;
+  padding: 0 7px;
+  display: flex;
+  flex-direction: row;
 }
 
-.fpnp.sheet.character .special-list table{
-    border: 0;
-    border-spacing: 5px 0;
-    border-collapse: separate;
-    background: none;
+.fpnp.sheet.character .special-list table {
+  border: 0;
+  border-spacing: 5px 0;
+  border-collapse: separate;
+  background: none;
 }
 
-.fpnp.sheet.character .special-list table tr{
-    background: none;
+.fpnp.sheet.character .special-list table tr {
+  background: none;
 }
 
-.fpnp.sheet.character .special-list table .special-cell_small{
-    width: 30px;
-    /*width: 24px;*/
+.fpnp.sheet.character .special-list table .special-cell_small {
+  width: 30px;
+  /*width: 24px;*/
 }
 
-.fpnp.sheet.character .special-list table .special-cell_small input{
-    min-width: 30px;
+.fpnp.sheet.character .special-list table .special-cell_small input {
+  min-width: 30px;
 }
 
-.fpnp.sheet.character .special-list table td p{
-    font: 22px 'Overseer';
-    text-align: center;
+.fpnp.sheet.character .special-list table td p {
+  font: 22px "Overseer";
+  text-align: center;
 }
 
 /*Secondary*/
 
-.fpnp.sheet.character .secondary-info{
-    padding: 5px 0 5px 5px;
-    border-left: 1px solid #525252;
-    width: 25%;
+.fpnp.sheet.character .secondary-info {
+  padding: 5px 0 5px 5px;
+  border-left: 1px solid #525252;
+  width: 25%;
 }
 
-.fpnp.sheet.character .secondary-list table{
-    border: 0;
-    border-spacing: 5px 0;
-    border-collapse: separate;
-    background: none;
+.fpnp.sheet.character .secondary-list table {
+  border: 0;
+  border-spacing: 5px 0;
+  border-collapse: separate;
+  background: none;
 }
 
-.fpnp.sheet.character .secondary-list table tr{
-    background: none;
+.fpnp.sheet.character .secondary-list table tr {
+  background: none;
 }
 
-.fpnp.sheet.character .secondary-list .secondary-box{
-    position: relative;
+.fpnp.sheet.character .secondary-list .secondary-box {
+  position: relative;
 }
 
-.fpnp.sheet.character .secondary-list .secondary-box span{
-    position: absolute;
-    bottom: -5px;
-    right: 0;
-    font-size: 10px;
-    font-weight: bold;
-    color: #000000;
+.fpnp.sheet.character .secondary-list .secondary-box span {
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000000;
 }
 
 /*skills*/
 
-.fpnp.sheet.character .left-skills{
-    padding: 5px 7px;
+.fpnp.sheet.character .skills-info {
+  position: relative;
 }
 
-.fpnp.sheet.character .left-skills table{
-    border: 0;
-    border-spacing: 5px 0;
-    border-collapse: separate;
-    background: none;
+.fpnp.sheet.character .skills-unassigned {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
-.fpnp.sheet.character .left-skills table tr{
-    background: none;
+.fpnp.sheet.character .left-skills {
+  padding: 5px 7px;
 }
 
-.fpnp.sheet.character .left-skills table .skills-cell_small{
-    width: 34px;
+.fpnp.sheet.character .left-skills table {
+  border: 0;
+  border-spacing: 5px 0;
+  border-collapse: separate;
+  background: none;
 }
 
-.fpnp.sheet.character .left-skills table td p{
-    font: 18px 'Overseer';
-    /*text-align: center;*/
-    white-space: nowrap;
+.fpnp.sheet.character .left-skills table tr {
+  background: none;
+}
+
+.fpnp.sheet.character .left-skills table .skills-cell_small {
+  width: 34px;
+}
+
+.fpnp.sheet.character .left-skills table td p {
+  font: 18px "Overseer";
+  /*text-align: center;*/
+  white-space: nowrap;
 }
 
 /*Right*/
 
-.fpnp.sheet.character .right-side{
-    border: 1px solid #525252;
-    border-left: 0;
+.fpnp.sheet.character .right-side {
+  border: 1px solid #525252;
+  border-left: 0;
 }
 
-.fpnp.sheet.character .right-status{
-    border-bottom: 1px solid #525252;
-    padding: 5px 7px;
+.fpnp.sheet.character .right-status {
+  border-bottom: 1px solid #525252;
+  padding: 5px 7px;
 }
 
-.fpnp.sheet.character .right-armor{
-    border-bottom: 1px solid #525252;
-    padding: 5px 7px;
+.fpnp.sheet.character .right-armor {
+  border-bottom: 1px solid #525252;
+  padding: 5px 7px;
 }
 
-.fpnp.sheet.character .right-weapons{
-    padding: 5px 7px;
+.fpnp.sheet.character .right-weapons {
+  padding: 5px 7px;
 }
