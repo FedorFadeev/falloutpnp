@@ -12,19 +12,22 @@ export class CustomActor extends Actor {
 
     Object.keys(special).forEach((key) => {
       const { min, max } = race.special[key];
+
       if (special[key].base < min) {
         special[key].base = min;
       } else if (special[key].base > max) {
         special[key].base = max;
       }
-    });
 
-    Object.keys(special).forEach((key) => {
       special[key].total =
         special[key].base +
         special[key].diffPositive -
         special[key].diffNegative;
     });
+
+    this.system.general.remainingSpecial =
+      40 -
+      Object.keys(special).reduce((acc, key) => acc + special[key].base, 0);
   }
 
   setSecondary() {
@@ -64,12 +67,30 @@ export class CustomActor extends Actor {
     // Skills (Total)
     Object.keys(skills).forEach((key) => {
       let skill = skills[key];
-      skill.total =
+      let unadjustedSkillPointTotal =
         skill.base +
+        (skill.isTagged ? 20 + skill.skillPoints * 2 : skill.skillPoints);
+
+      const adjustedSkillPointTotal =
+        Math.min(unadjustedSkillPointTotal, 100) + // 1-100
+        Math.min(Math.max(unadjustedSkillPointTotal - 100, 0), 50) / 2 + // 101-125
+        Math.min(Math.max(unadjustedSkillPointTotal - 150, 0), 75) / 3 + // 126-150
+        Math.min(Math.max(unadjustedSkillPointTotal - 225, 0), 100) / 4 + // 151-175
+        Math.min(Math.max(unadjustedSkillPointTotal - 325, 0), 125) / 5 + // 176-200
+        Math.max(unadjustedSkillPointTotal - 450, 0) / 6; // 201+
+
+      skill.total =
+        Math.floor(adjustedSkillPointTotal) +
         skill.diffPositive -
-        skill.diffNegative +
-        (skill.tagged ? 20 + skill.lvlUp * 2 : skill.lvlUp);
+        skill.diffNegative;
     });
+
+    this.system.general.remainingSkillPoints =
+      this.system.general.level * this.system.secondary.spPerLevel -
+      Object.keys(skills).reduce(
+        (acc, key) => acc + skills[key].skillPoints,
+        0
+      );
   }
 
   prepareDerivedData() {
@@ -79,7 +100,7 @@ export class CustomActor extends Actor {
     this.setSkills();
 
     const taggedSkillsCount = Object.keys(this.system.skills).reduce(
-      (acc, key) => (this.system.skills[key].tagged ? acc + 1 : acc),
+      (acc, key) => (this.system.skills[key].isTagged ? acc + 1 : acc),
       0
     );
     this.system.isTaggingDisabled = taggedSkillsCount >= 3;

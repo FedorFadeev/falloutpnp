@@ -1,5 +1,8 @@
 <div class="special-info">
   <h2>S.P.E.C.I.A.L.</h2>
+  {{#if system.general.remainingSpecial}}
+    <p class="special-unassigned">Unassigned: {{ system.general.remainingSpecial }}</p>
+  {{/if}}
   <div class="special-list">
       <table>
           <tr>
