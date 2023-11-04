@@ -9,7 +9,9 @@ async function preloadHandlebarsTemplates() {
     const templatePaths = [
         "systems/fpnp/templates/partials/weapon-card.html",
         "systems/fpnp/templates/partials/actor/skills.html",
-        "systems/fpnp/templates/partials/actor/bio.html"
+        "systems/fpnp/templates/partials/actor/bio.html",
+        "systems/fpnp/templates/partials/actor/special.html",
+        "systems/fpnp/templates/partials/actor/secondary.html"
     ];
 
     return loadTemplates(templatePaths);

@@ -1,0 +1,226 @@
+<div class="special-info">
+  <h2>S.P.E.C.I.A.L.</h2>
+  <div class="special-list">
+      <table>
+          <tr>
+              <th><p>Min</p></th>
+              <th><p>Base</p></th>
+              <th><p>Max</p></th>
+              <th><p>+</p></th>
+              <th><p>-</p></th>
+              <th><p>&nbsp;</p></th>
+              <th><p>Total</p></th>
+          </tr>
+
+          <tr>
+              <td>
+                  <div class="styled-div_input-like">
+                      {{ system.race.special.str.min }}
+                  </div>
+              </td>
+              <td>
+                  <input type="text" name="system.special.str.base" value="{{system.special.str.base}}" data-dtype="Number">
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.str.max }}
+                  </div>
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.str.diffPositive" value="{{system.special.str.diffPositive}}" data-dtype="Number">
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.str.diffNegative" value="{{system.special.str.diffNegative}}" data-dtype="Number">
+              </td>
+              <td>
+                  <p>ST</p>
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                      {{system.special.str.total}}
+                  </div>
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.per.min }}
+                  </div>
+              </td>
+              <td>
+                  <input type="text" name="system.special.per.base" value="{{system.special.per.base}}" data-dtype="Number">
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.per.max }}
+                  </div>
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.per.diffPositive" value="{{system.special.per.diffPositive}}">
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.per.diffNegative" value="{{system.special.per.diffNegative}}">
+              </td>
+              <td>
+                  <p>PE</p>
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                      {{system.special.per.total}}
+                  </div>
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.end.min }}
+                  </div>
+              </td>
+              <td>
+                  <input type="text" name="system.special.end.base" value="{{system.special.end.base}}" data-dtype="Number">
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.end.max }}
+                  </div>
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.end.diffPositive" value="{{system.special.end.diffPositive}}">
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.end.diffNegative" value="{{system.special.end.diffNegative}}">
+              </td>
+              <td>
+                  <p>EN</p>
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                      {{system.special.end.total}}
+                  </div>
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.cha.min }}
+                  </div>
+              </td>
+              <td>
+                  <input type="text" name="system.special.cha.base" value="{{system.special.cha.base}}" data-dtype="Number">
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.cha.max }}
+                  </div>
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.cha.diffPositive" value="{{system.special.cha.diffPositive}}">
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.cha.diffNegative" value="{{system.special.cha.diffNegative}}">
+              </td>
+              <td>
+                  <p>CH</p>
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                      {{system.special.cha.total}}
+                  </div>
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.int.min }}
+                  </div>
+              </td>
+              <td>
+                  <input type="text" name="system.special.int.base" value="{{system.special.int.base}}" data-dtype="Number">
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.int.max }}
+                  </div>
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.int.diffPositive" value="{{system.special.int.diffPositive}}">
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.int.diffNegative" value="{{system.special.int.diffNegative}}">
+              </td>
+              <td>
+                  <p>IN</p>
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                      {{system.special.int.total}}
+                  </div>
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.agi.min }}
+                  </div>
+              </td>
+              <td>
+                  <input type="text" name="system.special.agi.base" value="{{system.special.agi.base}}" data-dtype="Number">
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.agi.max }}
+                  </div>
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.agi.diffPositive" value="{{system.special.agi.diffPositive}}">
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.agi.diffNegative" value="{{system.special.agi.diffNegative}}">
+              </td>
+              <td>
+                  <p>AG</p>
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                      {{system.special.agi.total}}
+                  </div>
+              </td>
+          </tr>
+
+          <tr>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.luc.min }}
+                  </div>
+              </td>
+              <td>
+                  <input type="text" name="system.special.luc.base" value="{{system.special.luc.base}}" data-dtype="Number">
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                    {{ system.race.special.luc.max }}
+                  </div>
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.luc.diffPositive" value="{{system.special.luc.diffPositive}}">
+              </td>
+              <td class="special-cell special-cell_small">
+                  <input type="text" name="system.special.luc.diffNegative" value="{{system.special.luc.diffNegative}}">
+              </td>
+              <td>
+                  <p>LK</p>
+              </td>
+              <td>
+                  <div class="styled-div_input-like">
+                      {{system.special.luc.total}}
+                  </div>
+              </td>
+          </tr>
+      </table>
+  </div>
+</div>

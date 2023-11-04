@@ -8,14 +8,14 @@
     ],
     "templates": {
       "common": {
-        "race": "",
+        "race": null,
         "general": {
           "level": 0,
           "karma": 0,
           "experience": 0,
           "experienceToLevel": 1000,
           "wandererName": "",
-          "race": "",
+          "race": "human",
           "gender": "",
           "age": 1,
           "height": 1,
@@ -26,37 +26,37 @@
         },
         "special": {
           "str": {
-            "maxValue": 1,
+            "base": 5,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "per": {
-            "maxValue": 1,
+            "base": 5,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "end": {
-            "maxValue": 1,
+            "base": 5,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "cha": {
-            "maxValue": 1,
+            "base": 5,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "int": {
-            "maxValue": 1,
+            "base": 5,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "agi": {
-            "maxValue": 1,
+            "base": 5,
             "diffPositive": 0,
             "diffNegative": 0
           },
           "luc": {
-            "maxValue": 1,
+            "base": 5,
             "diffPositive": 0,
             "diffNegative": 0
           }
@@ -274,13 +274,21 @@
       }
     },
     "enemy": {
-      "templates": ["enemy", "concept"]
+      "templates": [
+        "enemy",
+        "concept"
+      ]
     },
     "boss": {
-      "templates": ["enemy", "concept"]
+      "templates": [
+        "enemy",
+        "concept"
+      ]
     },
     "character": {
-      "templates": ["common"]
+      "templates": [
+        "common"
+      ]
     }
   },
   "Item": {
