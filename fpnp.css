@@ -271,3 +271,12 @@
 .fpnp.sheet.character .right-weapons {
   padding: 5px 7px;
 }
+
+/* TODO: Scope this to character sheet only */
+.rollable-skill:hover {
+  /* TODO: Fix the height of the box shadow cell */
+  box-shadow: 0 0 4px 4px orange;
+}
+.rollable-special:hover {
+  box-shadow: 0 0 4px 4px orange;
+}
