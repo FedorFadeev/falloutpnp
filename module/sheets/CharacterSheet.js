@@ -85,7 +85,7 @@ export default class CharacterSheet extends ActorSheet {
     if (dataset.roll) {
       const { special } = this.document.system
       const specialTotals = Object.keys(special).reduce((acc, key) => ({ ...acc, [key]: special[key].total }), {})
-      this.displayRoll('d100', specialTotals[dataset.roll], dataset.label)
+      this.displayRoll('d10', specialTotals[dataset.roll], dataset.label)
     }
   }
 }
