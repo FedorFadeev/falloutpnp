@@ -75,7 +75,7 @@ export class CustomActor extends Actor {
     })
 
     this.system.general.remainingSkillPoints =
-      this.system.general.level * this.system.secondary.spPerLevel -
+      (this.system.general.level - 1) * this.system.secondary.spPerLevel -
       Object.keys(skills).reduce((acc, key) => acc + skills[key].skillPoints, 0)
   }
 
