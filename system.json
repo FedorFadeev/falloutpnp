@@ -1,8 +1,8 @@
 {
-  "id": "fpnp",
-  "title": "Fallout Pen and Paper",
-  "description": "hand made",
-  "version": "0.01",
+  "id": "falloutpnp",
+  "title": "Fallout PnP (Pen And Paper) 2.0",
+  "description": "From Ukraine with love. Fallout PnP created by Jason Mical.",
+  "version": "0.1.0",
   "compatibility": {
     "minimum": "11",
     "verified": "11",
@@ -11,18 +11,18 @@
   "authors": [
     {
       "name": "Valasky"
+    },
+    {
+      "name": "Martin Bahniuk"
     }
   ],
   "esmodules": [
-    "fpnp.js"
+    "main.js"
   ],
-
   "styles": [
-    "fpnp.css"
+    "styles.css"
   ],
-  "packs" : [
-
-  ],
+  "packs": [],
   "languages": [
     {
       "lang": "en",
@@ -32,6 +32,6 @@
   ],
   "gridDistance": 1,
   "gridUnits": "m",
-  "primaryTokenAttribute": "wounds",
-  "initiative": "1d6 + @speed"
+  "primaryTokenAttribute": "hp",
+  "initiative": "@sequence"
 }

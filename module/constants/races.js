@@ -1,7 +1,7 @@
 export const RACES = [
   {
-    label: "Human",
-    key: "human",
+    label: 'Human',
+    key: 'human',
     special: {
       str: {
         min: 1,
@@ -34,8 +34,8 @@ export const RACES = [
     },
   },
   {
-    label: "Ghoul",
-    key: "ghoul",
+    label: 'Ghoul',
+    key: 'ghoul',
     special: {
       str: {
         min: 1,
@@ -68,8 +68,8 @@ export const RACES = [
     },
   },
   {
-    label: "Super Mutant",
-    key: "superMutant",
+    label: 'Super Mutant',
+    key: 'superMutant',
     special: {
       str: {
         min: 5,
@@ -102,8 +102,8 @@ export const RACES = [
     },
   },
   {
-    label: "Deathclaw",
-    key: "deathclawRegular",
+    label: 'Deathclaw',
+    key: 'deathclawRegular',
     special: {
       str: {
         min: 6,
@@ -136,8 +136,8 @@ export const RACES = [
     },
   },
   {
-    label: "Deathclaw (Grey Tribe)",
-    key: "deathclawGreyTribe",
+    label: 'Deathclaw (Grey Tribe)',
+    key: 'deathclawGreyTribe',
     special: {
       str: {
         min: 6,
@@ -170,8 +170,8 @@ export const RACES = [
     },
   },
   {
-    label: "Dog",
-    key: "dog",
+    label: 'Dog',
+    key: 'dog',
     special: {
       str: {
         min: 1,
@@ -204,8 +204,8 @@ export const RACES = [
     },
   },
   {
-    label: "Robot",
-    key: "robot",
+    label: 'Robot',
+    key: 'robot',
     special: {
       str: {
         min: 7,
@@ -237,4 +237,4 @@ export const RACES = [
       },
     },
   },
-];
+]

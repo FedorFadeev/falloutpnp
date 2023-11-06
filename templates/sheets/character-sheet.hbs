@@ -1,0 +1,21 @@
+<form class="{{ cssClass }} falloutpnp character sheet" autocomplete="off">
+  <div class="left-side">
+    {{log data}} {{log system}}
+    <div class="left-bio">{{> "systems/falloutpnp/templates/partials/actor/bio.hbs"}}</div>
+    <div class="left-special">
+      {{> "systems/falloutpnp/templates/partials/actor/special.hbs"}}
+      {{> "systems/falloutpnp/templates/partials/actor/secondary.hbs"}}
+    </div>
+    <div class="left-skills">{{> "systems/falloutpnp/templates/partials/actor/skills.hbs"}}</div>
+  </div>
+  <div class="right-side">
+    <div class="right-status">🛠️ STATUS 🛠️</div>
+    <div class="right-armor">🛠️ ARMOR 🛠️</div>
+    <div class="right-weapons">
+      <div>🛠️ WEAPONS 🛠️</div>
+      <section class="weapon-list">
+        {{#each weapons as |weapon id|}} {{> "systems/falloutpnp/templates/partials/weapon-card.hbs" weapon}} {{/each}}
+      </section>
+    </div>
+  </div>
+</form>
