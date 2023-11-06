@@ -33,5 +33,7 @@
   "gridDistance": 1,
   "gridUnits": "m",
   "primaryTokenAttribute": "hp",
+  "url": "https://github.com/FedorFadeev/falloutpnp",
+  "manifest": "https://github.com/FedorFadeev/falloutpnp/blob/main/system.json",
   "initiative": "@sequence"
 }
