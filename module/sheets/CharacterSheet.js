@@ -59,10 +59,9 @@ export default class CharacterSheet extends ActorSheet {
     const result = isSuccess ? 'SUCCESS' : 'FAILURE'
     const color = isSuccess ? 'green' : 'red'
     const message = `<p style="display: flex; justify-content: center; font: x-large 'Overseer';">
-                        <span style="color: ${color};">${result}</span>
-                        &nbsp;
-                        <span>by ${Math.abs(target - roll.total)}</span>
-                      </p>`
+                      <span style="color: ${color};">${result}</span>
+                      <span style="padding-left: 0.5rem;">by ${Math.abs(target - roll.total)}</span>
+                    </p>`
     await roll.toMessage({
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       flavor: `Rolled ${label} (${target})` + message,
