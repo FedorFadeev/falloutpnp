@@ -1,13 +1,13 @@
 import { RACES } from "./constants/races.js";
 
-export const fpnp = {
+export const falloutpnp = {
   attackTypes: {
-    unarmed: "fpnp.attack.unarmed",
-    melee: "fpnp.attack.melee",
-    lightGuns: "fpnp.attack.lightGuns",
-    heavyGuns: "fpnp.attack.heavyGuns",
-    energyWeapon: "fpnp.attack.energyWeapon",
-    throwable: "fpnp.attack,throwable",
+    unarmed: "falloutpnp.attack.unarmed",
+    melee: "falloutpnp.attack.melee",
+    lightGuns: "falloutpnp.attack.lightGuns",
+    heavyGuns: "falloutpnp.attack.heavyGuns",
+    energyWeapon: "falloutpnp.attack.energyWeapon",
+    throwable: "falloutpnp.attack,throwable",
   },
   races: RACES,
 };
