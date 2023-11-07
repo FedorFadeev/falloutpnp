@@ -9,6 +9,11 @@
   font-style: italic;
 }
 
+:root {
+  --primary-color: #ff6400;
+  --input-overlay: rgba(0, 0, 0, 0.05);
+}
+
 .falloutpnp.sheet.item form {
   display: flex;
   flex-direction: column;
@@ -50,7 +55,7 @@
   width: calc(100% - 2px);
   min-width: 45px;
   height: var(--form-field-height);
-  background: rgba(0, 0, 0, 0.05);
+  background: var(--input-overlay);
   padding: 1px 3px;
   margin: 0;
   color: var(--color-text-dark-primary);
@@ -84,9 +89,7 @@
 }
 
 .falloutpnp.sheet.character .bio-image {
-  min-width: 125px;
-  width: 125px;
-  height: 125px;
+  max-width: 9rem;
 }
 
 .falloutpnp.sheet.character .bio-top table,
@@ -117,7 +120,6 @@
 .falloutpnp.sheet.character .bio-box {
   position: relative;
   display: flex;
-  flex-direction: row;
 }
 
 .falloutpnp.sheet.character .bio-box .bio-box-undertext {
@@ -272,45 +274,48 @@
   padding: 5px 7px;
 }
 
-/* TODO: Combine this CSS with their pseudo-elements, maybe put it somewhere else. */
-.falloutpnp.sheet.character .rollable-skill {
+/* Rollable Fields */
+.falloutpnp.sheet.character .rollable {
   position: relative;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 60%, #ff6400 100%);
   transition: all 0.1s ease-in-out;
+  transition-property: background-color box-shadow;
+  background: linear-gradient(90deg, var(--input-overlay) 0%, var(--input-overlay) 45%, var(--primary-color) 100%);
+  cursor: pointer;
 }
-.falloutpnp.sheet.character .rollable-skill:hover {
-  box-shadow: 0 0 4px 4px #ff6400;
-  transform: scale(1.05);
+.falloutpnp.sheet.character .rollable:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 4px 2px var(--primary-color);
+  background: linear-gradient(
+    90deg,
+    var(--input-overlay) 0%,
+    var(--input-overlay) 45%,
+    var(--primary-color) 95%,
+    var(--primary-color) 100%
+  );
 }
-.falloutpnp.sheet.character .rollable-skill:active {
-  transform: scale(1);
-  box-shadow: 0 0 4px 3px #ff6400;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 50%, #ff6400 100%);
+.falloutpnp.sheet.character .rollable:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 4px 4px var(--primary-color);
+  background: linear-gradient(
+    90deg,
+    var(--input-overlay) 0%,
+    var(--input-overlay) 40%,
+    var(--primary-color) 90%,
+    var(--primary-color) 100%
+  );
 }
+
+/* Rollable Field Dice Icons */
 .falloutpnp.sheet.character .rollable-skill::after {
   content: '';
   position: absolute;
   background: url('static/d100.svg') no-repeat center center;
-  background-size: cover;
   filter: invert(85%);
+  background-size: cover;
   width: 20px;
   height: 20px;
   right: 0.2rem;
   top: 0.2rem;
-}
-.falloutpnp.sheet.character .rollable-special {
-  position: relative;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 60%, #ff6400 100%);
-  transition: all 0.1s ease-in-out;
-}
-.falloutpnp.sheet.character .rollable-special:hover {
-  box-shadow: 0 0 4px 4px #ff6400;
-  transform: scale(1.05);
-}
-.falloutpnp.sheet.character .rollable-special:active {
-  transform: scale(1);
-  box-shadow: 0 0 4px 3px #ff6400;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 50%, #ff6400 100%);
 }
 .falloutpnp.sheet.character .rollable-special::after {
   content: '';

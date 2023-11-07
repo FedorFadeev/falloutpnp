@@ -1,12 +1,11 @@
 <div>
-  <h2>Bio</h2>
   <div class="bio-top">
     <table>
       <tr>
         <td>
           <div class="bio-box">
             <span class="span-text">Level</span>
-            <input type="text" name="system.general.level" value="{{system.general.level}}" />
+            <input type="number" name="system.general.level" value="{{system.general.level}}" min="1" />
           </div>
         </td>
         <td>
@@ -19,14 +18,19 @@
         <td>
           <div class="bio-box">
             <span class="span-text">EXP</span>
-            <input type="text" name="system.general.experience" value="{{system.general.experience}}" />
+            <input type="text" name="system.general.experience" value="{{system.general.experience}}" min="0" />
             <span class="bio-box-undertext">Current</span>
           </div>
         </td>
         <td>
           <div class="bio-box">
             <span class="span-text">/</span>
-            <input type="text" name="system.general.experienceToLevel" value="{{system.general.experienceToLevel}}" />
+            <input
+              type="text"
+              name="system.general.experienceToLevel"
+              value="{{system.general.experienceToLevel}}"
+              min="1000"
+            />
             <span class="bio-box-undertext">Level Up</span>
           </div>
         </td>
@@ -55,7 +59,7 @@
           <tr>
             <td>
               <div class="bio-box">
-                <select name="system.general.race">
+                <select name="system.general.race" style="width: 100%;">
                   {{selectOptions data.config.races selected=system.general.race nameAttr="key" labelAttr="label"}}
                 </select>
                 <span class="bio-box-undertext">Race</span>
