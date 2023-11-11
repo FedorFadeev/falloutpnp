@@ -183,16 +183,13 @@
         },
         "status": {
           "health": {
-            "current": 0,
-            "maximum": 0
+            "current": 0
           },
           "rads": {
-            "current": 0,
-            "resist": 0
+            "current": 0
           },
           "poison": {
-            "current": 0,
-            "resist": 0
+            "current": 0
           },
           "electricity": {
             "resist": 0

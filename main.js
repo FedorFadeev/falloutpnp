@@ -11,6 +11,7 @@ async function preloadHandlebarsTemplates() {
     'systems/falloutpnp/templates/partials/actor/bio.hbs',
     'systems/falloutpnp/templates/partials/actor/special.hbs',
     'systems/falloutpnp/templates/partials/actor/secondary.hbs',
+    'systems/falloutpnp/templates/partials/actor/status.hbs',
   ]
 
   return loadTemplates(templatePaths)
