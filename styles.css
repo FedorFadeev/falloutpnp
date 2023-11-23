@@ -248,22 +248,22 @@
 }
 
 .falloutpnp.sheet.character .left-skills table td p {
-  font: 18px 'Overseer';
+  font: 20px 'Overseer';
   /*text-align: center;*/
   white-space: nowrap;
 }
 
 .falloutpnp.sheet.character .left-skills table .skill-icon{
-  max-height: 30px;
-  max-width: 30px;
+  max-height: 28px;
+  max-width: 28px;
 }
 
 .falloutpnp.sheet.character .left-skills table .skill-icon img{
   border: 0;
-  max-width: 40px;
+  max-width: 34px;
   position: relative;
-  left: -5px;
-  top: -5px;
+  left: -3px;
+  top: -3px;
 }
 
 /*Right*/
@@ -312,6 +312,7 @@
 
 .falloutpnp.sheet.character .status-box .span-icon{
   min-width: 26px;
+  max-width: 26px;
   width: 26px;
   height: 26px;
   margin-right: 5px;
