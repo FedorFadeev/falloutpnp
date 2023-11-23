@@ -79,11 +79,20 @@ export class CustomActor extends Actor {
       Object.keys(skills).reduce((acc, key) => acc + skills[key].skillPoints, 0)
   }
 
+  setStatus() {
+    const { status, special } = this.system
+
+    status.health.maximum = 15 + special.str.total + (special.end.total * 2) ;
+    status.rads.resist = special.end.total * 2;
+    status.poison.resist = special.end.total * 5;
+  }
+
   prepareDerivedData() {
     this.setRace()
     this.setSpecial()
     this.setSecondary()
     this.setSkills()
+    this.setStatus()
 
     const taggedSkillsCount = Object.keys(this.system.skills).reduce(
       (acc, key) => (this.system.skills[key].isTagged ? acc + 1 : acc),
