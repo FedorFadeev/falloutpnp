@@ -18,19 +18,6 @@ export default class CharacterSheet extends ActorSheet {
     return 'systems/falloutpnp/templates/sheets/character-sheet.hbs'
   }
 
-  // prepareDerivedData() {
-  //     const str = this.object.system.special.str;
-  //     console.log('str is', str);
-  //     str.total = Math.floor(Math.max(str.minValue, str.value + str.diffPositive - str.diffNegative));
-  // }
-
-  // getData(){
-  //     const data = super.getData();
-  //     data.config = CONFIG.falloutpnp;
-  //     data.weapons = data.items.filter(function(item) {return item.type == "weapon"});
-  //     return data;
-  // }
-
   getData() {
     const data = super.getData()
     const dataSystem = this.document.system
