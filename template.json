@@ -241,11 +241,22 @@
       "concept": "",
       "enemy": {
         "health": 0,
+        "healthMaximum": 0,
         "sequence": 0,
         "actionPoints": 0,
         "xp": 0,
         "criticalChance": 0,
         "armorClass": 0,
+        "weapons": {
+          "weapon1": {
+            "type": "",
+            "name": ""
+          },
+          "weapon2": {
+            "type": "",
+            "name": ""
+          }
+        },
         "armor": {
           "damageThreshold": {
             "normal": 0,
@@ -265,8 +276,33 @@
         "resistance": {
           "poison": 0,
           "radiation": 0,
-          "gas": 0
-        }
+          "gas1": 0,
+          "gas2": 0
+        },
+        "attacks": {
+          "first": {
+            "type": "",
+            "hitChance": null,
+            "apCost": null,
+            "damage": null,
+            "effect": ""
+          },
+          "second": {
+            "type": "",
+            "hitChance": null,
+            "apCost": null,
+            "damage": null,
+            "effect": ""
+          },
+          "third": {
+            "type": "",
+            "hitChance": null,
+            "apCost": null,
+            "damage": null,
+            "effect": ""
+          }
+        },
+        "notes": ""
       }
     },
     "enemy": {
