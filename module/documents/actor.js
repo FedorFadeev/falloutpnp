@@ -27,7 +27,7 @@ export class CustomActor extends Actor {
   setSecondary() {
     const { secondary, special } = this.system
     secondary.meleeDamage = special.str.total > 5 ? special.str.total - 5 : 1
-    secondary.sequence = 2 * special.per.total
+    this.system.sequence = secondary.sequence = 2 * special.per.total
     secondary.healingRate = Math.max(1, Math.floor(special.end.total / 3))
     secondary.hpPerLevel = 3 + Math.floor(special.end.total / 2)
     secondary.spPerLevel = 5 + special.int.total * 2
@@ -80,24 +80,26 @@ export class CustomActor extends Actor {
   }
 
   setStatus() {
-    const { status, special } = this.system
+    const { status, special, secondary, general } = this.system
 
-    status.health.maximum = 15 + special.str.total + (special.end.total * 2) ;
+    status.health.maximum = 15 + special.str.total + (special.end.total * 2) + (secondary.hpPerLevel * general.level) ;
     status.rads.resist = special.end.total * 2;
     status.poison.resist = special.end.total * 5;
   }
 
   prepareDerivedData() {
-    this.setRace()
-    this.setSpecial()
-    this.setSecondary()
-    this.setSkills()
-    this.setStatus()
+    if(this.type === "character"){
+      this.setRace()
+      this.setSpecial()
+      this.setSecondary()
+      this.setSkills()
+      this.setStatus()
 
-    const taggedSkillsCount = Object.keys(this.system.skills).reduce(
-      (acc, key) => (this.system.skills[key].isTagged ? acc + 1 : acc),
-      0
-    )
-    this.system.isTaggingDisabled = taggedSkillsCount >= 3
+      const taggedSkillsCount = Object.keys(this.system.skills).reduce(
+        (acc, key) => (this.system.skills[key].isTagged ? acc + 1 : acc),
+        0
+      )
+      this.system.isTaggingDisabled = taggedSkillsCount >= 3
+    }
   }
 }

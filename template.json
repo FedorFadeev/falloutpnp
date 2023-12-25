@@ -64,6 +64,7 @@
           }
         },
         "secondary": {},
+        "sequence": 0,
         "isTaggingDisabled": false,
         "skills": {
           "smallGuns": {
@@ -276,8 +277,8 @@
         "resistance": {
           "poison": 0,
           "radiation": 0,
-          "gas1": 0,
-          "gas2": 0
+          "gasInhaled": 0,
+          "gasContact": 0
         },
         "attacks": {
           "first": {
