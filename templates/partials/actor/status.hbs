@@ -21,13 +21,13 @@
                         <span class="status-box-undertext">Max HP</span>
                     </div>
                 </td>
-                <td>
+                <td title="ENx5">
                     <div class="status-box">
                         <span class="span-icon">
-                            <img src="systems/falloutpnp/static/icons/icon-status-rads.png" alt="Rads">
+                            <img src="systems/falloutpnp/static/icons/icon-status-poison-resist.png" alt="Poison Resist">
                         </span>
-                        <input type="number" data-dtype="Number" name="system.status.rads.current" value="{{system.status.rads.current}}">
-                        <span class="status-box-undertext">Rads</span>
+                        <div class="styled-div_input-like">{{system.status.poison.resist}}%</div>
+                        <span class="status-box-undertext">Poison Resist</span>
                     </div>
                 </td>
                 <td title="ENx2">
@@ -35,9 +35,7 @@
                         <span class="span-icon">
                             <img src="systems/falloutpnp/static/icons/icon-status-rad-resist.png" alt="Rads">
                         </span>
-                        <div class="styled-div_input-like">
-                            {{system.status.rads.resist}}
-                        </div>
+                        <div class="styled-div_input-like">{{system.status.rads.resist}}%</div>
                         <span class="status-box-undertext">Rad Resist</span>
                     </div>
                 </td>
@@ -48,19 +46,17 @@
                         <span class="span-icon">
                             <img src="systems/falloutpnp/static/icons/icon-status-poison.png" alt="Poison">
                         </span>
-                        <input type="number" data-dtype="Number" name="system.status.poison.current" value="{{system.status.poison.current}}">
+                        <input type="number" data-dtype="Number" name="system.status.poison.current" value="{{system.status.poison.current}}%">
                         <span class="status-box-undertext">Poison</span>
                     </div>
                 </td>
-                <td title="ENx5">
+                <td>
                     <div class="status-box">
                         <span class="span-icon">
-                            <img src="systems/falloutpnp/static/icons/icon-status-poison-resist.png" alt="Poison Resist">
+                            <img src="systems/falloutpnp/static/icons/icon-status-rads.png" alt="Rads">
                         </span>
-                        <div class="styled-div_input-like">
-                            {{system.status.poison.resist}}
-                        </div>
-                        <span class="status-box-undertext">Poison Resist</span>
+                        <input type="number" data-dtype="Number" name="system.status.rads.current" value="{{system.status.rads.current}}%">
+                        <span class="status-box-undertext">Rads</span>
                     </div>
                 </td>
                 <td>
@@ -68,7 +64,7 @@
                         <span class="span-icon">
                             <img src="systems/falloutpnp/static/icons/icon-status-electricity-resist.png" alt="Electricity Resist">
                         </span>
-                        <input type="number" data-dtype="Number" name="system.status.electricity.resist" value="{{system.status.electricity.resist}}">
+                        <input type="number" data-dtype="Number" name="system.status.electricity.resist" value="{{system.status.electricity.resist}}%">
                         <span class="status-box-undertext">Electricity Resist</span>
                     </div>
                 </td>
@@ -77,7 +73,7 @@
                         <span class="span-icon">
                             <img src="systems/falloutpnp/static/icons/icon-status-gas-resist.png" alt="Gas Resist">
                         </span>
-                        <input type="number" data-dtype="Number" name="system.status.gas.resist" value="{{system.status.gas.resist}}">
+                        <input type="number" data-dtype="Number" name="system.status.gas.resist" value="{{system.status.gas.resist}}%">
                         <span class="status-box-undertext">Gas Resist</span>
                     </div>
                 </td>

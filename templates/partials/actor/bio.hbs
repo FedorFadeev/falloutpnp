@@ -5,10 +5,10 @@
         <td>
           <div class="bio-box">
             <span class="span-text">Level</span>
-            <input type="number" name="system.general.level" value="{{system.general.level}}" min="1" />
+            <input type="number" required name="system.general.level" value="{{system.general.level}}" min="1" />
           </div>
         </td>
-        <td>
+        <td style="padding-right: 20px;">
           <div class="bio-box">
             <span class="span-icon">
               <img src="systems/falloutpnp/static/icons/icon-karma.png" alt="Karma" />
@@ -27,12 +27,7 @@
         <td>
           <div class="bio-box">
             <span class="span-text">/</span>
-            <input
-              type="text"
-              name="system.general.experienceToLevel"
-              value="{{system.general.experienceToLevel}}"
-              min="1000"
-            />
+            <div class="styled-div_input-like">{{system.status.experienceToLevel}}</div>
             <span class="bio-box-undertext">Level Up</span>
           </div>
         </td>

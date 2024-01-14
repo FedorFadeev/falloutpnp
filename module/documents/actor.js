@@ -1,4 +1,5 @@
 import { RACES } from '../constants/races.js'
+import { EXPERIENCE_TO_LEVEL } from '../constants/experienceToLevel.js'
 
 export class CustomActor extends Actor {
   setRace() {
@@ -85,6 +86,7 @@ export class CustomActor extends Actor {
     status.health.maximum = 15 + special.str.total + (special.end.total * 2) + (secondary.hpPerLevel * general.level) ;
     status.rads.resist = special.end.total * 2;
     status.poison.resist = special.end.total * 5;
+    status.experienceToLevel = EXPERIENCE_TO_LEVEL[general.level] ?? EXPERIENCE_TO_LEVEL[EXPERIENCE_TO_LEVEL.length - 1] + (40000 * (general.level - 20));
   }
 
   prepareDerivedData() {

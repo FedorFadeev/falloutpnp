@@ -53,7 +53,7 @@
 
 .falloutpnp.sheet.character .styled-div_input-like {
   width: calc(100% - 2px);
-  min-width: 45px;
+  min-width: 55px;
   height: var(--form-field-height);
   background: var(--input-overlay);
   padding: 1px 3px;
