@@ -335,6 +335,7 @@
             {{#each (array 0 1 2) as |value|}}
               <span class="skill-with-uses-cell__radio-container">
                 <input
+                  title="Set remaining First Aid skill uses to {{value}}."
                   type="radio"
                   value="{{value}}"
                   name="system.skills.firstAid.usesRemaining"
@@ -398,6 +399,7 @@
             {{#each (array 0 1 2 3) as |value|}}
               <span class="skill-with-uses-cell__radio-container">
                 <input
+                  title="Set remaining Doctor skill uses to {{value}}."
                   type="radio"
                   value="{{value}}"
                   name="system.skills.doctor.usesRemaining"
