@@ -13,6 +13,7 @@
   --primary-color: #ff6400;
   --input-overlay: rgba(0, 0, 0, 0.05);
   --color-border-light-tertiary: #a5a5a5;
+  --color-shadow-primary: #ff6400;
 }
 
 .falloutpnp.sheet.item form {
@@ -478,7 +479,7 @@
 }
 .falloutpnp.sheet.character .rollable:hover {
   transform: scale(1.04);
-  box-shadow: 0 0 4px 2px var(--primary-color);
+  box-shadow: 0 0 4px 1px var(--primary-color);
   background: linear-gradient(
     90deg,
     var(--input-overlay) 0%,
@@ -489,7 +490,7 @@
 }
 .falloutpnp.sheet.character .rollable:active {
   transform: scale(0.96);
-  box-shadow: 0 0 4px 4px var(--primary-color);
+  box-shadow: 0 0 4px 2px var(--primary-color);
   background: linear-gradient(
     90deg,
     var(--input-overlay) 0%,
