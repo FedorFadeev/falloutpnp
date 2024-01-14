@@ -157,6 +157,12 @@
   padding: 4px;
 }
 
+.falloutpnp.sheet.character .span-text {
+  font: 22px 'Overseer';
+  line-height: 26px;
+  margin-right: 5px;
+}
+
 .falloutpnp.sheet.character .left-special {
   border-bottom: 1px solid #525252;
   padding: 0 7px;
