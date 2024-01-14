@@ -310,7 +310,7 @@
   margin-right: 5px;
 }
 
-.falloutpnp.sheet.character .status-box .span-icon{
+.falloutpnp.sheet.character .span-icon{
   min-width: 26px;
   max-width: 26px;
   width: 26px;
@@ -318,7 +318,7 @@
   margin-right: 5px;
 }
 
-.falloutpnp.sheet.character .status-box .span-icon img{
+.falloutpnp.sheet.character .span-icon img{
   border: 0;
 }
 
