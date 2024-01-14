@@ -37,6 +37,12 @@ export default class CharacterSheet extends ActorSheet {
 
     html.find('.rollable-skill').click(this.onRollSkill.bind(this))
     html.find('.rollable-special').click(this.onRollSpecial.bind(this))
+    html.find('input[name="data.system.skills.doctor.usesRemaining"]').change((event) => {
+      this.onUpdateSkillUsesRemaining('doctor', event.target.value)
+    })
+    html.find('input[name="data.system.skills.firstAid.usesRemaining"]').change((event) => {
+      this.onUpdateSkillUsesRemaining('firstAid', event.target.value)
+    })
   }
 
   // TODO: Implement critical success.
@@ -73,5 +79,10 @@ export default class CharacterSheet extends ActorSheet {
       const specialTotals = Object.keys(special).reduce((acc, key) => ({ ...acc, [key]: special[key].total }), {})
       this.displayRoll('d10', specialTotals[dataset.roll], dataset.label)
     }
+  }
+
+  onUpdateSkillUsesRemaining(skill, usesRemaining) {
+    const { skills } = this.document.system
+    skills[skill].usesRemaining = usesRemaining
   }
 }

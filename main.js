@@ -32,8 +32,13 @@ Hooks.once('init', () => {
   // Actors.registerSheet("falloutpnp", NPCSheet, { makeDefault: true });
 
   Actors.unregisterSheet('core', ActorSheet)
-  Actors.registerSheet('falloutpnp', EnemySheet, { types: ["enemy"], makeDefault: true })
-  Actors.registerSheet('falloutpnp', CharacterSheet, { types: ["character"], makeDefault: true })
+  Actors.registerSheet('falloutpnp', EnemySheet, { types: ['enemy'], makeDefault: true })
+  Actors.registerSheet('falloutpnp', CharacterSheet, { types: ['character'], makeDefault: true })
 
   preloadHandlebarsTemplates()
+})
+
+Hooks.on('ready', function () {
+  Handlebars.registerHelper('equals', (a, b) => a == b)
+  Handlebars.registerHelper('array', (...args) => [...args].slice(0, -1))
 })

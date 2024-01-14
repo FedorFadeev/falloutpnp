@@ -331,14 +331,19 @@
         </td>
         <td class="skill-with-uses-cell">
           <p>First Aid</p>
-          <input
-            title="Remaining First Aid skill uses (out of 2)"
-            type="number"
-            name="system.skills.firstAid.usesRemaining"
-            value="{{system.skills.firstAid.usesRemaining}}"
-            min="0"
-          />
-          <span class="undertext">/2</span>
+          <div>
+            {{#each (array 0 1 2) as |value|}}
+              <span class="skill-with-uses-cell__radio-container">
+                <input
+                  type="radio"
+                  value="{{value}}"
+                  name="system.skills.firstAid.usesRemaining"
+                  {{checked (equals ../system.skills.firstAid.usesRemaining value)}}
+                />
+                <span class="undertext-radio">{{value}}</span>
+              </span>
+            {{/each}}
+          </div>
         </td>
         <td title="(PE+IN)x2">
           <div class="styled-div_input-like">
@@ -389,14 +394,19 @@
         </td>
         <td class="skill-with-uses-cell">
           <p>Doctor</p>
-          <input
-            title="Remaining Doctor skill uses (out of 3)"
-            type="number"
-            name="system.skills.doctor.usesRemaining"
-            value="{{system.skills.doctor.usesRemaining}}"
-            min="0"
-          />
-          <span class="undertext">/3</span>
+          <div>
+            {{#each (array 0 1 2 3) as |value|}}
+              <span class="skill-with-uses-cell__radio-container">
+                <input
+                  type="radio"
+                  value="{{value}}"
+                  name="system.skills.doctor.usesRemaining"
+                  {{checked (equals ../system.skills.doctor.usesRemaining value)}}
+                />
+                <span class="undertext-radio">{{value}}</span>
+              </span>
+            {{/each}}
+          </div>
         </td>
         <td title="5+PE+IN">
           <div class="styled-div_input-like">

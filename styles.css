@@ -133,10 +133,13 @@
   color: #000000;
 }
 
-.falloutpnp.sheet.character .bio-box .span-text {
-  font: 22px 'Overseer';
-  line-height: 26px;
-  margin-right: 5px;
+.falloutpnp.sheet.character .undertext-radio {
+  position: absolute;
+  bottom: -8px;
+  right: -2px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000000;
 }
 
 /*special*/
@@ -253,20 +256,22 @@
 .falloutpnp.sheet.character .skill-with-uses-cell {
   display: flex;
   align-items: center;
-  position: relative;
   justify-content: space-between;
 }
-.falloutpnp.sheet.character .skill-with-uses-cell input {
-  max-width: 40px;
+
+.falloutpnp.sheet.character .skill-with-uses-cell div {
+  display: flex;
+  align-items: center;
 }
-.falloutpnp.sheet.character .skill-with-uses-cell p {
-  margin: 0;
+
+.falloutpnp.sheet.character .skill-with-uses-cell__radio-container {
+  position: relative;
 }
 
 .falloutpnp.sheet.character .left-skills table td p {
   font: 20px 'Overseer';
-  /*text-align: center;*/
   white-space: nowrap;
+  margin: 0;
 }
 
 .falloutpnp.sheet.character .left-skills table .skill-icon {
@@ -309,12 +314,6 @@
   position: relative;
   display: flex;
   flex-direction: row;
-}
-
-.falloutpnp.sheet.character .status-box .span-text {
-  font: 22px 'Overseer';
-  line-height: 26px;
-  margin-right: 5px;
 }
 
 .falloutpnp.sheet.character .span-icon {
@@ -379,9 +378,7 @@
   border: 0;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info .enemy-box .span-text,
-.falloutpnp.sheet.character-enemy .enemy-weapons .enemy-box .span-text,
-.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box .span-text {
+.falloutpnp.sheet.character-enemy .span-text {
   font: 22px 'Overseer';
   line-height: 26px;
   margin-right: 5px;
