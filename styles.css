@@ -251,6 +251,7 @@
 /* First Aid and Doctor require additional input fields. */
 .falloutpnp.sheet.character .skill-with-uses-cell {
   display: flex;
+  align-items: center;
   position: relative;
   justify-content: space-between;
 }
