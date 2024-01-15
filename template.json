@@ -107,14 +107,14 @@
             "diffPositive": 0,
             "diffNegative": 0,
             "skillPoints": 0,
-            "usesRemaining": 2
+            "usesRemaining": 3
           },
           "doctor": {
             "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
             "skillPoints": 0,
-            "usesRemaining": 3
+            "usesRemaining": 2
           },
           "sneak": {
             "isTagged": false,
