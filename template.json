@@ -13,7 +13,6 @@
           "level": 1,
           "karma": 0,
           "experience": 0,
-          "experienceToLevel": 1000,
           "name": "",
           "race": "human",
           "gender": "",
@@ -107,13 +106,15 @@
             "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "skillPoints": 0
+            "skillPoints": 0,
+            "usesRemaining": 2
           },
           "doctor": {
             "isTagged": false,
             "diffPositive": 0,
             "diffNegative": 0,
-            "skillPoints": 0
+            "skillPoints": 0,
+            "usesRemaining": 3
           },
           "sneak": {
             "isTagged": false,

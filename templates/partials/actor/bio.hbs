@@ -5,33 +5,30 @@
         <td>
           <div class="bio-box">
             <span class="span-text">Level</span>
-            <input type="number" name="system.general.level" value="{{system.general.level}}" min="1" />
+            <input type="number" required name="system.general.level" value="{{system.general.level}}" min="1" />
           </div>
         </td>
-        <td>
+        <td style="padding-right: 20px;">
           <div class="bio-box">
-            <span class="span-icon">icon</span>
+            <span class="span-icon">
+              <img src="systems/falloutpnp/static/icons/icon-karma.png" alt="Karma" />
+            </span>
             <input type="text" name="system.general.karma" value="{{system.general.karma}}" />
-            <span class="bio-box-undertext">Karma</span>
+            <span class="undertext">Karma</span>
           </div>
         </td>
         <td>
           <div class="bio-box">
             <span class="span-text">EXP</span>
             <input type="text" name="system.general.experience" value="{{system.general.experience}}" min="0" />
-            <span class="bio-box-undertext">Current</span>
+            <span class="undertext">Current</span>
           </div>
         </td>
         <td>
           <div class="bio-box">
             <span class="span-text">/</span>
-            <input
-              type="text"
-              name="system.general.experienceToLevel"
-              value="{{system.general.experienceToLevel}}"
-              min="1000"
-            />
-            <span class="bio-box-undertext">Level Up</span>
+            <div class="styled-div_input-like">{{system.status.experienceToLevel}}</div>
+            <span class="undertext">Level Up</span>
           </div>
         </td>
       </tr>
@@ -48,7 +45,7 @@
             <td>
               <div class="bio-box">
                 <input type="text" name="system.general.name" value="{{system.general.name}}" />
-                <span class="bio-box-undertext">Name</span>
+                <span class="undertext">Name</span>
               </div>
             </td>
           </tr>
@@ -62,13 +59,13 @@
                 <select name="system.general.race" style="width: 100%;">
                   {{selectOptions data.config.races selected=system.general.race nameAttr="key" labelAttr="label"}}
                 </select>
-                <span class="bio-box-undertext">Race</span>
+                <span class="undertext">Race</span>
               </div>
             </td>
             <td>
               <div class="bio-box">
                 <input type="text" name="system.general.gender" value="{{system.general.gender}}" />
-                <span class="bio-box-undertext">Gender</span>
+                <span class="undertext">Gender</span>
               </div>
             </td>
           </tr>
@@ -80,19 +77,19 @@
             <td>
               <div class="bio-box">
                 <input type="text" name="system.general.age" value="{{system.general.age}}" />
-                <span class="bio-box-undertext">Age</span>
+                <span class="undertext">Age</span>
               </div>
             </td>
             <td>
               <div class="bio-box">
                 <input type="text" name="system.general.height" value="{{system.general.height}}" />
-                <span class="bio-box-undertext">Height</span>
+                <span class="undertext">Height</span>
               </div>
             </td>
             <td>
               <div class="bio-box">
                 <input type="text" name="system.general.weight" value="{{system.general.weight}}" />
-                <span class="bio-box-undertext">Weight</span>
+                <span class="undertext">Weight</span>
               </div>
             </td>
           </tr>
@@ -104,19 +101,19 @@
             <td>
               <div class="bio-box">
                 <input type="text" name="system.general.skinTone" value="{{system.general.skinTone}}" />
-                <span class="bio-box-undertext">Skin Tone</span>
+                <span class="undertext">Skin Tone</span>
               </div>
             </td>
             <td>
               <div class="bio-box">
                 <input type="text" name="system.general.hair" value="{{system.general.hair}}" />
-                <span class="bio-box-undertext">Hair</span>
+                <span class="undertext">Hair</span>
               </div>
             </td>
             <td>
               <div class="bio-box">
                 <input type="text" name="system.general.eyes" value="{{system.general.eyes}}" />
-                <span class="bio-box-undertext">Eyes</span>
+                <span class="undertext">Eyes</span>
               </div>
             </td>
           </tr>

@@ -26,7 +26,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-smallGuns.png" alt="Small Guns">
+            <img src="systems/falloutpnp/static/icons/icon-skill-smallGuns.png" alt="Small Guns" />
           </div>
         </td>
         <td>
@@ -76,7 +76,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-bigGuns.png" alt="Big Guns">
+            <img src="systems/falloutpnp/static/icons/icon-skill-bigGuns.png" alt="Big Guns" />
           </div>
         </td>
         <td>
@@ -122,7 +122,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-energyWeapons.png" alt="Energy Weapons">
+            <img src="systems/falloutpnp/static/icons/icon-skill-energyWeapons.png" alt="Energy Weapons" />
           </div>
         </td>
         <td>
@@ -176,7 +176,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-unarmed.png" alt="Unarmed">
+            <img src="systems/falloutpnp/static/icons/icon-skill-unarmed.png" alt="Unarmed" />
           </div>
         </td>
         <td>
@@ -222,7 +222,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-meleeWeapons.png" alt="Melee weapons">
+            <img src="systems/falloutpnp/static/icons/icon-skill-meleeWeapons.png" alt="Melee weapons" />
           </div>
         </td>
         <td>
@@ -276,7 +276,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-throwing.png" alt="Throwing">
+            <img src="systems/falloutpnp/static/icons/icon-skill-throwing.png" alt="Throwing" />
           </div>
         </td>
         <td>
@@ -326,11 +326,25 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-firstAid.png" alt="First Aid">
+            <img src="systems/falloutpnp/static/icons/icon-skill-firstAid.png" alt="First Aid" />
           </div>
         </td>
-        <td>
+        <td class="skill-with-uses-cell">
           <p>First Aid</p>
+          <div>
+            {{#each (array 0 1 2) as |value|}}
+              <span class="skill-with-uses-cell__radio-container">
+                <input
+                  title="Set remaining First Aid skill uses to {{value}}."
+                  type="radio"
+                  value="{{value}}"
+                  name="system.skills.firstAid.usesRemaining"
+                  {{checked (equals ../system.skills.firstAid.usesRemaining value)}}
+                />
+                <span class="undertext-radio">{{value}}</span>
+              </span>
+            {{/each}}
+          </div>
         </td>
         <td title="(PE+IN)x2">
           <div class="styled-div_input-like">
@@ -376,11 +390,25 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-doctor.png" alt="Doctor">
+            <img src="systems/falloutpnp/static/icons/icon-skill-doctor.png" alt="Doctor" />
           </div>
         </td>
-        <td>
+        <td class="skill-with-uses-cell">
           <p>Doctor</p>
+          <div>
+            {{#each (array 0 1 2 3) as |value|}}
+              <span class="skill-with-uses-cell__radio-container">
+                <input
+                  title="Set remaining Doctor skill uses to {{value}}."
+                  type="radio"
+                  value="{{value}}"
+                  name="system.skills.doctor.usesRemaining"
+                  {{checked (equals ../system.skills.doctor.usesRemaining value)}}
+                />
+                <span class="undertext-radio">{{value}}</span>
+              </span>
+            {{/each}}
+          </div>
         </td>
         <td title="5+PE+IN">
           <div class="styled-div_input-like">
@@ -414,7 +442,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-sneak.png" alt="Sneak">
+            <img src="systems/falloutpnp/static/icons/icon-skill-sneak.png" alt="Sneak" />
           </div>
         </td>
         <td>
@@ -452,7 +480,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-lockpick.png" alt="Lockpick">
+            <img src="systems/falloutpnp/static/icons/icon-skill-lockpick.png" alt="Lockpick" />
           </div>
         </td>
         <td>
@@ -502,7 +530,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-steal.png" alt="Steal">
+            <img src="systems/falloutpnp/static/icons/icon-skill-steal.png" alt="Steal" />
           </div>
         </td>
         <td>
@@ -540,7 +568,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-traps.png" alt="Traps">
+            <img src="systems/falloutpnp/static/icons/icon-skill-traps.png" alt="Traps" />
           </div>
         </td>
         <td>
@@ -578,7 +606,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-science.png" alt="Science">
+            <img src="systems/falloutpnp/static/icons/icon-skill-science.png" alt="Science" />
           </div>
         </td>
         <td>
@@ -624,7 +652,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="Repair">
+            <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="Repair" />
           </div>
         </td>
         <td>
@@ -662,7 +690,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-pilot-true.png" alt="Pilot">
+            <img src="systems/falloutpnp/static/icons/icon-skill-pilot-true.png" alt="Pilot" />
           </div>
         </td>
         <td>
@@ -700,7 +728,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-speech.png" alt="Speech">
+            <img src="systems/falloutpnp/static/icons/icon-skill-speech.png" alt="Speech" />
           </div>
         </td>
         <td>
@@ -738,7 +766,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-barter.png" alt="Barter">
+            <img src="systems/falloutpnp/static/icons/icon-skill-barter.png" alt="Barter" />
           </div>
         </td>
         <td>
@@ -776,7 +804,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-gambling.png" alt="Gambling">
+            <img src="systems/falloutpnp/static/icons/icon-skill-gambling.png" alt="Gambling" />
           </div>
         </td>
         <td>
@@ -826,7 +854,7 @@
         </td>
         <td>
           <div class="skill-icon">
-            <img src="systems/falloutpnp/static/icons/icon-skill-outdoorsman.png" alt="Outdoorsman">
+            <img src="systems/falloutpnp/static/icons/icon-skill-outdoorsman.png" alt="Outdoorsman" />
           </div>
         </td>
         <td>

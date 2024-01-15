@@ -12,6 +12,8 @@
 :root {
   --primary-color: #ff6400;
   --input-overlay: rgba(0, 0, 0, 0.05);
+  --color-border-light-tertiary: #a5a5a5;
+  --color-shadow-primary: #ff6400;
 }
 
 .falloutpnp.sheet.item form {
@@ -53,7 +55,7 @@
 
 .falloutpnp.sheet.character .styled-div_input-like {
   width: calc(100% - 2px);
-  min-width: 45px;
+  min-width: 55px;
   height: var(--form-field-height);
   background: var(--input-overlay);
   padding: 1px 3px;
@@ -122,7 +124,7 @@
   display: flex;
 }
 
-.falloutpnp.sheet.character .bio-box .bio-box-undertext {
+.falloutpnp.sheet.character .undertext {
   position: absolute;
   bottom: -5px;
   right: 0;
@@ -131,10 +133,13 @@
   color: #000000;
 }
 
-.falloutpnp.sheet.character .bio-box .span-text {
-  font: 22px 'Overseer';
-  line-height: 26px;
-  margin-right: 5px;
+.falloutpnp.sheet.character .undertext-radio {
+  position: absolute;
+  bottom: -8px;
+  right: -2px;
+  font-size: 10px;
+  font-weight: bold;
+  color: #000000;
 }
 
 /*special*/
@@ -150,6 +155,12 @@
   top: 0;
   right: 0;
   padding: 4px;
+}
+
+.falloutpnp.sheet.character .span-text {
+  font: 22px 'Overseer';
+  line-height: 26px;
+  margin-right: 5px;
 }
 
 .falloutpnp.sheet.character .left-special {
@@ -247,18 +258,34 @@
   width: 34px;
 }
 
-.falloutpnp.sheet.character .left-skills table td p {
-  font: 20px 'Overseer';
-  /*text-align: center;*/
-  white-space: nowrap;
+/* First Aid and Doctor require additional input fields. */
+.falloutpnp.sheet.character .skill-with-uses-cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.falloutpnp.sheet.character .left-skills table .skill-icon{
+.falloutpnp.sheet.character .skill-with-uses-cell div {
+  display: flex;
+  align-items: center;
+}
+
+.falloutpnp.sheet.character .skill-with-uses-cell__radio-container {
+  position: relative;
+}
+
+.falloutpnp.sheet.character .left-skills table td p {
+  font: 20px 'Overseer';
+  white-space: nowrap;
+  margin: 0;
+}
+
+.falloutpnp.sheet.character .left-skills table .skill-icon {
   max-height: 28px;
   max-width: 28px;
 }
 
-.falloutpnp.sheet.character .left-skills table .skill-icon img{
+.falloutpnp.sheet.character .left-skills table .skill-icon img {
   border: 0;
   max-width: 34px;
   position: relative;
@@ -289,28 +316,13 @@
 
 /* Status */
 
-.falloutpnp.sheet.character .status-table .status-box{
+.falloutpnp.sheet.character .status-table .status-box {
   position: relative;
   display: flex;
   flex-direction: row;
 }
 
-.falloutpnp.sheet.character .status-table .status-box .status-box-undertext{
-  position: absolute;
-  bottom: -5px;
-  right: 0;
-  font-size: 10px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.falloutpnp.sheet.character .status-box .span-text{
-  font: 22px 'Overseer';
-  line-height: 26px;
-  margin-right: 5px;
-}
-
-.falloutpnp.sheet.character .status-box .span-icon{
+.falloutpnp.sheet.character .span-icon {
   min-width: 26px;
   max-width: 26px;
   width: 26px;
@@ -318,22 +330,22 @@
   margin-right: 5px;
 }
 
-.falloutpnp.sheet.character .status-box .span-icon img{
+.falloutpnp.sheet.character .span-icon img {
   border: 0;
 }
 
-.falloutpnp.sheet.character .status-box input{
-  border: 0
+.falloutpnp.sheet.character .status-box input {
+  border: 0;
 }
 
-.falloutpnp.sheet.character .status-table table{
+.falloutpnp.sheet.character .status-table table {
   border: 0;
   border-spacing: 5px 0;
   border-collapse: separate;
   background: none;
 }
 
-.falloutpnp.sheet.character .status-table table tr{
+.falloutpnp.sheet.character .status-table table tr {
   background: none;
 }
 
@@ -341,26 +353,26 @@
 
 /*.falloutpnp.sheet.character-enemy{}*/
 
-.falloutpnp.sheet.character-enemy .enemy-top{
+.falloutpnp.sheet.character-enemy .enemy-top {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-image{
+.falloutpnp.sheet.character-enemy .enemy-image {
   max-width: 186px;
   min-width: 186px;
   height: 186px;
   margin-top: 9px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-image img{
+.falloutpnp.sheet.character-enemy .enemy-image img {
   display: block;
 }
 
 .falloutpnp.sheet.character-enemy .enemy-info .enemy-box,
 .falloutpnp.sheet.character-enemy .enemy-weapons .enemy-box,
-.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box{
+.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -368,30 +380,17 @@
 
 .falloutpnp.sheet.character-enemy .enemy-info .enemy-box input,
 .falloutpnp.sheet.character-enemy .enemy-weapons .enemy-box input,
-.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box input{
+.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box input {
   border: 0;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info .enemy-box .enemy-box-undertext,
-.falloutpnp.sheet.character-enemy .enemy-weapons .enemy-box .enemy-box-undertext,
-.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box-undertext{
-  position: absolute;
-  bottom: -5px;
-  right: 0;
-  font-size: 10px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-info .enemy-box .span-text,
-.falloutpnp.sheet.character-enemy .enemy-weapons .enemy-box .span-text,
-.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box .span-text{
+.falloutpnp.sheet.character-enemy .span-text {
   font: 22px 'Overseer';
   line-height: 26px;
   margin-right: 5px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info{
+.falloutpnp.sheet.character-enemy .enemy-info {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
@@ -406,20 +405,20 @@
   margin: 0 auto;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info table table{
+.falloutpnp.sheet.character-enemy .enemy-info table table {
   border-spacing: 0;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info table table td:first-child{
+.falloutpnp.sheet.character-enemy .enemy-info table table td:first-child {
   padding-right: 3px;
   padding-left: 2px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info table table td:last-child{
+.falloutpnp.sheet.character-enemy .enemy-info table table td:last-child {
   padding-left: 3px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info table thead{
+.falloutpnp.sheet.character-enemy .enemy-info table thead {
   background: none;
   text-shadow: none;
   border: 0;
@@ -429,19 +428,19 @@
 }
 
 .falloutpnp.sheet.character-enemy .enemy-info table tr,
-.falloutpnp.sheet.character-enemy .enemy-attack table tr{
+.falloutpnp.sheet.character-enemy .enemy-attack table tr {
   background: none;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-stats{
+.falloutpnp.sheet.character-enemy .enemy-stats {
   min-width: 150px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-notes textarea{
+.falloutpnp.sheet.character-enemy .enemy-notes textarea {
   resize: none;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-weapons table{
+.falloutpnp.sheet.character-enemy .enemy-weapons table {
   border: 0;
   border-spacing: 5px 0;
   border-collapse: separate;
@@ -449,11 +448,11 @@
   margin: 0 auto;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-weapons table tr{
+.falloutpnp.sheet.character-enemy .enemy-weapons table tr {
   background: none;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-title{
+.falloutpnp.sheet.character-enemy .enemy-title {
   font: 22px 'Overseer';
   font-style: italic;
   margin: 0 auto;
@@ -461,13 +460,13 @@
   padding-top: 10px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-attack{
+.falloutpnp.sheet.character-enemy .enemy-attack {
   border-top: 1px solid #555555;
   padding-top: 10px;
   margin-top: 10px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-attack:first-child{
+.falloutpnp.sheet.character-enemy .enemy-attack:first-child {
   border: 0;
   padding-top: 0;
   margin-top: 0;
@@ -483,7 +482,7 @@
 }
 .falloutpnp.sheet.character .rollable:hover {
   transform: scale(1.04);
-  box-shadow: 0 0 4px 2px var(--primary-color);
+  box-shadow: 0 0 4px 1px var(--primary-color);
   background: linear-gradient(
     90deg,
     var(--input-overlay) 0%,
@@ -494,7 +493,7 @@
 }
 .falloutpnp.sheet.character .rollable:active {
   transform: scale(0.96);
-  box-shadow: 0 0 4px 4px var(--primary-color);
+  box-shadow: 0 0 4px 2px var(--primary-color);
   background: linear-gradient(
     90deg,
     var(--input-overlay) 0%,
