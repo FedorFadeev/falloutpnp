@@ -1,0 +1,50 @@
+@use '../variables' as *;
+
+// Apply the .rollable class to make the div look like a button.
+// Optionally, modify it with -d100 or -d10 to change the icon to the dice being rolled.
+
+.rollable {
+  min-width: 56px !important;
+  border: none;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  transition-property: background-color box-shadow;
+  background: linear-gradient(90deg, $input-overlay 0%, $input-overlay 45%, $primary-color 100%) !important;
+  cursor: pointer;
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 4px 1px $primary-color;
+    background: linear-gradient(90deg, $input-overlay 0%, $input-overlay 45%, $primary-color 95%, $primary-color 100%);
+  }
+  &:active {
+    transform: scale(0.96);
+    box-shadow: 0 0 4px 2px $primary-color;
+    background: linear-gradient(90deg, $input-overlay 0%, $input-overlay 40%, $primary-color 90%, $primary-color 100%);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    filter: invert(85%);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    right: 0.2rem;
+    top: 0.2rem;
+  }
+}
+
+.rollable-d100 {
+  @extend .rollable;
+  &::after {
+    background: url('static/d100.svg') no-repeat center center;
+  }
+}
+
+.rollable-d10 {
+  @extend .rollable;
+  &::after {
+    background: url('static/d10.svg') no-repeat center center;
+  }
+}
+
+// TODO: Add rollable-d4, rollable-6, rollable-d8, rollable-d12, rollable2d6, etc. icons.

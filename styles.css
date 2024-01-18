@@ -1,328 +1,36 @@
-@font-face {
-  font-family: 'Overseer';
-  src: url('fonts/Overseer Bold.otf');
-}
-
-@font-face {
-  font-family: 'Overseer';
-  src: url('fonts/Overseer Bold Italic.otf');
-  font-style: italic;
-}
-
 :root {
   --primary-color: #ff6400;
   --input-overlay: rgba(0, 0, 0, 0.05);
   --color-border-light-tertiary: #a5a5a5;
   --color-shadow-primary: #ff6400;
-}
-
-.falloutpnp.sheet.item form {
-  display: flex;
-  flex-direction: column;
-}
-
-.falloutpnp.sheet.item .sheet-content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.falloutpnp.sheet.item .sheet-content .editor {
-  height: 100%;
-}
-
-/*Character sheet*/
-.falloutpnp.sheet.character form {
-  display: flex;
-  flex-direction: row;
-}
-
-.falloutpnp.sheet.character form h1,
-.falloutpnp.sheet.character form h2,
-.falloutpnp.sheet.character form h3,
-.falloutpnp.sheet.character form h4,
-.falloutpnp.sheet.character form p,
-.falloutpnp.sheet.character form h5 {
-  border: 0;
-  margin: 0 auto;
-}
-
-.falloutpnp.sheet.character form h2 {
-  font: italic 24px 'Overseer';
-  margin-bottom: 4px;
-  text-align: center;
-}
-
-.falloutpnp.sheet.character .styled-div_input-like {
-  width: calc(100% - 2px);
-  min-width: 55px;
-  height: var(--form-field-height);
-  background: var(--input-overlay);
-  padding: 1px 3px;
-  margin: 0;
-  color: var(--color-text-dark-primary);
-  font-family: inherit;
-  font-size: inherit;
-  text-align: inherit;
-  line-height: var(--form-field-height);
-  border-radius: 3px;
-}
-
-/*Left*/
-
-.falloutpnp.sheet.character .left-side {
-  border: 1px solid #525252;
-}
-
-/*bio*/
-
-.falloutpnp.sheet.character .left-bio {
-  border-bottom: 1px solid #525252;
-  padding: 5px 7px;
-}
-
-/*padding: 7px*/
-/*height 24px*/
-/*width 36px*/
-
-.falloutpnp.sheet.character .bio-bottom {
-  display: flex;
-  flex-direction: row;
-}
-
-.falloutpnp.sheet.character .bio-image {
-  max-width: 9rem;
-}
-
-.falloutpnp.sheet.character .bio-top table,
-.falloutpnp.sheet.character .bio-row table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-}
-
-.falloutpnp.sheet.character .bio-row:first-child table {
-  margin: 0;
-}
-.falloutpnp.sheet.character .bio-row:first-child table td {
-  padding: 0;
-}
-
-.falloutpnp.sheet.character .bio-top table tr,
-.falloutpnp.sheet.character .bio-row table tr {
-  background: none;
-}
-
-.falloutpnp.sheet.character .bio-top input,
-.falloutpnp.sheet.character .bio-row input {
-  border: 0;
-}
-
-.falloutpnp.sheet.character .bio-box {
-  position: relative;
-  display: flex;
-}
-
-.falloutpnp.sheet.character .undertext {
-  position: absolute;
-  bottom: -5px;
-  right: 0;
-  font-size: 10px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.falloutpnp.sheet.character .undertext-radio {
-  position: absolute;
-  bottom: -8px;
-  right: -2px;
-  font-size: 10px;
-  font-weight: bold;
-  color: #000000;
-}
-
-/*special*/
-
-.falloutpnp.sheet.character .special-info {
-  position: relative;
-  width: 75%;
-  padding: 5px 5px 5px 0;
-}
-
-.falloutpnp.sheet.character .special-unassigned {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 4px;
-}
-
-.falloutpnp.sheet.character .span-text {
-  font: 22px 'Overseer';
-  line-height: 26px;
-  margin-right: 5px;
-}
-
-.falloutpnp.sheet.character .left-special {
-  border-bottom: 1px solid #525252;
-  padding: 0 7px;
-  display: flex;
-  flex-direction: row;
-}
-
-.falloutpnp.sheet.character .special-list table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-}
-
-.falloutpnp.sheet.character .special-list table tr {
-  background: none;
-}
-
-.falloutpnp.sheet.character .special-list table .special-cell_small {
-  width: 30px;
-  /*width: 24px;*/
-}
-
-.falloutpnp.sheet.character .special-list table .special-cell_small input {
-  min-width: 30px;
-}
-
-.falloutpnp.sheet.character .special-list table td p {
-  font: 22px 'Overseer';
-  text-align: center;
-}
-
-/*Secondary*/
-
-.falloutpnp.sheet.character .secondary-info {
-  padding: 5px 0 5px 5px;
-  border-left: 1px solid #525252;
-  width: 25%;
-}
-
-.falloutpnp.sheet.character .secondary-list table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-}
-
-.falloutpnp.sheet.character .secondary-list table tr {
-  background: none;
-}
-
-.falloutpnp.sheet.character .secondary-list .secondary-box {
-  position: relative;
-}
-
-.falloutpnp.sheet.character .secondary-list .secondary-box span {
-  position: absolute;
-  bottom: -5px;
-  right: 0;
-  font-size: 10px;
-  font-weight: bold;
-  color: #000000;
-}
-
-/*skills*/
-
-.falloutpnp.sheet.character .skills-info {
-  position: relative;
-}
-
-.falloutpnp.sheet.character .skills-unassigned {
-  position: absolute;
-  top: 0;
-  right: 0;
-}
-
-.falloutpnp.sheet.character .left-skills {
-  padding: 5px 7px;
-}
-
-.falloutpnp.sheet.character .left-skills table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-}
-
-.falloutpnp.sheet.character .left-skills table tr {
-  background: none;
-}
-
-.falloutpnp.sheet.character .left-skills table .skills-cell_small {
-  width: 34px;
+  --border-default: 1px solid #525252;
 }
 
 /* First Aid and Doctor require additional input fields. */
-.falloutpnp.sheet.character .skill-with-uses-cell {
+.character-sheet .cell-with-radio {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.falloutpnp.sheet.character .skill-with-uses-cell div {
+.character-sheet .cell-with-radio div {
   display: flex;
   align-items: center;
 }
 
-.falloutpnp.sheet.character .skill-with-uses-cell__radio-container {
+.character-sheet .cell-with-radio__radio-container {
   position: relative;
 }
 
-.falloutpnp.sheet.character .left-skills table td p {
+.character-sheet .left-skills table td p {
   font: 20px 'Overseer';
   white-space: nowrap;
   margin: 0;
 }
 
-.falloutpnp.sheet.character .left-skills table .skill-icon {
-  max-height: 28px;
-  max-width: 28px;
-}
-
-.falloutpnp.sheet.character .left-skills table .skill-icon img {
-  border: 0;
-  max-width: 34px;
-  position: relative;
-  left: -3px;
-  top: -3px;
-}
-
-/*Right*/
-
-.falloutpnp.sheet.character .right-side {
-  border: 1px solid #525252;
-  border-left: 0;
-}
-
-.falloutpnp.sheet.character .right-status {
-  border-bottom: 1px solid #525252;
-  padding: 5px 7px;
-}
-
-.falloutpnp.sheet.character .right-armor {
-  border-bottom: 1px solid #525252;
-  padding: 5px 7px;
-}
-
-.falloutpnp.sheet.character .right-weapons {
-  padding: 5px 7px;
-}
-
 /* Status */
 
-.falloutpnp.sheet.character .status-table .status-box {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-}
-
-.falloutpnp.sheet.character .span-icon {
+.character-sheet .span-icon {
   min-width: 26px;
   max-width: 26px;
   width: 26px;
@@ -330,95 +38,65 @@
   margin-right: 5px;
 }
 
-.falloutpnp.sheet.character .span-icon img {
+.character-sheet .span-icon img {
   border: 0;
-}
-
-.falloutpnp.sheet.character .status-box input {
-  border: 0;
-}
-
-.falloutpnp.sheet.character .status-table table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-}
-
-.falloutpnp.sheet.character .status-table table tr {
-  background: none;
 }
 
 /* Enemy sheet */
+/*.character-sheet-enemy{}*/
+/* TODO: Move enemy CSS to .scss files, using character-sheet as an example */
 
-/*.falloutpnp.sheet.character-enemy{}*/
-
-.falloutpnp.sheet.character-enemy .enemy-top {
+.character-sheet-enemy .enemy-top {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-image {
+.character-sheet-enemy .enemy-image {
   max-width: 186px;
   min-width: 186px;
   height: 186px;
   margin-top: 9px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-image img {
+.character-sheet-enemy .enemy-image img {
   display: block;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info .enemy-box,
-.falloutpnp.sheet.character-enemy .enemy-weapons .enemy-box,
-.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box {
+.character-sheet-enemy .enemy-info .enemy-box,
+.character-sheet-enemy .enemy-weapons .enemy-box,
+.character-sheet-enemy .enemy-attack .enemy-box {
   position: relative;
   display: flex;
   flex-direction: row;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info .enemy-box input,
-.falloutpnp.sheet.character-enemy .enemy-weapons .enemy-box input,
-.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box input {
-  border: 0;
-}
-
-.falloutpnp.sheet.character-enemy .span-text {
+.character-sheet-enemy .span-text {
   font: 22px 'Overseer';
   line-height: 26px;
   margin-right: 5px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info {
+.character-sheet-enemy .enemy-info {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info table,
-.falloutpnp.sheet.character-enemy .enemy-attack table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-  margin: 0 auto;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-info table table {
+.character-sheet-enemy .enemy-info table table {
   border-spacing: 0;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info table table td:first-child {
+.character-sheet-enemy .enemy-info table table td:first-child {
   padding-right: 3px;
   padding-left: 2px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info table table td:last-child {
+.character-sheet-enemy .enemy-info table table td:last-child {
   padding-left: 3px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info table thead {
+.character-sheet-enemy .enemy-info table thead {
   background: none;
   text-shadow: none;
   border: 0;
@@ -427,20 +105,20 @@
   font-style: italic;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info table tr,
-.falloutpnp.sheet.character-enemy .enemy-attack table tr {
+.character-sheet-enemy .enemy-info table tr,
+.character-sheet-enemy .enemy-attack table tr {
   background: none;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-stats {
+.character-sheet-enemy .enemy-stats {
   min-width: 150px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-notes textarea {
+.character-sheet-enemy .enemy-notes textarea {
   resize: none;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-weapons table {
+.character-sheet-enemy .enemy-weapons table {
   border: 0;
   border-spacing: 5px 0;
   border-collapse: separate;
@@ -448,11 +126,11 @@
   margin: 0 auto;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-weapons table tr {
+.character-sheet-enemy .enemy-weapons table tr {
   background: none;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-title {
+.character-sheet-enemy .enemy-title {
   font: 22px 'Overseer';
   font-style: italic;
   margin: 0 auto;
@@ -460,69 +138,14 @@
   padding-top: 10px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-attack {
+.character-sheet-enemy .enemy-attack {
   border-top: 1px solid #555555;
   padding-top: 10px;
   margin-top: 10px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-attack:first-child {
+.character-sheet-enemy .enemy-attack:first-child {
   border: 0;
   padding-top: 0;
   margin-top: 0;
-}
-
-/* Rollable Fields */
-.falloutpnp.sheet.character .rollable {
-  position: relative;
-  transition: all 0.1s ease-in-out;
-  transition-property: background-color box-shadow;
-  background: linear-gradient(90deg, var(--input-overlay) 0%, var(--input-overlay) 45%, var(--primary-color) 100%);
-  cursor: pointer;
-}
-.falloutpnp.sheet.character .rollable:hover {
-  transform: scale(1.04);
-  box-shadow: 0 0 4px 1px var(--primary-color);
-  background: linear-gradient(
-    90deg,
-    var(--input-overlay) 0%,
-    var(--input-overlay) 45%,
-    var(--primary-color) 95%,
-    var(--primary-color) 100%
-  );
-}
-.falloutpnp.sheet.character .rollable:active {
-  transform: scale(0.96);
-  box-shadow: 0 0 4px 2px var(--primary-color);
-  background: linear-gradient(
-    90deg,
-    var(--input-overlay) 0%,
-    var(--input-overlay) 40%,
-    var(--primary-color) 90%,
-    var(--primary-color) 100%
-  );
-}
-
-/* Rollable Field Dice Icons */
-.falloutpnp.sheet.character .rollable-skill::after {
-  content: '';
-  position: absolute;
-  background: url('static/d100.svg') no-repeat center center;
-  filter: invert(85%);
-  background-size: cover;
-  width: 20px;
-  height: 20px;
-  right: 0.2rem;
-  top: 0.2rem;
-}
-.falloutpnp.sheet.character .rollable-special::after {
-  content: '';
-  position: absolute;
-  background: url('static/d10.svg') no-repeat center center;
-  background-size: cover;
-  filter: invert(85%);
-  width: 20px;
-  height: 20px;
-  right: 0.2rem;
-  top: 0.2rem;
 }

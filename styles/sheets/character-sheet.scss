@@ -1,0 +1,48 @@
+@use '../variables' as *;
+
+.character-sheet {
+  display: flex;
+  flex-direction: row;
+  border: $border-default;
+
+  & .special-and-secondary {
+    display: flex;
+    flex-direction: row;
+
+    & .special {
+      flex-grow: 3;
+      border-right: $border-default;
+
+      .special-name {
+        font-family: $font-family-headings;
+        font-size: 22px;
+      }
+    }
+
+    & .secondary {
+      flex-grow: 1;
+    }
+  }
+
+  & .skills {
+    .skill-name {
+      font-family: $font-family-headings;
+      font-size: 19px;
+    }
+  }
+
+  & .bio {
+    display: flex;
+
+    & .token-image {
+      max-width: 8rem;
+    }
+  }
+
+  // TODO: Make this into a cute warning box. Merge with unassigned SPECIALs.
+  .skills-unassigned {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}

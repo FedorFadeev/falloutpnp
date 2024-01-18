@@ -19,21 +19,17 @@ async function preloadHandlebarsTemplates() {
 }
 
 Hooks.once('init', () => {
-  console.log('Loaded')
-
   CONFIG.falloutpnp = falloutpnp
 
   CONFIG.Actor.documentClass = CustomActor
 
   Items.unregisterSheet('core', ItemSheet)
-  Items.registerSheet('falloutpnp', WeaponSheet, { makeDefault: true })
-
-  // Actors.unregisterSheet("core", ActorSheet);
-  // Actors.registerSheet("falloutpnp", NPCSheet, { makeDefault: true });
+  Items.registerSheet('falloutpnp', WeaponSheet, { types: ['weapon'], makeDefault: true })
 
   Actors.unregisterSheet('core', ActorSheet)
   Actors.registerSheet('falloutpnp', EnemySheet, { types: ['enemy'], makeDefault: true })
   Actors.registerSheet('falloutpnp', CharacterSheet, { types: ['character'], makeDefault: true })
+  // Actors.registerSheet("falloutpnp", NPCSheet, { makeDefault: true });
 
   preloadHandlebarsTemplates()
 })

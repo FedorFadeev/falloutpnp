@@ -3,19 +3,17 @@ export default class WeaponSheet extends ItemSheet {
     return mergeObject(super.defaultOptions, {
       width: 600,
       height: 400,
-      classes: ['falloutpnp', 'sheet', 'item'],
     })
   }
 
   get template() {
-    return `systems/falloutpnp/templates/sheets/${this.item.type}-sheet.hbs`
+    return `systems/falloutpnp/templates/sheets/weapon-sheet.hbs`
   }
 
   getData() {
     const data = super.getData()
-
+    data.system = data.data.system
     data.config = CONFIG.falloutpnp
-
     return data
   }
 }

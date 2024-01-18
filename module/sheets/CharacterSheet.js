@@ -3,14 +3,6 @@ export default class CharacterSheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       width: 1000,
       height: 700,
-      classes: ['falloutpnp', 'sheet', 'character'],
-      tabs: [
-        {
-          navSelector: '.sheet-tabs',
-          contentSelector: '.sheet-body',
-          initial: 'features',
-        },
-      ],
     })
   }
 
@@ -20,23 +12,17 @@ export default class CharacterSheet extends ActorSheet {
 
   getData() {
     const data = super.getData()
-    const dataSystem = this.document.system
+    data.system = data.data.system
     data.config = CONFIG.falloutpnp
-    data.weapons = data.items.filter(function (item) {
-      return item.type == 'weapon'
-    })
-    return {
-      data: data,
-      system: dataSystem,
-    }
+    return data
   }
 
   // https://foundryvtt.wiki/en/development/guides/SD-tutorial/SD111-Creating-rollable-buttons-with-event-listeners
   activateListeners(html) {
     super.activateListeners(html)
 
-    html.find('.rollable-skill').click(this.onRollSkill.bind(this))
-    html.find('.rollable-special').click(this.onRollSpecial.bind(this))
+    html.find('.rollable-d100').click(this.onRollSkill.bind(this))
+    html.find('.rollable-d10').click(this.onRollSpecial.bind(this))
     html.find('input[name="data.system.skills.doctor.usesRemaining"]').change((event) => {
       this.onUpdateSkillUsesRemaining('doctor', event.target.value)
     })

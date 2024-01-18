@@ -1,23 +1,22 @@
-<form class="{{ cssClass }} falloutpnp character sheet" autocomplete="off">
-  <div class="left-side">
-    {{log data}} {{log system}}
-    <div class="left-bio">{{> "systems/falloutpnp/templates/partials/actor/bio.hbs"}}</div>
-    <div class="left-special">
-      {{> "systems/falloutpnp/templates/partials/actor/special.hbs"}}
-      {{> "systems/falloutpnp/templates/partials/actor/secondary.hbs"}}
-    </div>
-    <div class="left-skills">{{> "systems/falloutpnp/templates/partials/actor/skills.hbs"}}</div>
+<form class="character-sheet" autocomplete="off">
+  <div class="sheet-column">
+    <section class="bio">{{> "systems/falloutpnp/templates/partials/actor/bio.hbs"}}</section>
+    {{!-- TODO: Fix vertical between special and secondary not connecting --}}
+    <section class="special-and-secondary">
+      <div class="special">
+        {{> "systems/falloutpnp/templates/partials/actor/special.hbs"}}
+      </div>
+      <div class="secondary">
+        {{> "systems/falloutpnp/templates/partials/actor/secondary.hbs"}}
+      </div>
+    </section>
+    <section class="skills">{{> "systems/falloutpnp/templates/partials/actor/skills.hbs"}}</section>
   </div>
-  <div class="right-side">
-    <div class="right-status">
-      {{> "systems/falloutpnp/templates/partials/actor/status.hbs"}}
-    </div>
-    <div class="right-armor">🛠️ ARMOR 🛠️</div>
-    <div class="right-weapons">
-      <div>🛠️ WEAPONS 🛠️</div>
-      <section class="weapon-list">
-        {{#each weapons as |weapon id|}} {{> "systems/falloutpnp/templates/partials/weapon-card.hbs" weapon}} {{/each}}
-      </section>
-    </div>
+
+  <div class="sheet-column">
+    <section class="status">{{> "systems/falloutpnp/templates/partials/actor/status.hbs"}}</section>
+    <section>🛠️ EQUIPPED ARMOR 🛠️</section>
+    <section>🛠️ EQUIPPED WEAPON 🛠️</section>
+    <section>🛠️ CAPS, WEIGHT, INVENTORY 🛠️</section>
   </div>
 </form>

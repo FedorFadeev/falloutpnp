@@ -1,0 +1,39 @@
+@use './variables' as *;
+@import './shared/index.scss';
+
+@import './sheets/character-sheet.scss';
+
+// Global styles & FoundryVTT CSS overrides.
+
+.sheet .window-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-family-headings;
+    font-style: italic;
+    font-weight: 400;
+    border: none;
+    text-align: center;
+  }
+
+  p {
+    border: none;
+    margin: 0;
+  }
+
+  table {
+    margin: 0;
+    border: none;
+    border-spacing: 6px 0;
+    border-collapse: separate;
+    background: none;
+
+    thead,
+    tr {
+      background: none;
+    }
+  }
+}

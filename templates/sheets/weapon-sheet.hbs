@@ -1,37 +1,35 @@
-<form class="{{cssClass}}" autocomplete="off">
+<form class="weapon-sheet" autocomplete="off">
   <header class="sheet-header">
     <img src="{{item.img}}" data-edit="img" title="{{item.name}}" height="64" width="64" />
     <h1><input name="name" type="text" value="{{item.name}}" placeholder="{{localize 'Name'}}" /></h1>
   </header>
-  <div class="sheet-content">
+
+  <select name="system.attackType">
+    {{selectOptions config.attackTypes selected=system.attackType nameAttr="key" labelAttr="label"}}
+  </select>
+  <span class="undertext">Attack Type</span>
+
+  <div>
     <table>
       <tr>
-        <th>{{localize "falloutpnp.weapon.attackWith"}}</th>
-        <th>{{localize "falloutpnp.weapon.type"}}</th>
-        <th>{{localize "falloutpnp.weapon.damage"}}</th>
-        <th>{{localize "falloutpnp.weapon.single"}}</th>
-      </tr>
-      <tr>
-        <td>
-          <select name="data.attackWith">
-            {{#select data.attackWith}}
-              {{#each config.attackTypes as |name type|}}
-                <option value="{{type}}">{{name}}</option>
-              {{/each}}
-            {{/select}}
-          </select>
-        </td>
-        <td>
-          <input name="data.type" type="text" value="{{data.type}}" data-dtype="String" />
-        </td>
-        <td>
-          <input name="data.damage" type="text" value="{{data.damage}}" data-dtype="Number" />
-        </td>
-        <td>
-          <input name="data.single" type="text" value="{{data.single}}" data-dtype="Number" />
+        <td class="cell-with-radio">
+          <p>Condition</p>
+          <div>
+            {{#each falloutpnp.weaponConditions as |weaponCondition|}}
+              <span class="cell-with-radio__radio-container">
+                <input
+                  title="Set weapon condition {{weaponCondition.value}}%."
+                  type="radio"
+                  value="{{weaponCondition.value}}"
+                  name="data.system.condition"
+                  {{checked (equals ../data.system.condition weaponCondition.value)}}
+                />
+                <span class="undertext-radio">{{condition.label}}</span>
+              </span>
+            {{/each}}
+          </div>
         </td>
       </tr>
     </table>
-    {{editor content=data.description target="data.description" owner=owner editable=editable}}
   </div>
 </form>
