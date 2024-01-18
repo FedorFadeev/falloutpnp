@@ -20,8 +20,7 @@
     "main.js"
   ],
   "styles": [
-    "styles.css",
-    "gigastyles.css"
+    "styles.css"
   ],
   "packs": [],
   "languages": [

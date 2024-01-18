@@ -1,107 +1,115 @@
 {{! TODO: Finish the BIO header here. }}
-{{!-- <table>
-    <tr>
-      <td>
+<table style="table-layout: fixed;">
+  <tr>
+    <td>
+      <div class="flex">
+        <span class="large-text">Level&nbsp;</span>
         <div class="input-field">
-          <span class="span-text">Level</span>
           <input type="number" required name="system.general.level" value="{{system.general.level}}" min="1" />
         </div>
-      </td>
-      <td style="padding-right: 20px;">
-        <div class="input-field">
-          <span class="span-icon">
-            <img src="systems/falloutpnp/static/icons/icon-karma.png" alt="Karma" />
-          </span>
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <span class="inline-icon">
+          <img src="systems/falloutpnp/static/icons/icon-karma.png" alt="Karma" />
+        </span>
+        <div class="input-field" style="margin-right: 16px;">
           <input type="text" name="system.general.karma" value="{{system.general.karma}}" />
           <span class="undertext">Karma</span>
         </div>
-      </td>
-      <td>
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <span class="large-text">EXP&nbsp;</span>
         <div class="input-field">
-          <span class="span-text">EXP</span>
           <input type="text" name="system.general.experience" value="{{system.general.experience}}" min="0" />
           <span class="undertext">Current</span>
         </div>
-      </td>
-      <td>
-        <div class="input-field">
-          <span class="span-text">/</span>
-          <div class="data-field">{{system.status.experienceToLevel}}</div>
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <span class="large-text">/&nbsp;</span>
+        <div class="data-field">
+          {{system.status.experienceToLevel}}
           <span class="undertext">Level Up</span>
         </div>
-      </td>
-    </tr>
-  </table> --}}
-<img class="token-image" src="{{actor.img}}" title="Change token image." data-edit="img" />
-<div>
-  <table>
-    <tr>
-      <td>
-        <div class="input-field">
-          <input type="text" name="system.general.name" value="{{system.general.name}}" />
-          <span class="undertext">Name</span>
-        </div>
-      </td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-      <td>
-        <div class="input-field">
-          <select name="system.general.race" style="width: 100%;">
-            {{selectOptions config.races selected=system.general.race nameAttr="key" labelAttr="label"}}
-          </select>
-          <span class="undertext">Race</span>
-        </div>
-      </td>
-      <td>
-        <div class="input-field">
-          <input type="text" name="system.general.gender" value="{{system.general.gender}}" />
-          <span class="undertext">Gender</span>
-        </div>
-      </td>
-    </tr>
-  </table>
-  <table>
-    <tr>
-      <td>
-        <div class="input-field">
-          <input type="text" name="system.general.age" value="{{system.general.age}}" />
-          <span class="undertext">Age</span>
-        </div>
-      </td>
-      <td>
-        <div class="input-field">
-          <input type="text" name="system.general.height" value="{{system.general.height}}" />
-          <span class="undertext">Height</span>
-        </div>
-      </td>
-      <td>
-        <div class="input-field">
-          <input type="text" name="system.general.weight" value="{{system.general.weight}}" />
-          <span class="undertext">Weight</span>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <div class="input-field">
-          <input type="text" name="system.general.skinTone" value="{{system.general.skinTone}}" />
-          <span class="undertext">Skin Tone</span>
-        </div>
-      </td>
-      <td>
-        <div class="input-field">
-          <input type="text" name="system.general.hair" value="{{system.general.hair}}" />
-          <span class="undertext">Hair</span>
-        </div>
-      </td>
-      <td>
-        <div class="input-field">
-          <input type="text" name="system.general.eyes" value="{{system.general.eyes}}" />
-          <span class="undertext">Eyes</span>
-        </div>
-      </td>
-    </tr>
-  </table>
+      </div>
+    </td>
+  </tr>
+</table>
+<div class="flex">
+  <img class="token-image" src="{{actor.img}}" title="Click to change image used for character token" data-edit="img" />
+  <div>
+    <table>
+      <tr>
+        <td colspan="2">
+          <div class="input-field">
+            <input type="text" name="system.general.name" value="{{system.general.name}}" />
+            <span class="undertext">Name</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="input-field">
+            <select name="system.general.race" style="width: 100%;">
+              {{selectOptions config.races selected=system.general.race nameAttr="key" labelAttr="label"}}
+            </select>
+            <span class="undertext">Race</span>
+          </div>
+        </td>
+        <td>
+          <div class="input-field">
+            <input type="text" name="system.general.gender" value="{{system.general.gender}}" />
+            <span class="undertext">Gender</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <table>
+      <tr>
+        <td>
+          <div class="input-field">
+            <input type="text" name="system.general.age" value="{{system.general.age}}" />
+            <span class="undertext">Age</span>
+          </div>
+        </td>
+        <td>
+          <div class="input-field">
+            <input type="text" name="system.general.height" value="{{system.general.height}}" />
+            <span class="undertext">Height</span>
+          </div>
+        </td>
+        <td>
+          <div class="input-field">
+            <input type="text" name="system.general.weight" value="{{system.general.weight}}" />
+            <span class="undertext">Weight</span>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="input-field">
+            <input type="text" name="system.general.skinTone" value="{{system.general.skinTone}}" />
+            <span class="undertext">Skin Tone</span>
+          </div>
+        </td>
+        <td>
+          <div class="input-field">
+            <input type="text" name="system.general.hair" value="{{system.general.hair}}" />
+            <span class="undertext">Hair</span>
+          </div>
+        </td>
+        <td>
+          <div class="input-field">
+            <input type="text" name="system.general.eyes" value="{{system.general.eyes}}" />
+            <span class="undertext">Eyes</span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>

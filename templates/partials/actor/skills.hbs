@@ -2,363 +2,340 @@
 {{#if system.general.remainingSkillPoints}}
   <p class="skills-unassigned">Unassigned: {{system.general.remainingSkillPoints}}</p>
 {{/if}}
-<div class="skills-list">
-  <table>
-    <tr>
-      <th><p>Tag</p></th>
-      <th><p>&nbsp;</p></th>
-      <th><p>Skill</p></th>
-      <th><p>Base</p></th>
-      <th><p>Skill Points</p></th>
-      <th><p>+</p></th>
-      <th><p>-</p></th>
-      <th><p>Total</p></th>
-    </tr>
-    <tr>
-      <td>
+<table>
+  <tr>
+    <th><p>Tag</p></th>
+    <th colspan="2"><p>Skill</p></th>
+    <th><p>Base</p></th>
+    <th colspan="3"><p>Skill Points</p></th>
+    <th><p>Total</p></th>
+  </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.smallGuns.isTagged"
+        {{checked system.skills.smallGuns.isTagged}}
+        {{disabled (ifThen system.skills.smallGuns.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-smallGuns.png" alt="Small Guns" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Small Guns</p>
+    </td>
+    <td title="5+AGx4">
+      <div class="data-field">
+        {{system.skills.smallGuns.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
         <input
-          type="checkbox"
-          name="system.skills.smallGuns.isTagged"
-          {{checked system.skills.smallGuns.isTagged}}
-          {{disabled (ifThen system.skills.smallGuns.isTagged false system.isTaggingDisabled)}}
+          type="number"
+          name="system.skills.smallGuns.skillPoints"
+          value="{{system.skills.smallGuns.skillPoints}}"
         />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-smallGuns.png" alt="Small Guns" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Small Guns</p>
-      </td>
-      <td title="5+AGx4">
-        <div class="data-field">
-          {{system.skills.smallGuns.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.smallGuns.skillPoints"
-            value="{{system.skills.smallGuns.skillPoints}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.smallGuns.diffPositive"
-            value="{{system.skills.smallGuns.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.smallGuns.diffNegative"
-            value="{{system.skills.smallGuns.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="smallGuns" data-label="Small Guns">
-          {{system.skills.smallGuns.total}}
-        </div>
-      </td>
-    </tr>
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.smallGuns.diffPositive"
+          value="{{system.skills.smallGuns.diffPositive}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.smallGuns.diffNegative"
+          value="{{system.skills.smallGuns.diffNegative}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="smallGuns" data-label="Small Guns">
+        {{system.skills.smallGuns.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.bigGuns.isTagged"
-          {{checked system.skills.bigGuns.isTagged}}
-          {{disabled (ifThen system.skills.bigGuns.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td class="vault-boy">
-        <img src="systems/falloutpnp/static/icons/icon-skill-bigGuns.png" alt="Big Guns" />
-      </td>
-      <td>
-        <p class="skill-name">Big Guns</p>
-      </td>
-      <td title="AGx2">
-        <div class="data-field">
-          {{system.skills.bigGuns.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.bigGuns.skillPoints" value="{{system.skills.bigGuns.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.bigGuns.diffPositive"
-            value="{{system.skills.bigGuns.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.bigGuns.diffNegative"
-            value="{{system.skills.bigGuns.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="bigGuns" data-label="Big Guns">
-          {{system.skills.bigGuns.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.bigGuns.isTagged"
+        {{checked system.skills.bigGuns.isTagged}}
+        {{disabled (ifThen system.skills.bigGuns.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td class="vault-boy">
+      <img src="systems/falloutpnp/static/icons/icon-skill-bigGuns.png" alt="Big Guns" />
+    </td>
+    <td>
+      <p class="skill-name">Big Guns</p>
+    </td>
+    <td title="AGx2">
+      <div class="data-field">
+        {{system.skills.bigGuns.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.bigGuns.skillPoints" value="{{system.skills.bigGuns.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.bigGuns.diffPositive" value="{{system.skills.bigGuns.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.bigGuns.diffNegative" value="{{system.skills.bigGuns.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="bigGuns" data-label="Big Guns">
+        {{system.skills.bigGuns.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.energyWeapons.isTagged"
+        {{checked system.skills.energyWeapons.isTagged}}
+        {{disabled (ifThen system.skills.energyWeapons.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-energyWeapons.png" alt="Energy Weapons" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Energy Weapons</p>
+    </td>
+    <td title="AGx2">
+      <div class="data-field">
+        {{system.skills.energyWeapons.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
         <input
-          type="checkbox"
-          name="system.skills.energyWeapons.isTagged"
-          {{checked system.skills.energyWeapons.isTagged}}
-          {{disabled (ifThen system.skills.energyWeapons.isTagged false system.isTaggingDisabled)}}
+          type="number"
+          name="system.skills.energyWeapons.skillPoints"
+          value="{{system.skills.energyWeapons.skillPoints}}"
         />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-energyWeapons.png" alt="Energy Weapons" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Energy Weapons</p>
-      </td>
-      <td title="AGx2">
-        <div class="data-field">
-          {{system.skills.energyWeapons.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.energyWeapons.skillPoints"
-            value="{{system.skills.energyWeapons.skillPoints}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.energyWeapons.diffPositive"
-            value="{{system.skills.energyWeapons.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.energyWeapons.diffNegative"
-            value="{{system.skills.energyWeapons.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="energyWeapons" data-label="Energy Weapons">
-          {{system.skills.energyWeapons.total}}
-        </div>
-      </td>
-    </tr>
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.energyWeapons.diffPositive"
+          value="{{system.skills.energyWeapons.diffPositive}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.energyWeapons.diffNegative"
+          value="{{system.skills.energyWeapons.diffNegative}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="energyWeapons" data-label="Energy Weapons">
+        {{system.skills.energyWeapons.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.unarmed.isTagged"
-          {{checked system.skills.unarmed.isTagged}}
-          {{disabled (ifThen system.skills.unarmed.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-unarmed.png" alt="Unarmed" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Unarmed</p>
-      </td>
-      <td title="30+(AG+ST)x2">
-        <div class="data-field">
-          {{system.skills.unarmed.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.unarmed.skillPoints" value="{{system.skills.unarmed.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.unarmed.diffPositive"
-            value="{{system.skills.unarmed.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.unarmed.diffNegative"
-            value="{{system.skills.unarmed.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="unarmed" data-label="Unarmed">
-          {{system.skills.unarmed.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.unarmed.isTagged"
+        {{checked system.skills.unarmed.isTagged}}
+        {{disabled (ifThen system.skills.unarmed.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-unarmed.png" alt="Unarmed" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Unarmed</p>
+    </td>
+    <td title="30+(AG+ST)x2">
+      <div class="data-field">
+        {{system.skills.unarmed.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.unarmed.skillPoints" value="{{system.skills.unarmed.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.unarmed.diffPositive" value="{{system.skills.unarmed.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.unarmed.diffNegative" value="{{system.skills.unarmed.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="unarmed" data-label="Unarmed">
+        {{system.skills.unarmed.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.meleeWeapons.isTagged"
+        {{checked system.skills.meleeWeapons.isTagged}}
+        {{disabled (ifThen system.skills.meleeWeapons.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-meleeWeapons.png" alt="Melee weapons" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Melee Weapons</p>
+    </td>
+    <td title="20+(AG+ST)x2">
+      <div class="data-field">
+        {{system.skills.meleeWeapons.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
         <input
-          type="checkbox"
-          name="system.skills.meleeWeapons.isTagged"
-          {{checked system.skills.meleeWeapons.isTagged}}
-          {{disabled (ifThen system.skills.meleeWeapons.isTagged false system.isTaggingDisabled)}}
+          type="number"
+          name="system.skills.meleeWeapons.skillPoints"
+          value="{{system.skills.meleeWeapons.skillPoints}}"
         />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-meleeWeapons.png" alt="Melee weapons" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Melee Weapons</p>
-      </td>
-      <td title="20+(AG+ST)x2">
-        <div class="data-field">
-          {{system.skills.meleeWeapons.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.meleeWeapons.skillPoints"
-            value="{{system.skills.meleeWeapons.skillPoints}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.meleeWeapons.diffPositive"
-            value="{{system.skills.meleeWeapons.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.meleeWeapons.diffNegative"
-            value="{{system.skills.meleeWeapons.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="meleeWeapons" data-label="Melee Weapons">
-          {{system.skills.meleeWeapons.total}}
-        </div>
-      </td>
-    </tr>
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.meleeWeapons.diffPositive"
+          value="{{system.skills.meleeWeapons.diffPositive}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.meleeWeapons.diffNegative"
+          value="{{system.skills.meleeWeapons.diffNegative}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="meleeWeapons" data-label="Melee Weapons">
+        {{system.skills.meleeWeapons.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.throwing.isTagged"
+        {{checked system.skills.throwing.isTagged}}
+        {{disabled (ifThen system.skills.throwing.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-throwing.png" alt="Throwing" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Throwing</p>
+    </td>
+    <td title="AGx4">
+      <div class="data-field">
+        {{system.skills.throwing.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.throwing.skillPoints" value="{{system.skills.throwing.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
         <input
-          type="checkbox"
-          name="system.skills.throwing.isTagged"
-          {{checked system.skills.throwing.isTagged}}
-          {{disabled (ifThen system.skills.throwing.isTagged false system.isTaggingDisabled)}}
+          type="number"
+          name="system.skills.throwing.diffPositive"
+          value="{{system.skills.throwing.diffPositive}}"
         />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-throwing.png" alt="Throwing" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Throwing</p>
-      </td>
-      <td title="AGx4">
-        <div class="data-field">
-          {{system.skills.throwing.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.throwing.skillPoints"
-            value="{{system.skills.throwing.skillPoints}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.throwing.diffPositive"
-            value="{{system.skills.throwing.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.throwing.diffNegative"
-            value="{{system.skills.throwing.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="throwing" data-label="Throwing">
-          {{system.skills.throwing.total}}
-        </div>
-      </td>
-    </tr>
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.throwing.diffNegative"
+          value="{{system.skills.throwing.diffNegative}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="throwing" data-label="Throwing">
+        {{system.skills.throwing.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.firstAid.isTagged"
-          {{checked system.skills.firstAid.isTagged}}
-          {{disabled (ifThen system.skills.firstAid.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-firstAid.png" alt="First Aid" />
-        </div>
-      </td>
-      <td class="cell-with-radio">
-        <p class="skill-name">First Aid</p>
-        <div>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.firstAid.isTagged"
+        {{checked system.skills.firstAid.isTagged}}
+        {{disabled (ifThen system.skills.firstAid.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-firstAid.png" alt="First Aid" />
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <span class="skill-name flex-grow">First Aid</span>
+        <div class="flex">
           {{#each (array 0 1 2 3) as |value|}}
-            <span class="cell-with-radio__radio-container">
+            <div class="radio-field">
               <input
                 title="Set remaining First Aid skill uses to {{value}}."
                 type="radio"
@@ -366,69 +343,67 @@
                 name="system.skills.firstAid.usesRemaining"
                 {{checked (equals ../system.skills.firstAid.usesRemaining value)}}
               />
-              <span class="undertext-radio">{{value}}</span>
-            </span>
+              <span class="undertext">{{value}}</span>
+            </div>
           {{/each}}
         </div>
-      </td>
-      <td title="(PE+IN)x2">
-        <div class="data-field">
-          {{system.skills.firstAid.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.firstAid.skillPoints"
-            value="{{system.skills.firstAid.skillPoints}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.firstAid.diffPositive"
-            value="{{system.skills.firstAid.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.firstAid.diffNegative"
-            value="{{system.skills.firstAid.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="firstAid" data-label="First Aid">
-          {{system.skills.firstAid.total}}
-        </div>
-      </td>
-    </tr>
-
-    <tr>
-      <td>
+      </div>
+    </td>
+    <td title="(PE+IN)x2">
+      <div class="data-field">
+        {{system.skills.firstAid.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.firstAid.skillPoints" value="{{system.skills.firstAid.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
         <input
-          type="checkbox"
-          name="system.skills.doctor.isTagged"
-          {{checked system.skills.doctor.isTagged}}
-          {{disabled (ifThen system.skills.doctor.isTagged false system.isTaggingDisabled)}}
+          type="number"
+          name="system.skills.firstAid.diffPositive"
+          value="{{system.skills.firstAid.diffPositive}}"
         />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-doctor.png" alt="Doctor" />
-        </div>
-      </td>
-      <td class="cell-with-radio">
-        <p class="skill-name">Doctor</p>
-        <div>
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.firstAid.diffNegative"
+          value="{{system.skills.firstAid.diffNegative}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="firstAid" data-label="First Aid">
+        {{system.skills.firstAid.total}}
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.doctor.isTagged"
+        {{checked system.skills.doctor.isTagged}}
+        {{disabled (ifThen system.skills.doctor.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-doctor.png" alt="Doctor" />
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <span class="skill-name flex-grow">Doctor</span>
+        <div class="flex">
           {{#each (array 0 1 2) as |value|}}
-            <span class="cell-with-radio__radio-container">
+            <div class="radio-field">
               <input
                 title="Set remaining Doctor skill uses to {{value}}."
                 type="radio"
@@ -436,564 +411,548 @@
                 name="system.skills.doctor.usesRemaining"
                 {{checked (equals ../system.skills.doctor.usesRemaining value)}}
               />
-              <span class="undertext-radio">{{value}}</span>
-            </span>
+              <span class="undertext">{{value}}</span>
+            </div>
           {{/each}}
         </div>
-      </td>
-      <td title="5+PE+IN">
-        <div class="data-field">
-          {{system.skills.doctor.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.doctor.skillPoints" value="{{system.skills.doctor.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.doctor.diffPositive" value="{{system.skills.doctor.diffPositive}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.doctor.diffNegative" value="{{system.skills.doctor.diffNegative}}" />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="doctor" data-label="Doctor">
-          {{system.skills.doctor.total}}
-        </div>
-      </td>
-    </tr>
+      </div>
+    </td>
+    <td title="5+PE+IN">
+      <div class="data-field">
+        {{system.skills.doctor.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.doctor.skillPoints" value="{{system.skills.doctor.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.doctor.diffPositive" value="{{system.skills.doctor.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.doctor.diffNegative" value="{{system.skills.doctor.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="doctor" data-label="Doctor">
+        {{system.skills.doctor.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.sneak.isTagged"
-          {{checked system.skills.sneak.isTagged}}
-          {{disabled (ifThen system.skills.sneak.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-sneak.png" alt="Sneak" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Sneak</p>
-      </td>
-      <td title="5+AGx3">
-        <div class="data-field">
-          {{system.skills.sneak.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.sneak.skillPoints" value="{{system.skills.sneak.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.sneak.diffPositive" value="{{system.skills.sneak.diffPositive}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.sneak.diffNegative" value="{{system.skills.sneak.diffNegative}}" />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="sneak" data-label="Sneak">
-          {{system.skills.sneak.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.sneak.isTagged"
+        {{checked system.skills.sneak.isTagged}}
+        {{disabled (ifThen system.skills.sneak.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-sneak.png" alt="Sneak" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Sneak</p>
+    </td>
+    <td title="5+AGx3">
+      <div class="data-field">
+        {{system.skills.sneak.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.sneak.skillPoints" value="{{system.skills.sneak.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.sneak.diffPositive" value="{{system.skills.sneak.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.sneak.diffNegative" value="{{system.skills.sneak.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="sneak" data-label="Sneak">
+        {{system.skills.sneak.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.lockpick.isTagged"
+        {{checked system.skills.lockpick.isTagged}}
+        {{disabled (ifThen system.skills.lockpick.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-lockpick.png" alt="Lockpick" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Lockpick</p>
+    </td>
+    <td title="10+PE+AG">
+      <div class="data-field">
+        {{system.skills.lockpick.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.lockpick.skillPoints" value="{{system.skills.lockpick.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
         <input
-          type="checkbox"
-          name="system.skills.lockpick.isTagged"
-          {{checked system.skills.lockpick.isTagged}}
-          {{disabled (ifThen system.skills.lockpick.isTagged false system.isTaggingDisabled)}}
+          type="number"
+          name="system.skills.lockpick.diffPositive"
+          value="{{system.skills.lockpick.diffPositive}}"
         />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-lockpick.png" alt="Lockpick" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Lockpick</p>
-      </td>
-      <td title="10+PE+AG">
-        <div class="data-field">
-          {{system.skills.lockpick.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.lockpick.skillPoints"
-            value="{{system.skills.lockpick.skillPoints}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.lockpick.diffPositive"
-            value="{{system.skills.lockpick.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.lockpick.diffNegative"
-            value="{{system.skills.lockpick.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="lockpick" data-label="Lockpick">
-          {{system.skills.lockpick.total}}
-        </div>
-      </td>
-    </tr>
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.lockpick.diffNegative"
+          value="{{system.skills.lockpick.diffNegative}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="lockpick" data-label="Lockpick">
+        {{system.skills.lockpick.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.steal.isTagged"
-          {{checked system.skills.steal.isTagged}}
-          {{disabled (ifThen system.skills.steal.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-steal.png" alt="Steal" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Steal</p>
-      </td>
-      <td title="AGx3">
-        <div class="data-field">
-          {{system.skills.steal.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.steal.skillPoints" value="{{system.skills.steal.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.steal.diffPositive" value="{{system.skills.steal.diffPositive}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.steal.diffNegative" value="{{system.skills.steal.diffNegative}}" />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="steal" data-label="Steal">
-          {{system.skills.steal.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.steal.isTagged"
+        {{checked system.skills.steal.isTagged}}
+        {{disabled (ifThen system.skills.steal.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-steal.png" alt="Steal" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Steal</p>
+    </td>
+    <td title="AGx3">
+      <div class="data-field">
+        {{system.skills.steal.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.steal.skillPoints" value="{{system.skills.steal.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.steal.diffPositive" value="{{system.skills.steal.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.steal.diffNegative" value="{{system.skills.steal.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="steal" data-label="Steal">
+        {{system.skills.steal.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.traps.isTagged"
-          {{checked system.skills.traps.isTagged}}
-          {{disabled (ifThen system.skills.traps.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-traps.png" alt="Traps" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Traps</p>
-      </td>
-      <td title="10+PE+AG">
-        <div class="data-field">
-          {{system.skills.traps.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.traps.skillPoints" value="{{system.skills.traps.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.traps.diffPositive" value="{{system.skills.traps.diffPositive}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.traps.diffNegative" value="{{system.skills.traps.diffNegative}}" />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="traps" data-label="Traps">
-          {{system.skills.traps.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.traps.isTagged"
+        {{checked system.skills.traps.isTagged}}
+        {{disabled (ifThen system.skills.traps.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-traps.png" alt="Traps" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Traps</p>
+    </td>
+    <td title="10+PE+AG">
+      <div class="data-field">
+        {{system.skills.traps.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.traps.skillPoints" value="{{system.skills.traps.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.traps.diffPositive" value="{{system.skills.traps.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.traps.diffNegative" value="{{system.skills.traps.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="traps" data-label="Traps">
+        {{system.skills.traps.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.science.isTagged"
-          {{checked system.skills.science.isTagged}}
-          {{disabled (ifThen system.skills.science.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-science.png" alt="Science" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Science</p>
-      </td>
-      <td title="INx4">
-        <div class="data-field">
-          {{system.skills.science.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.science.skillPoints" value="{{system.skills.science.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.science.diffPositive"
-            value="{{system.skills.science.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.science.diffNegative"
-            value="{{system.skills.science.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="science" data-label="Science">
-          {{system.skills.science.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.science.isTagged"
+        {{checked system.skills.science.isTagged}}
+        {{disabled (ifThen system.skills.science.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-science.png" alt="Science" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Science</p>
+    </td>
+    <td title="INx4">
+      <div class="data-field">
+        {{system.skills.science.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.science.skillPoints" value="{{system.skills.science.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.science.diffPositive" value="{{system.skills.science.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.science.diffNegative" value="{{system.skills.science.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="science" data-label="Science">
+        {{system.skills.science.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.repair.isTagged"
-          {{checked system.skills.repair.isTagged}}
-          {{disabled (ifThen system.skills.repair.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="Repair" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Repair</p>
-      </td>
-      <td title="INx3">
-        <div class="data-field">
-          {{system.skills.repair.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.repair.skillPoints" value="{{system.skills.repair.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.repair.diffPositive" value="{{system.skills.repair.diffPositive}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.repair.diffNegative" value="{{system.skills.repair.diffNegative}}" />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="repair" data-label="Repair">
-          {{system.skills.repair.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.repair.isTagged"
+        {{checked system.skills.repair.isTagged}}
+        {{disabled (ifThen system.skills.repair.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="Repair" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Repair</p>
+    </td>
+    <td title="INx3">
+      <div class="data-field">
+        {{system.skills.repair.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.repair.skillPoints" value="{{system.skills.repair.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.repair.diffPositive" value="{{system.skills.repair.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.repair.diffNegative" value="{{system.skills.repair.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="repair" data-label="Repair">
+        {{system.skills.repair.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.pilot.isTagged"
-          {{checked system.skills.pilot.isTagged}}
-          {{disabled (ifThen system.skills.pilot.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-pilot.png" alt="Pilot" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Pilot</p>
-      </td>
-      <td title="(AG+PE)x2">
-        <div class="data-field">
-          {{system.skills.pilot.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.pilot.skillPoints" value="{{system.skills.pilot.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.pilot.diffPositive" value="{{system.skills.pilot.diffPositive}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.pilot.diffNegative" value="{{system.skills.pilot.diffNegative}}" />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="pilot" data-label="Pilot">
-          {{system.skills.pilot.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.pilot.isTagged"
+        {{checked system.skills.pilot.isTagged}}
+        {{disabled (ifThen system.skills.pilot.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-pilot.png" alt="Pilot" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Pilot</p>
+    </td>
+    <td title="(AG+PE)x2">
+      <div class="data-field">
+        {{system.skills.pilot.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.pilot.skillPoints" value="{{system.skills.pilot.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.pilot.diffPositive" value="{{system.skills.pilot.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.pilot.diffNegative" value="{{system.skills.pilot.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="pilot" data-label="Pilot">
+        {{system.skills.pilot.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.speech.isTagged"
-          {{checked system.skills.speech.isTagged}}
-          {{disabled (ifThen system.skills.speech.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-speech.png" alt="Speech" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Speech</p>
-      </td>
-      <td title="CHx5">
-        <div class="data-field">
-          {{system.skills.speech.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.speech.skillPoints" value="{{system.skills.speech.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.speech.diffPositive" value="{{system.skills.speech.diffPositive}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.speech.diffNegative" value="{{system.skills.speech.diffNegative}}" />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="speech" data-label="Speech">
-          {{system.skills.speech.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.speech.isTagged"
+        {{checked system.skills.speech.isTagged}}
+        {{disabled (ifThen system.skills.speech.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-speech.png" alt="Speech" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Speech</p>
+    </td>
+    <td title="CHx5">
+      <div class="data-field">
+        {{system.skills.speech.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.speech.skillPoints" value="{{system.skills.speech.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.speech.diffPositive" value="{{system.skills.speech.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.speech.diffNegative" value="{{system.skills.speech.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="speech" data-label="Speech">
+        {{system.skills.speech.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
-        <input
-          type="checkbox"
-          name="system.skills.barter.isTagged"
-          {{checked system.skills.barter.isTagged}}
-          {{disabled (ifThen system.skills.barter.isTagged false system.isTaggingDisabled)}}
-        />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-barter.png" alt="Barter" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Barter</p>
-      </td>
-      <td title="CHx4">
-        <div class="data-field">
-          {{system.skills.barter.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.barter.skillPoints" value="{{system.skills.barter.skillPoints}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.barter.diffPositive" value="{{system.skills.barter.diffPositive}}" />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input type="number" name="system.skills.barter.diffNegative" value="{{system.skills.barter.diffNegative}}" />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="barter" data-label="Barter">
-          {{system.skills.barter.total}}
-        </div>
-      </td>
-    </tr>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.barter.isTagged"
+        {{checked system.skills.barter.isTagged}}
+        {{disabled (ifThen system.skills.barter.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-barter.png" alt="Barter" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Barter</p>
+    </td>
+    <td title="CHx4">
+      <div class="data-field">
+        {{system.skills.barter.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.barter.skillPoints" value="{{system.skills.barter.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.barter.diffPositive" value="{{system.skills.barter.diffPositive}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.barter.diffNegative" value="{{system.skills.barter.diffNegative}}" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="barter" data-label="Barter">
+        {{system.skills.barter.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.gambling.isTagged"
+        {{checked system.skills.gambling.isTagged}}
+        {{disabled (ifThen system.skills.gambling.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-gambling.png" alt="Gambling" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Gambling</p>
+    </td>
+    <td title="LKx5">
+      <div class="data-field">
+        {{system.skills.gambling.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input type="number" name="system.skills.gambling.skillPoints" value="{{system.skills.gambling.skillPoints}}" />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
         <input
-          type="checkbox"
-          name="system.skills.gambling.isTagged"
-          {{checked system.skills.gambling.isTagged}}
-          {{disabled (ifThen system.skills.gambling.isTagged false system.isTaggingDisabled)}}
+          type="number"
+          name="system.skills.gambling.diffPositive"
+          value="{{system.skills.gambling.diffPositive}}"
         />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-gambling.png" alt="Gambling" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Gambling</p>
-      </td>
-      <td title="LKx5">
-        <div class="data-field">
-          {{system.skills.gambling.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.gambling.skillPoints"
-            value="{{system.skills.gambling.skillPoints}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.gambling.diffPositive"
-            value="{{system.skills.gambling.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.gambling.diffNegative"
-            value="{{system.skills.gambling.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="gambling" data-label="Gambling">
-          {{system.skills.gambling.total}}
-        </div>
-      </td>
-    </tr>
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.gambling.diffNegative"
+          value="{{system.skills.gambling.diffNegative}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="gambling" data-label="Gambling">
+        {{system.skills.gambling.total}}
+      </div>
+    </td>
+  </tr>
 
-    <tr>
-      <td>
+  <tr>
+    <td>
+      <input
+        type="checkbox"
+        name="system.skills.outdoorsman.isTagged"
+        {{checked system.skills.outdoorsman.isTagged}}
+        {{disabled (ifThen system.skills.outdoorsman.isTagged false system.isTaggingDisabled)}}
+      />
+    </td>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-outdoorsman.png" alt="Outdoorsman" />
+      </div>
+    </td>
+    <td>
+      <p class="skill-name">Outdoorsman</p>
+    </td>
+    <td title="(EN+IN)x2">
+      <div class="data-field">
+        {{system.skills.outdoorsman.base}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
         <input
-          type="checkbox"
-          name="system.skills.outdoorsman.isTagged"
-          {{checked system.skills.outdoorsman.isTagged}}
-          {{disabled (ifThen system.skills.outdoorsman.isTagged false system.isTaggingDisabled)}}
+          type="number"
+          name="system.skills.outdoorsman.skillPoints"
+          value="{{system.skills.outdoorsman.skillPoints}}"
         />
-      </td>
-      <td>
-        <div class="vault-boy">
-          <img src="systems/falloutpnp/static/icons/icon-skill-outdoorsman.png" alt="Outdoorsman" />
-        </div>
-      </td>
-      <td>
-        <p class="skill-name">Outdoorsman</p>
-      </td>
-      <td title="(EN+IN)x2">
-        <div class="data-field">
-          {{system.skills.outdoorsman.base}}
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.outdoorsman.skillPoints"
-            value="{{system.skills.outdoorsman.skillPoints}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.outdoorsman.diffPositive"
-            value="{{system.skills.outdoorsman.diffPositive}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="number-input-field">
-          <input
-            type="number"
-            name="system.skills.outdoorsman.diffNegative"
-            value="{{system.skills.outdoorsman.diffNegative}}"
-          />
-        </div>
-      </td>
-      <td>
-        <div class="data-field rollable-d100" data-roll="outdoorsman" data-label="Outdoorsman">
-          {{system.skills.outdoorsman.total}}
-        </div>
-      </td>
-    </tr>
-  </table>
-</div>
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.outdoorsman.diffPositive"
+          value="{{system.skills.outdoorsman.diffPositive}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          name="system.skills.outdoorsman.diffNegative"
+          value="{{system.skills.outdoorsman.diffNegative}}"
+        />
+      </div>
+    </td>
+    <td>
+      <div class="data-field rollable-d100" data-roll="outdoorsman" data-label="Outdoorsman">
+        {{system.skills.outdoorsman.total}}
+      </div>
+    </td>
+  </tr>
+</table>

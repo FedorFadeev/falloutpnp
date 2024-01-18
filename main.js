@@ -13,6 +13,7 @@ async function preloadHandlebarsTemplates() {
     'systems/falloutpnp/templates/partials/actor/special.hbs',
     'systems/falloutpnp/templates/partials/actor/secondary.hbs',
     'systems/falloutpnp/templates/partials/actor/status.hbs',
+    'systems/falloutpnp/templates/partials/actor/inventory.hbs',
   ]
 
   return loadTemplates(templatePaths)

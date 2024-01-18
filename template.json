@@ -8,6 +8,7 @@
     ],
     "templates": {
       "common": {
+        "caps": 0,
         "race": null,
         "general": {
           "level": 1,

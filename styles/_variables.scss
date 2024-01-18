@@ -1,4 +1,4 @@
-// Fonts
+// Typography
 @import url('fonts/Overseer Bold.otf');
 @font-face {
   font-family: 'Overseer';
@@ -23,6 +23,7 @@ $font-weight-bold: 700;
 // Colors
 $primary-color: #ff6400;
 $input-overlay: rgba(0, 0, 0, 0.05);
+$border-light-color: #a5a5a5;
 
 // Borders
 $border-default: 1px solid #525252;

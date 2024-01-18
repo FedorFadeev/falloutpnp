@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "sass --watch --no-source-map ./styles/index.scss ./gigastyles.css"
+    "dev": "sass --watch --no-source-map ./styles/index.scss ./styles.css"
   },
   "devDependencies": {
     "sass": "^1.69.7"

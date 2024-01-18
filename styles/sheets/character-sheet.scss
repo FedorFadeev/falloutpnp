@@ -12,11 +12,6 @@
     & .special {
       flex-grow: 3;
       border-right: $border-default;
-
-      .special-name {
-        font-family: $font-family-headings;
-        font-size: 22px;
-      }
     }
 
     & .secondary {
@@ -28,14 +23,18 @@
     .skill-name {
       font-family: $font-family-headings;
       font-size: 19px;
+      white-space: nowrap;
     }
   }
 
   & .bio {
     display: flex;
+    flex-direction: column;
 
     & .token-image {
       max-width: 8rem;
+      margin-left: 6px;
+      margin-bottom: 2px;
     }
   }
 
