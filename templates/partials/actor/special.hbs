@@ -1,5 +1,4 @@
 {{! TODO: Add .vault-boy icons to the S.P.E.C.I.A.L.s }}
-
 <h2>S.P.E.C.I.A.L.</h2>
 {{!-- {{#if system.general.remainingSpecial}}
   <p class="special-unassigned">Unassigned: {{system.general.remainingSpecial}}</p>
@@ -10,8 +9,7 @@
     <th><p>Min</p></th>
     <th><p>Base</p></th>
     <th><p>Max</p></th>
-    <th><p>+</p></th>
-    <th><p>-</p></th>
+    <th><p>Modifier</p></th>
     <th><p>&nbsp;</p></th>
     <th><p>Total</p></th>
   </tr>
@@ -19,7 +17,7 @@
   <tr>
     <td>
       <div class="vault-boy">
-        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="TODO: Add and replace with a SPECIAL icon" />
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
       </div>
     </td>
     <td>
@@ -28,15 +26,19 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.special.str.base"
-          value="{{system.special.str.base}}"
-          min="{{system.race.special.str.min}}"
-          max="{{system.race.special.str.max}}"
-          data-dtype="Number"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="str"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.special.str.base"
+            value="{{system.special.str.base}}"
+            min="{{system.race.special.str.min}}"
+            max="{{system.race.special.str.max}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="str"></div>
       </div>
     </td>
     <td>
@@ -48,19 +50,9 @@
       <div class="input-field">
         <input
           type="number"
-          name="system.special.str.diffPositive"
-          value="{{system.special.str.diffPositive}}"
           data-dtype="Number"
-        />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.special.str.diffNegative"
-          value="{{system.special.str.diffNegative}}"
-          data-dtype="Number"
+          name="system.special.str.modifier"
+          value="{{system.special.str.modifier}}"
         />
       </div>
     </td>
@@ -73,11 +65,10 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <div class="vault-boy">
-        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="TODO: Add and replace with a SPECIAL icon" />
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
       </div>
     </td>
     <td>
@@ -86,15 +77,19 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.special.per.base"
-          value="{{system.special.per.base}}"
-          min="{{system.race.special.per.min}}"
-          max="{{system.race.special.per.max}}"
-          data-dtype="Number"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="per"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.special.per.base"
+            value="{{system.special.per.base}}"
+            min="{{system.race.special.per.min}}"
+            max="{{system.race.special.per.max}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="per"></div>
       </div>
     </td>
     <td>
@@ -104,12 +99,12 @@
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.special.per.diffPositive" value="{{system.special.per.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.special.per.diffNegative" value="{{system.special.per.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.per.modifier"
+          value="{{system.special.per.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -121,11 +116,10 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <div class="vault-boy">
-        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="TODO: Add and replace with a SPECIAL icon" />
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
       </div>
     </td>
     <td>
@@ -134,15 +128,19 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.special.end.base"
-          value="{{system.special.end.base}}"
-          min="{{system.race.special.end.min}}"
-          max="{{system.race.special.end.max}}"
-          data-dtype="Number"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="end"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.special.end.base"
+            value="{{system.special.end.base}}"
+            min="{{system.race.special.end.min}}"
+            max="{{system.race.special.end.max}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="end"></div>
       </div>
     </td>
     <td>
@@ -152,12 +150,12 @@
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.special.end.diffPositive" value="{{system.special.end.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.special.end.diffNegative" value="{{system.special.end.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.end.modifier"
+          value="{{system.special.end.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -169,11 +167,10 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <div class="vault-boy">
-        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="TODO: Add and replace with a SPECIAL icon" />
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
       </div>
     </td>
     <td>
@@ -182,15 +179,19 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.special.cha.base"
-          value="{{system.special.cha.base}}"
-          min="{{system.race.special.cha.min}}"
-          max="{{system.race.special.cha.max}}"
-          data-dtype="Number"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="cha"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.special.cha.base"
+            value="{{system.special.cha.base}}"
+            min="{{system.race.special.cha.min}}"
+            max="{{system.race.special.cha.max}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="cha"></div>
       </div>
     </td>
     <td>
@@ -200,12 +201,12 @@
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.special.cha.diffPositive" value="{{system.special.cha.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.special.cha.diffNegative" value="{{system.special.cha.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.cha.modifier"
+          value="{{system.special.cha.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -217,11 +218,10 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <div class="vault-boy">
-        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="TODO: Add and replace with a SPECIAL icon" />
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
       </div>
     </td>
     <td>
@@ -230,15 +230,19 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.special.int.base"
-          value="{{system.special.int.base}}"
-          min="{{system.race.special.int.min}}"
-          max="{{system.race.special.int.max}}"
-          data-dtype="Number"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="int"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.special.int.base"
+            value="{{system.special.int.base}}"
+            min="{{system.race.special.int.min}}"
+            max="{{system.race.special.int.max}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="int"></div>
       </div>
     </td>
     <td>
@@ -248,12 +252,12 @@
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.special.int.diffPositive" value="{{system.special.int.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.special.int.diffNegative" value="{{system.special.int.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.int.modifier"
+          value="{{system.special.int.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -265,11 +269,10 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <div class="vault-boy">
-        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="TODO: Add and replace with a SPECIAL icon" />
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
       </div>
     </td>
     <td>
@@ -278,15 +281,19 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.special.agi.base"
-          value="{{system.special.agi.base}}"
-          min="{{system.race.special.agi.min}}"
-          max="{{system.race.special.agi.max}}"
-          data-dtype="Number"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="agi"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.special.agi.base"
+            value="{{system.special.agi.base}}"
+            min="{{system.race.special.agi.min}}"
+            max="{{system.race.special.agi.max}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="agi"></div>
       </div>
     </td>
     <td>
@@ -296,12 +303,12 @@
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.special.agi.diffPositive" value="{{system.special.agi.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.special.agi.diffNegative" value="{{system.special.agi.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.agi.modifier"
+          value="{{system.special.agi.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -313,11 +320,10 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <div class="vault-boy">
-        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" alt="TODO: Add and replace with a SPECIAL icon" />
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
       </div>
     </td>
     <td>
@@ -326,15 +332,19 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.special.luc.base"
-          value="{{system.special.luc.base}}"
-          min="{{system.race.special.luc.min}}"
-          max="{{system.race.special.luc.max}}"
-          data-dtype="Number"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="luc"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.special.luc.base"
+            value="{{system.special.luc.base}}"
+            min="{{system.race.special.luc.min}}"
+            max="{{system.race.special.luc.max}}"
+            data-dtype="Number"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="luc"></div>
       </div>
     </td>
     <td>
@@ -344,12 +354,12 @@
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.special.luc.diffPositive" value="{{system.special.luc.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.special.luc.diffNegative" value="{{system.special.luc.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.luc.modifier"
+          value="{{system.special.luc.modifier}}"
+        />
       </div>
     </td>
     <td>

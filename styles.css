@@ -29,6 +29,10 @@
   flex-grow: 1;
 }
 
+.relative {
+  position: relative;
+}
+
 @font-face {
   font-family: "Overseer";
   src: url("fonts/Overseer Bold.otf") format("opentype");
@@ -166,39 +170,67 @@
   width: 100%;
   min-width: 32px;
 }
+.input-field > input {
+  width: 100%;
+}
 
 .radio-field {
   position: relative;
 }
 
-.rollable, .rollable-d10, .rollable-d100 {
-  min-width: 56px !important;
+.clickable, .rollable, .rollable-d10, .rollable-d100, .clickable-minus, .clickable-plus {
   border: none;
   position: relative;
   transition: all 0.1s ease-in-out;
   transition-property: background-color box-shadow;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 45%, #ff6400 100%) !important;
   cursor: pointer;
+  z-index: 2;
 }
-.rollable:hover, .rollable-d10:hover, .rollable-d100:hover {
+.clickable:hover, .rollable:hover, .rollable-d10:hover, .rollable-d100:hover, .clickable-minus:hover, .clickable-plus:hover {
   transform: scale(1.04);
   box-shadow: 0 0 4px 1px #ff6400;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 45%, #ff6400 95%, #ff6400 100%);
 }
-.rollable:active, .rollable-d10:active, .rollable-d100:active {
+.clickable:active, .rollable:active, .rollable-d10:active, .rollable-d100:active, .clickable-minus:active, .clickable-plus:active {
   transform: scale(0.96);
   box-shadow: 0 0 4px 2px #ff6400;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 40%, #ff6400 90%, #ff6400 100%);
 }
-.rollable::after, .rollable-d10::after, .rollable-d100::after {
+.clickable::after, .rollable::after, .rollable-d10::after, .rollable-d100::after, .clickable-minus::after, .clickable-plus::after {
   content: "";
   position: absolute;
-  filter: invert(85%);
   background-size: cover;
   width: 20px;
   height: 20px;
   right: 0.2rem;
   top: 0.2rem;
+}
+
+.clickable-plus {
+  min-width: var(--form-field-height);
+  margin-left: 0.2rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 20%, #ff6400 95%);
+}
+.clickable-plus::after {
+  background: url("static/plus.svg") no-repeat center center;
+}
+
+.clickable-minus {
+  min-width: var(--form-field-height);
+  margin-right: 0.2rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 20%, #ff6400 95%);
+}
+.clickable-minus::after {
+  background: url("static/minus.svg") no-repeat center center;
+}
+
+.rollable, .rollable-d10, .rollable-d100 {
+  min-width: 56px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 50%, #ff6400 90%);
+}
+.rollable:hover, .rollable-d10:hover, .rollable-d100:hover {
+  transform: scale(1.04);
+}
+.rollable:active, .rollable-d10:active, .rollable-d100:active {
+  transform: scale(0.96);
 }
 
 .rollable-d100::after {

@@ -1,13 +1,14 @@
 <h2>Skills</h2>
-{{#if system.general.remainingSkillPoints}}
+{{!-- {{#if system.general.remainingSkillPoints}}
   <p class="skills-unassigned">Unassigned: {{system.general.remainingSkillPoints}}</p>
-{{/if}}
+{{/if}} --}}
 <table>
   <tr>
     <th><p>Tag</p></th>
     <th colspan="2"><p>Skill</p></th>
     <th><p>Base</p></th>
-    <th colspan="3"><p>Skill Points</p></th>
+    <th><p>Skill Points</p></th>
+    <th><p>Modifier</p></th>
     <th><p>Total</p></th>
   </tr>
   <tr>
@@ -33,29 +34,25 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.smallGuns.skillPoints"
-          value="{{system.skills.smallGuns.skillPoints}}"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="smallGuns"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.skills.smallGuns.skillPoints"
+            value="{{system.skills.smallGuns.skillPoints}}"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="smallGuns"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
         <input
           type="number"
-          name="system.skills.smallGuns.diffPositive"
-          value="{{system.skills.smallGuns.diffPositive}}"
-        />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.smallGuns.diffNegative"
-          value="{{system.skills.smallGuns.diffNegative}}"
+          data-dtype="Number"
+          name="system.skills.smallGuns.modifier"
+          value="{{system.skills.smallGuns.modifier}}"
         />
       </div>
     </td>
@@ -65,7 +62,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -87,18 +83,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.bigGuns.skillPoints" value="{{system.skills.bigGuns.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="bigGuns"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.bigGuns.skillPoints" value="{{system.skills.bigGuns.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="bigGuns"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.bigGuns.diffPositive" value="{{system.skills.bigGuns.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.bigGuns.diffNegative" value="{{system.skills.bigGuns.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.bigGuns.modifier"
+          value="{{system.skills.bigGuns.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -107,7 +107,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -131,29 +130,25 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.energyWeapons.skillPoints"
-          value="{{system.skills.energyWeapons.skillPoints}}"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="energyWeapons"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.skills.energyWeapons.skillPoints"
+            value="{{system.skills.energyWeapons.skillPoints}}"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="energyWeapons"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
         <input
           type="number"
-          name="system.skills.energyWeapons.diffPositive"
-          value="{{system.skills.energyWeapons.diffPositive}}"
-        />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.energyWeapons.diffNegative"
-          value="{{system.skills.energyWeapons.diffNegative}}"
+          data-dtype="Number"
+          name="system.skills.energyWeapons.modifier"
+          value="{{system.skills.energyWeapons.modifier}}"
         />
       </div>
     </td>
@@ -163,7 +158,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -187,18 +181,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.unarmed.skillPoints" value="{{system.skills.unarmed.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="unarmed"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.unarmed.skillPoints" value="{{system.skills.unarmed.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="unarmed"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.unarmed.diffPositive" value="{{system.skills.unarmed.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.unarmed.diffNegative" value="{{system.skills.unarmed.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.unarmed.modifier"
+          value="{{system.skills.unarmed.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -207,7 +205,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -231,29 +228,25 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.meleeWeapons.skillPoints"
-          value="{{system.skills.meleeWeapons.skillPoints}}"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="meleeWeapons"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.skills.meleeWeapons.skillPoints"
+            value="{{system.skills.meleeWeapons.skillPoints}}"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="meleeWeapons"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
         <input
           type="number"
-          name="system.skills.meleeWeapons.diffPositive"
-          value="{{system.skills.meleeWeapons.diffPositive}}"
-        />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.meleeWeapons.diffNegative"
-          value="{{system.skills.meleeWeapons.diffNegative}}"
+          data-dtype="Number"
+          name="system.skills.meleeWeapons.modifier"
+          value="{{system.skills.meleeWeapons.modifier}}"
         />
       </div>
     </td>
@@ -263,7 +256,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -287,25 +279,25 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.throwing.skillPoints" value="{{system.skills.throwing.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="throwing"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.skills.throwing.skillPoints"
+            value="{{system.skills.throwing.skillPoints}}"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="throwing"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
         <input
           type="number"
-          name="system.skills.throwing.diffPositive"
-          value="{{system.skills.throwing.diffPositive}}"
-        />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.throwing.diffNegative"
-          value="{{system.skills.throwing.diffNegative}}"
+          data-dtype="Number"
+          name="system.skills.throwing.modifier"
+          value="{{system.skills.throwing.modifier}}"
         />
       </div>
     </td>
@@ -315,7 +307,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -355,25 +346,25 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.firstAid.skillPoints" value="{{system.skills.firstAid.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="firstAid"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.skills.firstAid.skillPoints"
+            value="{{system.skills.firstAid.skillPoints}}"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="firstAid"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
         <input
           type="number"
-          name="system.skills.firstAid.diffPositive"
-          value="{{system.skills.firstAid.diffPositive}}"
-        />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.firstAid.diffNegative"
-          value="{{system.skills.firstAid.diffNegative}}"
+          data-dtype="Number"
+          name="system.skills.firstAid.modifier"
+          value="{{system.skills.firstAid.modifier}}"
         />
       </div>
     </td>
@@ -383,7 +374,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -423,18 +413,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.doctor.skillPoints" value="{{system.skills.doctor.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="doctor"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.doctor.skillPoints" value="{{system.skills.doctor.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="doctor"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.doctor.diffPositive" value="{{system.skills.doctor.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.doctor.diffNegative" value="{{system.skills.doctor.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.doctor.modifier"
+          value="{{system.skills.doctor.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -443,7 +437,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -467,18 +460,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.sneak.skillPoints" value="{{system.skills.sneak.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="sneak"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.sneak.skillPoints" value="{{system.skills.sneak.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="sneak"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.sneak.diffPositive" value="{{system.skills.sneak.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.sneak.diffNegative" value="{{system.skills.sneak.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.sneak.modifier"
+          value="{{system.skills.sneak.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -487,7 +484,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -511,25 +507,25 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.lockpick.skillPoints" value="{{system.skills.lockpick.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="lockpick"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.skills.lockpick.skillPoints"
+            value="{{system.skills.lockpick.skillPoints}}"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="lockpick"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
         <input
           type="number"
-          name="system.skills.lockpick.diffPositive"
-          value="{{system.skills.lockpick.diffPositive}}"
-        />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.lockpick.diffNegative"
-          value="{{system.skills.lockpick.diffNegative}}"
+          data-dtype="Number"
+          name="system.skills.lockpick.modifier"
+          value="{{system.skills.lockpick.modifier}}"
         />
       </div>
     </td>
@@ -539,7 +535,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -563,18 +558,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.steal.skillPoints" value="{{system.skills.steal.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="steal"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.steal.skillPoints" value="{{system.skills.steal.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="steal"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.steal.diffPositive" value="{{system.skills.steal.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.steal.diffNegative" value="{{system.skills.steal.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.steal.modifier"
+          value="{{system.skills.steal.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -583,7 +582,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -607,18 +605,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.traps.skillPoints" value="{{system.skills.traps.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="traps"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.traps.skillPoints" value="{{system.skills.traps.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="traps"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.traps.diffPositive" value="{{system.skills.traps.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.traps.diffNegative" value="{{system.skills.traps.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.traps.modifier"
+          value="{{system.skills.traps.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -627,7 +629,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -651,18 +652,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.science.skillPoints" value="{{system.skills.science.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="science"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.science.skillPoints" value="{{system.skills.science.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="science"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.science.diffPositive" value="{{system.skills.science.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.science.diffNegative" value="{{system.skills.science.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.science.modifier"
+          value="{{system.skills.science.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -671,7 +676,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -695,18 +699,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.repair.skillPoints" value="{{system.skills.repair.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="repair"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.repair.skillPoints" value="{{system.skills.repair.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="repair"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.repair.diffPositive" value="{{system.skills.repair.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.repair.diffNegative" value="{{system.skills.repair.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.repair.modifier"
+          value="{{system.skills.repair.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -715,7 +723,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -739,18 +746,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.pilot.skillPoints" value="{{system.skills.pilot.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="pilot"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.pilot.skillPoints" value="{{system.skills.pilot.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="pilot"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.pilot.diffPositive" value="{{system.skills.pilot.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.pilot.diffNegative" value="{{system.skills.pilot.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.pilot.modifier"
+          value="{{system.skills.pilot.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -759,7 +770,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -783,18 +793,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.speech.skillPoints" value="{{system.skills.speech.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="speech"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.speech.skillPoints" value="{{system.skills.speech.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="speech"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.speech.diffPositive" value="{{system.skills.speech.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.speech.diffNegative" value="{{system.skills.speech.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.speech.modifier"
+          value="{{system.skills.speech.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -803,7 +817,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -827,18 +840,22 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.barter.skillPoints" value="{{system.skills.barter.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="barter"></div>
+        <div class="input-field">
+          <input type="number" name="system.skills.barter.skillPoints" value="{{system.skills.barter.skillPoints}}" />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="barter"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
-        <input type="number" name="system.skills.barter.diffPositive" value="{{system.skills.barter.diffPositive}}" />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.barter.diffNegative" value="{{system.skills.barter.diffNegative}}" />
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.skills.barter.modifier"
+          value="{{system.skills.barter.modifier}}"
+        />
       </div>
     </td>
     <td>
@@ -847,7 +864,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -871,25 +887,25 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input type="number" name="system.skills.gambling.skillPoints" value="{{system.skills.gambling.skillPoints}}" />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="gambling"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.skills.gambling.skillPoints"
+            value="{{system.skills.gambling.skillPoints}}"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="gambling"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
         <input
           type="number"
-          name="system.skills.gambling.diffPositive"
-          value="{{system.skills.gambling.diffPositive}}"
-        />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.gambling.diffNegative"
-          value="{{system.skills.gambling.diffNegative}}"
+          data-dtype="Number"
+          name="system.skills.gambling.modifier"
+          value="{{system.skills.gambling.modifier}}"
         />
       </div>
     </td>
@@ -899,7 +915,6 @@
       </div>
     </td>
   </tr>
-
   <tr>
     <td>
       <input
@@ -923,29 +938,25 @@
       </div>
     </td>
     <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.outdoorsman.skillPoints"
-          value="{{system.skills.outdoorsman.skillPoints}}"
-        />
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-skill="outdoorsman"></div>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.skills.outdoorsman.skillPoints"
+            value="{{system.skills.outdoorsman.skillPoints}}"
+          />
+        </div>
+        <div class="data-field clickable-plus" data-increment-skill="outdoorsman"></div>
       </div>
     </td>
     <td>
       <div class="input-field">
         <input
           type="number"
-          name="system.skills.outdoorsman.diffPositive"
-          value="{{system.skills.outdoorsman.diffPositive}}"
-        />
-      </div>
-    </td>
-    <td>
-      <div class="input-field">
-        <input
-          type="number"
-          name="system.skills.outdoorsman.diffNegative"
-          value="{{system.skills.outdoorsman.diffNegative}}"
+          data-dtype="Number"
+          name="system.skills.outdoorsman.modifier"
+          value="{{system.skills.outdoorsman.modifier}}"
         />
       </div>
     </td>

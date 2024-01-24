@@ -21,14 +21,21 @@ export default class CharacterSheet extends ActorSheet {
   activateListeners(html) {
     super.activateListeners(html)
 
-    html.find('.rollable-d100').click(this.onRollSkill.bind(this))
+    // S.P.E.C.I.A.L.
     html.find('.rollable-d10').click(this.onRollSpecial.bind(this))
+    html.find('[data-increment-special]').click(this.onIncrementSpecial.bind(this))
+    html.find('[data-decrement-special]').click(this.onDecrementSpecial.bind(this))
+
+    // Skills
+    html.find('.rollable-d100').click(this.onRollSkill.bind(this))
     html.find('input[name="data.system.skills.doctor.usesRemaining"]').change((event) => {
       this.onUpdateSkillUsesRemaining('doctor', event.target.value)
     })
     html.find('input[name="data.system.skills.firstAid.usesRemaining"]').change((event) => {
       this.onUpdateSkillUsesRemaining('firstAid', event.target.value)
     })
+    html.find('.clickable-plus[data-increment-skill]').click(this.onIncrementSkill.bind(this))
+    html.find('.clickable-minus[data-decrement-skill]').click(this.onDecrementSkill.bind(this))
   }
 
   // TODO: Implement critical success.
@@ -45,6 +52,48 @@ export default class CharacterSheet extends ActorSheet {
       speaker: ChatMessage.getSpeaker({ actor: this.actor }),
       flavor: `Rolled ${label} (${target})` + message,
     })
+  }
+
+  onIncrementSpecial(event) {
+    const { incrementSpecial } = event.currentTarget.dataset
+    if (incrementSpecial) {
+      const { special, race } = this.document.system
+      const { max } = race.special[incrementSpecial]
+      this.actor.update({
+        [`system.special.${incrementSpecial}.base`]: Math.min(max, special[incrementSpecial].base + 1),
+      })
+    }
+  }
+
+  onDecrementSpecial(event) {
+    const { decrementSpecial } = event.currentTarget.dataset
+    if (decrementSpecial) {
+      const { special, race } = this.document.system
+      const { min } = race.special[decrementSpecial]
+      this.actor.update({
+        [`system.special.${decrementSpecial}.base`]: Math.max(min, special[decrementSpecial].base - 1),
+      })
+    }
+  }
+
+  onIncrementSkill(event) {
+    const { incrementSkill } = event.currentTarget.dataset
+    if (incrementSkill) {
+      const { skills } = this.document.system
+      this.actor.update({
+        [`system.skills.${incrementSkill}.skillPoints`]: skills[incrementSkill].skillPoints + 1,
+      })
+    }
+  }
+
+  onDecrementSkill(event) {
+    const { decrementSkill } = event.currentTarget.dataset
+    if (decrementSkill) {
+      const { skills } = this.document.system
+      this.actor.update({
+        [`system.skills.${decrementSkill}.skillPoints`]: skills[decrementSkill].skillPoints - 1,
+      })
+    }
   }
 
   onRollSkill(event) {

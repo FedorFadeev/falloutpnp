@@ -84,6 +84,9 @@
   position: relative;
   width: 100%;
   min-width: 32px;
+  > input {
+    width: 100%;
+  }
 }
 
 // TODO: Build out a class for weapon/armor condition and skill uses, like in the character sheet.
@@ -93,33 +96,61 @@
 
 // Apply the .rollable class to make the div look like a button.
 // Optionally, modify it with -d100 or -d10 to change the icon to the dice being rolled.
-.rollable {
-  min-width: 56px !important;
+.clickable {
   border: none;
   position: relative;
   transition: all 0.1s ease-in-out;
   transition-property: background-color box-shadow;
-  background: linear-gradient(90deg, $input-overlay 0%, $input-overlay 45%, $primary-color 100%) !important;
   cursor: pointer;
+  z-index: 2;
   &:hover {
     transform: scale(1.04);
     box-shadow: 0 0 4px 1px $primary-color;
-    background: linear-gradient(90deg, $input-overlay 0%, $input-overlay 45%, $primary-color 95%, $primary-color 100%);
   }
   &:active {
     transform: scale(0.96);
     box-shadow: 0 0 4px 2px $primary-color;
-    background: linear-gradient(90deg, $input-overlay 0%, $input-overlay 40%, $primary-color 90%, $primary-color 100%);
   }
   &::after {
     content: '';
     position: absolute;
-    filter: invert(85%);
     background-size: cover;
     width: 20px;
     height: 20px;
     right: 0.2rem;
     top: 0.2rem;
+  }
+}
+
+.clickable-plus {
+  @extend .clickable;
+  min-width: var(--form-field-height);
+  margin-left: 0.2rem;
+  background: linear-gradient(90deg, $input-overlay 20%, $primary-color 95%);
+  &::after {
+    background: url('static/plus.svg') no-repeat center center;
+  }
+}
+
+.clickable-minus {
+  @extend .clickable;
+  min-width: var(--form-field-height);
+  margin-right: 0.2rem;
+  background: linear-gradient(90deg, $input-overlay 20%, $primary-color 95%);
+  &::after {
+    background: url('static/minus.svg') no-repeat center center;
+  }
+}
+
+.rollable {
+  @extend .clickable;
+  min-width: 56px;
+  background: linear-gradient(90deg, $input-overlay 50%, $primary-color 90%);
+  &:hover {
+    transform: scale(1.04);
+  }
+  &:active {
+    transform: scale(0.96);
   }
 }
 

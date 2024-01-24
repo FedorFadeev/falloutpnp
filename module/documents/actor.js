@@ -19,7 +19,7 @@ export class CustomActor extends Actor {
         special[key].base = max
       }
 
-      special[key].total = special[key].base + special[key].diffPositive - special[key].diffNegative
+      special[key].total = special[key].base + special[key].modifier
     })
 
     this.system.general.remainingSpecial = 40 - Object.keys(special).reduce((acc, key) => acc + special[key].base, 0)
@@ -72,7 +72,7 @@ export class CustomActor extends Actor {
         Math.min(Math.max(unadjustedSkillPointTotal - 325, 0), 125) / 5 + // 176-200
         Math.max(unadjustedSkillPointTotal - 450, 0) / 6 // 201+
 
-      skill.total = Math.floor(adjustedSkillPointTotal) + skill.diffPositive - skill.diffNegative
+      skill.total = Math.floor(adjustedSkillPointTotal) + skill.modifier
     })
 
     this.system.general.remainingSkillPoints =
@@ -92,6 +92,7 @@ export class CustomActor extends Actor {
   }
 
   prepareDerivedData() {
+    console.log('PREPARING ___________')
     if (this.type === 'character') {
       this.setRace()
       this.setSpecial()

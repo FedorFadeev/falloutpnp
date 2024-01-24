@@ -29,38 +29,31 @@
         "special": {
           "str": {
             "base": 5,
-            "diffPositive": 0,
-            "diffNegative": 0
+            "modifier": 0
           },
           "per": {
             "base": 5,
-            "diffPositive": 0,
-            "diffNegative": 0
+            "modifier": 0
           },
           "end": {
             "base": 5,
-            "diffPositive": 0,
-            "diffNegative": 0
+            "modifier": 0
           },
           "cha": {
             "base": 5,
-            "diffPositive": 0,
-            "diffNegative": 0
+            "modifier": 0
           },
           "int": {
             "base": 5,
-            "diffPositive": 0,
-            "diffNegative": 0
+            "modifier": 0
           },
           "agi": {
             "base": 5,
-            "diffPositive": 0,
-            "diffNegative": 0
+            "modifier": 0
           },
           "luc": {
             "base": 5,
-            "diffPositive": 0,
-            "diffNegative": 0
+            "modifier": 0
           }
         },
         "secondary": {},
@@ -69,118 +62,99 @@
         "skills": {
           "smallGuns": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "bigGuns": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "energyWeapons": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "unarmed": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "meleeWeapons": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "throwing": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "firstAid": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0,
             "usesRemaining": 3
           },
           "doctor": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0,
             "usesRemaining": 2
           },
           "sneak": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "lockpick": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "steal": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "traps": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "science": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "repair": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "pilot": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "speech": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "barter": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "gambling": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           },
           "outdoorsman": {
             "isTagged": false,
-            "diffPositive": 0,
-            "diffNegative": 0,
+            "modifier": 0,
             "skillPoints": 0
           }
         },
