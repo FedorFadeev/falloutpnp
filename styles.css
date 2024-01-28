@@ -178,7 +178,7 @@
   position: relative;
 }
 
-.clickable, .rollable, .rollable-d10, .rollable-d100, .clickable-minus, .clickable-plus {
+.clickable, .rollable, .rollable-d10, .rollable-d100, .clickable-block, .clickable-delete, .clickable-open, .clickable-minus, .clickable-plus {
   border: none;
   position: relative;
   transition: all 0.1s ease-in-out;
@@ -186,15 +186,15 @@
   cursor: pointer;
   z-index: 2;
 }
-.clickable:hover, .rollable:hover, .rollable-d10:hover, .rollable-d100:hover, .clickable-minus:hover, .clickable-plus:hover {
+.clickable:hover, .rollable:hover, .rollable-d10:hover, .rollable-d100:hover, .clickable-block:hover, .clickable-delete:hover, .clickable-open:hover, .clickable-minus:hover, .clickable-plus:hover {
   transform: scale(1.04);
   box-shadow: 0 0 4px 1px #ff6400;
 }
-.clickable:active, .rollable:active, .rollable-d10:active, .rollable-d100:active, .clickable-minus:active, .clickable-plus:active {
+.clickable:active, .rollable:active, .rollable-d10:active, .rollable-d100:active, .clickable-block:active, .clickable-delete:active, .clickable-open:active, .clickable-minus:active, .clickable-plus:active {
   transform: scale(0.96);
   box-shadow: 0 0 4px 2px #ff6400;
 }
-.clickable::after, .rollable::after, .rollable-d10::after, .rollable-d100::after, .clickable-minus::after, .clickable-plus::after {
+.clickable::after, .rollable::after, .rollable-d10::after, .rollable-d100::after, .clickable-block::after, .clickable-delete::after, .clickable-open::after, .clickable-minus::after, .clickable-plus::after {
   content: "";
   position: absolute;
   background-size: cover;
@@ -205,21 +205,52 @@
 }
 
 .clickable-plus {
+  width: var(--form-field-height);
   min-width: var(--form-field-height);
   margin-left: 0.2rem;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 20%, #ff6400 95%);
+  background: linear-gradient(90deg, #ff6400 5%, rgba(0, 0, 0, 0.05) 80%);
 }
 .clickable-plus::after {
   background: url("static/plus.svg") no-repeat center center;
 }
 
 .clickable-minus {
+  width: var(--form-field-height);
   min-width: var(--form-field-height);
   margin-right: 0.2rem;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 20%, #ff6400 95%);
 }
 .clickable-minus::after {
   background: url("static/minus.svg") no-repeat center center;
+}
+
+.clickable-open {
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 20%, #ff6400 95%);
+}
+.clickable-open::after {
+  background: url("static/open.svg") no-repeat center center;
+}
+
+.clickable-delete {
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  background: linear-gradient(90deg, #ff6400 5%, rgba(0, 0, 0, 0.05) 80%);
+}
+.clickable-delete::after {
+  background: url("static/delete.svg") no-repeat center center;
+}
+
+.clickable-block {
+  min-width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 25%, #ff6400 100%);
+}
+.clickable-block:hover {
+  transform: scale(1.01);
+}
+.clickable-block:active {
+  transform: scale(0.99);
 }
 
 .rollable, .rollable-d10, .rollable-d100 {

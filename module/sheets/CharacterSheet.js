@@ -28,14 +28,20 @@ export default class CharacterSheet extends ActorSheet {
 
     // Skills
     html.find('.rollable-d100').click(this.onRollSkill.bind(this))
-    html.find('input[name="data.system.skills.doctor.usesRemaining"]').change((event) => {
+    html.find('input[name="system.skills.doctor.usesRemaining"]').change((event) => {
       this.onUpdateSkillUsesRemaining('doctor', event.target.value)
     })
-    html.find('input[name="data.system.skills.firstAid.usesRemaining"]').change((event) => {
+    html.find('input[name="system.skills.firstAid.usesRemaining"]').change((event) => {
       this.onUpdateSkillUsesRemaining('firstAid', event.target.value)
     })
     html.find('.clickable-plus[data-increment-skill]').click(this.onIncrementSkill.bind(this))
     html.find('.clickable-minus[data-decrement-skill]').click(this.onDecrementSkill.bind(this))
+
+    // Inventory
+    html.find('[data-delete-item]').click(this.onDeleteItem.bind(this))
+    html.find('[data-create-item]').click(this.onCreateItem.bind(this))
+    html.find('[data-update-item]').change(this.onUpdateItem.bind(this))
+    html.find('[data-open-item]').click(this.onOpenItem.bind(this))
   }
 
   // TODO: Implement critical success.
@@ -119,5 +125,46 @@ export default class CharacterSheet extends ActorSheet {
   onUpdateSkillUsesRemaining(skill, usesRemaining) {
     const { skills } = this.document.system
     skills[skill].usesRemaining = usesRemaining
+  }
+
+  async onCreateItem(event) {
+    const { createItem: type } = event.currentTarget.dataset
+    await Item.create(
+      {
+        name: 'EMPTY_ITEM_NAME',
+        type,
+        data: {
+          weight: 0,
+          quantity: 1,
+        },
+      },
+      { parent: this.actor }
+    )
+    const itemNameInputs = this.form.querySelectorAll('input[name="item.name"]')
+    itemNameInputs[itemNameInputs.length - 1].focus()
+  }
+
+  onDeleteItem(event) {
+    const { deleteItem: itemId } = event.currentTarget.dataset
+    const item = this.actor.items.get(itemId)
+    item.delete()
+  }
+
+  async onUpdateItem(event) {
+    const { itemId, updateItem } = event.currentTarget.dataset
+    const item = this.actor.items.get(itemId)
+    await item.update({ [updateItem]: event.target.value }, { render: false })
+    item.render()
+  }
+
+  onOpenItem(event) {
+    const { openItem: itemId } = event.currentTarget.dataset
+    const item = this.actor.items.get(itemId)
+    item.sheet.render(true)
+  }
+
+  close(options) {
+    super.close(options)
+    document.activeElement.blur()
   }
 }

@@ -8,8 +8,11 @@
     ],
     "templates": {
       "common": {
-        "caps": 0,
         "race": null,
+        "notes": "",
+        "caps": 0,
+        "carryWeight": 0,
+        "maxCarryWeight": 15,
         "general": {
           "level": 1,
           "karma": 0,
@@ -303,11 +306,12 @@
   "Item": {
     "types": [
       "weapon",
-      "armor"
+      "armor",
+      "custom"
     ],
     "templates": {
       "common": {
-        "name": "",
+        "description": "",
         "weight": 1,
         "quantity": 1
       },
@@ -350,6 +354,11 @@
       "raceRestriction": null,
       "sneakSkillReduction": 0,
       "radiationResistanceBonus": 0
+    },
+    "custom": {
+      "templates": [
+        "common"
+      ]
     }
   }
 }

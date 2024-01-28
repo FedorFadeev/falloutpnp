@@ -22,7 +22,7 @@
                   type="radio"
                   value="{{weaponCondition.value}}"
                   name="data.system.condition"
-                  {{checked (equals ../data.system.condition weaponCondition.value)}}
+                  {{checked (eq ../data.system.condition weaponCondition.value)}}
                 />
                 <span class="undertext-radio">{{condition.label}}</span>
               </span>
