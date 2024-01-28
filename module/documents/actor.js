@@ -92,7 +92,6 @@ export class CustomActor extends Actor {
   }
 
   prepareDerivedData() {
-    console.log('PREPARING ___________')
     if (this.type === 'character') {
       this.setRace()
       this.setSpecial()
