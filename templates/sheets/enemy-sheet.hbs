@@ -4,7 +4,7 @@
     <div class="enemy-image">
       <img src="{{data.actor.img}}" title="{{data.actor.name}}" data-edit="img" />
     </div>
-    <div class="enemy-info">
+    <div class="enemy-info flex">
       <div class="enemy-stats">
         <table>
           <thead>
@@ -17,16 +17,15 @@
           <tbody>
             <tr>
               <td>
-                <div class="enemy-box">
-                  <!-- <span class="span-text">EXP</span> -->
-                  <input type="text" name="system.health" value="{{system.health}}" min="0" />
+                 <div class="input-field">
+                  <input type="text" name="system.health" value="{{system.health}}" />
                   <span class="undertext">Current HP</span>
                 </div>
               </td>
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.healthMaximum" value="{{system.healthMaximum}}" min="0" />
                   <span class="undertext">Maximum HP</span>
                 </div>
@@ -34,7 +33,7 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.sequence" value="{{system.sequence}}" min="0" />
                   <span class="undertext">Sequence</span>
                 </div>
@@ -42,7 +41,7 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.actionPoints" value="{{system.actionPoints}}" min="0" />
                   <span class="undertext">Action Points</span>
                 </div>
@@ -50,7 +49,7 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.criticalChance" value="{{system.criticalChance}}" min="0" />
                   <span class="undertext">Critical Chance</span>
                 </div>
@@ -70,13 +69,13 @@
           <tbody>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageThreshold.normal" value="{{system.damageThreshold.normal}}" min="0" />
                   <span class="undertext">Normal</span>
                 </div>
               </td>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageResistance.normal" value="{{system.damageResistance.normal}}" min="0" />
                   <span class="undertext">Normal</span>
                 </div>
@@ -84,13 +83,13 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageThreshold.laser" value="{{system.damageThreshold.laser}}" min="0" />
                   <span class="undertext">Laser</span>
                 </div>
               </td>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageResistance.laser" value="{{system.damageResistance.laser}}" min="0" />
                   <span class="undertext">Laser</span>
                 </div>
@@ -98,13 +97,13 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageThreshold.fire" value="{{system.damageThreshold.fire}}" min="0" />
                   <span class="undertext">Fire</span>
                 </div>
               </td>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageResistance.fire" value="{{system.damageResistance.fire}}" min="0" />
                   <span class="undertext">Fire</span>
                 </div>
@@ -112,13 +111,13 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageThreshold.plasma" value="{{system.damageThreshold.plasma}}" min="0" />
                   <span class="undertext">Plasma</span>
                 </div>
               </td>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageResistance.plasma" value="{{system.damageResistance.plasma}}" min="0" />
                   <span class="undertext">Plasma</span>
                 </div>
@@ -126,13 +125,13 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageThreshold.explode" value="{{system.damageThreshold.explode}}" min="0" />
                   <span class="undertext">Explode</span>
                 </div>
               </td>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.damageResistance.explode" value="{{system.damageResistance.explode}}" min="0" />
                   <span class="undertext">Explode</span>
                 </div>
@@ -153,7 +152,7 @@
           <tbody>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.xp" value="{{system.xp}}" min="0" />
                   <span class="undertext">XP Reward</span>
                 </div>
@@ -161,7 +160,7 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.armorClass" value="{{system.armorClass}}" min="0" />
                   <span class="undertext">AC</span>
                 </div>
@@ -169,7 +168,7 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.resistance.poison" value="{{system.resistance.poison}}" min="0" />
                   <span class="undertext">Poison Resist</span>
                 </div>
@@ -177,7 +176,7 @@
             </tr>
             <tr>
               <td>
-                <div class="enemy-box">
+                <div class="input-field">
                   <input type="text" name="system.resistance.radiation" value="{{system.resistance.radiation}}" min="0" />
                   <span class="undertext">Radiation Resist</span>
                 </div>
@@ -188,13 +187,13 @@
                 <table>
                   <tr>
                     <td>
-                      <div class="enemy-box">
+                      <div class="input-field">
                         <input type="text" name="system.resistance.gasInhaled" value="{{system.resistance.gasInhaled}}" min="0" />
                         <span class="undertext">Gas Ihaled</span>
                       </div>
                     </td>
                     <td>
-                      <div class="enemy-box">
+                      <div class="input-field">
                         <input type="text" name="system.resistance.gas2" value="{{system.resistance.gasContact}}" min="0" />
                         <span class="undertext">Gas Contact</span>
                       </div>
@@ -215,25 +214,25 @@
         <table>
           <tr>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.first.type" value="{{system.attacks.first.type}}" min="0" />
                 <span class="undertext">Type</span>
               </div>
             </td>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.first.hitChance" value="{{system.attacks.first.hitChance}}" min="0" />
                 <span class="undertext">Hit Chance</span>
               </div>
             </td>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.first.apCost" value="{{system.attacks.first.apCost}}" min="0" />
                 <span class="undertext">AP Cost</span>
               </div>
             </td>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.first.damage" value="{{system.attacks.first.damage}}" min="0" />
                 <span class="undertext">Damage</span>
               </div>
@@ -243,7 +242,7 @@
         <table>
           <tr>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.first.effect" value="{{system.attacks.first.effect}}" min="0" />
                 <span class="undertext">Effect</span>
               </div>
@@ -255,25 +254,25 @@
         <table>
           <tr>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.second.type" value="{{system.attacks.second.type}}" min="0" />
                 <span class="undertext">Type</span>
               </div>
             </td>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.second.hitChance" value="{{system.attacks.second.hitChance}}" min="0" />
                 <span class="undertext">Hit Chance</span>
               </div>
             </td>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.second.apCost" value="{{system.attacks.second.apCost}}" min="0" />
                 <span class="undertext">AP Cost</span>
               </div>
             </td>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.second.damage" value="{{system.attacks.second.damage}}" min="0" />
                 <span class="undertext">Damage</span>
               </div>
@@ -283,7 +282,7 @@
         <table>
           <tr>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.second.effect" value="{{system.attacks.second.effect}}" min="0" />
                 <span class="undertext">Effect</span>
               </div>
@@ -295,25 +294,25 @@
         <table>
           <tr>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.third.type" value="{{system.attacks.third.type}}" min="0" />
                 <span class="undertext">Type</span>
               </div>
             </td>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.third.hitChance" value="{{system.attacks.third.hitChance}}" min="0" />
                 <span class="undertext">Hit Chance</span>
               </div>
             </td>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.third.apCost" value="{{system.attacks.third.apCost}}" min="0" />
                 <span class="undertext">AP Cost</span>
               </div>
             </td>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.third.damage" value="{{system.attacks.third.damage}}" min="0" />
                 <span class="undertext">Damage</span>
               </div>
@@ -323,7 +322,7 @@
         <table>
           <tr>
             <td>
-              <div class="enemy-box">
+              <div class="input-field">
                 <input type="text" name="system.attacks.third.effect" value="{{system.attacks.third.effect}}" min="0" />
                 <span class="undertext">Effect</span>
               </div>
@@ -338,13 +337,13 @@
     <table>
       <tr>
         <td>
-          <div class="enemy-box">
+          <div class="input-field">
             <input type="text" name="system.weapons.weapon1.name" value="{{system.weapons.weapon1.name}}" min="0" />
             <span class="undertext">Weapon name</span>
           </div>
         </td>
         <td>
-          <div class="enemy-box">
+          <div class="input-field">
             <input type="text" name="system.weapons.weapon1.type" value="{{system.weapons.weapon1.type}}" min="0" />
             <span class="undertext">Weapon type</span>
           </div>
@@ -352,13 +351,13 @@
       </tr>
       <tr>
         <td>
-          <div class="enemy-box">
+          <div class="input-field">
             <input type="text" name="system.weapons.weapon2.name" value="{{system.weapons.weapon2.name}}" min="0" />
             <span class="undertext">Weapon name</span>
           </div>
         </td>
         <td>
-          <div class="enemy-box">
+          <div class="input-field">
             <input type="text" name="system.weapons.weapon2.type" value="{{system.weapons.weapon2.type}}" min="0" />
             <span class="undertext">Weapon type</span>
           </div>
