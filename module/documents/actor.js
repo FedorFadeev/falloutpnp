@@ -83,7 +83,7 @@ export class CustomActor extends Actor {
   setStatus() {
     const { status, special, secondary, general } = this.system
 
-    status.health.maximum = 15 + special.str.total + special.end.total * 2 + secondary.hpPerLevel * general.level
+    status.health.maximum = 15 + special.str.total + special.end.total * 2 + (secondary.hpPerLevel * (general.level - 1))
     status.rads.resist = special.end.total * 2
     status.poison.resist = special.end.total * 5
     status.experienceToLevel =
