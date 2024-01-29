@@ -19,7 +19,7 @@ export class CustomActor extends Actor {
         special[key].base = max
       }
 
-      special[key].total = special[key].base + special[key].diffPositive - special[key].diffNegative
+      special[key].total = special[key].base + special[key].modifier
     })
 
     this.system.general.remainingSpecial = 40 - Object.keys(special).reduce((acc, key) => acc + special[key].base, 0)
@@ -72,7 +72,7 @@ export class CustomActor extends Actor {
         Math.min(Math.max(unadjustedSkillPointTotal - 325, 0), 125) / 5 + // 176-200
         Math.max(unadjustedSkillPointTotal - 450, 0) / 6 // 201+
 
-      skill.total = Math.floor(adjustedSkillPointTotal) + skill.diffPositive - skill.diffNegative
+      skill.total = Math.floor(adjustedSkillPointTotal) + skill.modifier
     })
 
     this.system.general.remainingSkillPoints =
@@ -83,14 +83,16 @@ export class CustomActor extends Actor {
   setStatus() {
     const { status, special, secondary, general } = this.system
 
-    status.health.maximum = 15 + special.str.total + (special.end.total * 2) + (secondary.hpPerLevel * general.level) ;
-    status.rads.resist = special.end.total * 2;
-    status.poison.resist = special.end.total * 5;
-    status.experienceToLevel = EXPERIENCE_TO_LEVEL[general.level] ?? EXPERIENCE_TO_LEVEL[EXPERIENCE_TO_LEVEL.length - 1] + (40000 * (general.level - 20));
+    status.health.maximum = 15 + special.str.total + special.end.total * 2 + secondary.hpPerLevel * general.level
+    status.rads.resist = special.end.total * 2
+    status.poison.resist = special.end.total * 5
+    status.experienceToLevel =
+      EXPERIENCE_TO_LEVEL[general.level] ??
+      EXPERIENCE_TO_LEVEL[EXPERIENCE_TO_LEVEL.length - 1] + 40000 * (general.level - 20)
   }
 
   prepareDerivedData() {
-    if(this.type === "character"){
+    if (this.type === 'character') {
       this.setRace()
       this.setSpecial()
       this.setSecondary()

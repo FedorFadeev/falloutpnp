@@ -1,0 +1,40 @@
+<form class="editable" autocomplete="off">
+  <div class="flex">
+    <img
+      style="max-width: 8rem;"
+      src="{{item.img}}"
+      title="Click to change image used for character token"
+      data-edit="img"
+    />
+    <table class="flex-grow">
+      <tr>
+        <td>
+          <div class="input-field">
+            <input
+              type="text"
+              name="item.name"
+              data-item-id="{{item._id}}"
+              data-update-item="name"
+              value="{{ifThen (eq item.name 'EMPTY_ITEM_NAME') '' item.name}}"
+            />
+            <div class="undertext">Name</div>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <div class="relative">
+            <textarea
+              name="item.system.description"
+              data-item-id="{{item._id}}"
+              data-update-item="system.description"
+              style="min-height: 6rem; resize: none"
+            >{{item.system.description}}</textarea>
+            {{!-- TODO: Fix positioning on notes in textarea --}}
+            <div class="undertext">Description</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>

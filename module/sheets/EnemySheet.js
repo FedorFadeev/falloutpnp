@@ -3,7 +3,6 @@ export default class EnemySheet extends ActorSheet {
     return mergeObject(super.defaultOptions, {
       width: 700,
       height: 700,
-      classes: ['falloutpnp', 'sheet', 'character-enemy'],
     })
   }
 

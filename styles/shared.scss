@@ -1,0 +1,205 @@
+@use 'variables' as *;
+
+// Makes the text bold and a bit larger, not to be used in place of headings.
+.large-text {
+  font-family: $font-family-headings;
+  font-size: 22px;
+}
+
+// Use .seet-column for splitting the sheet into columns, then use <section>s for blocks of content.
+.sheet-column {
+  width: 100%;
+
+  & section {
+    padding: 4px;
+  }
+  &:first-child {
+    border-right: $border-default;
+  }
+  & section:not(:last-child) {
+    border-bottom: $border-default;
+  }
+}
+
+// Small text in the bottom right of a data-field, an input or a select.
+.undertext {
+  position: absolute;
+  bottom: -8px;
+  right: -1px;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: right;
+  line-height: 1rem;
+  white-space: nowrap;
+  color: #000000;
+  &-radio {
+    bottom: -8px;
+    right: -2px;
+  }
+}
+
+// Class for a <div> that contains an <img> that displays a vault boy style icon. Intentionally overflows the parent.
+.vault-boy {
+  max-height: 26px;
+  max-width: 26px;
+  & img {
+    border: none;
+    max-width: 34px;
+    position: relative;
+    left: -4px;
+    top: -3px;
+  }
+}
+
+// Generic inline icon. Doesn't overflow the parent unlike .vault-boy.
+.inline-icon {
+  min-width: 26px;
+  max-width: 26px;
+  width: 26px;
+  height: 26px;
+  margin-right: 5px;
+  > img {
+    border: 0;
+  }
+}
+
+// Static or derived data that is not user-editable, styled similar to an input.
+.data-field {
+  position: relative;
+  width: 100%;
+  min-width: 48px;
+  height: var(--form-field-height);
+  background: $input-overlay;
+  padding: 1px 3px;
+  color: var(--color-text-dark-primary);
+  line-height: var(--form-field-height);
+  border-radius: 4px;
+  & .undertext {
+    right: -3px;
+  }
+}
+
+// Modifyable data that is user-editable.
+.input-field {
+  position: relative;
+  width: 100%;
+  min-width: 32px;
+  > input {
+    width: 100%;
+  }
+}
+
+// TODO: Build out a class for weapon/armor condition and skill uses, like in the character sheet.
+.radio-field {
+  position: relative;
+}
+
+// Apply the .rollable class to make the div look like a button.
+// Optionally, modify it with -d100 or -d10 to change the icon to the dice being rolled.
+.clickable {
+  border: none;
+  position: relative;
+  transition: all 0.1s ease-in-out;
+  transition-property: background-color box-shadow;
+  cursor: pointer;
+  z-index: 2;
+  &:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 4px 1px $primary-color;
+  }
+  &:active {
+    transform: scale(0.96);
+    box-shadow: 0 0 4px 2px $primary-color;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    right: 0.2rem;
+    top: 0.2rem;
+  }
+}
+
+.clickable-plus {
+  @extend .clickable;
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  margin-left: 0.2rem;
+  background: linear-gradient(90deg, $primary-color 5%, $input-overlay 80%);
+  &::after {
+    background: url('static/plus.svg') no-repeat center center;
+  }
+}
+
+.clickable-minus {
+  @extend .clickable;
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  margin-right: 0.2rem;
+  background: linear-gradient(90deg, $input-overlay 20%, $primary-color 95%);
+  &::after {
+    background: url('static/minus.svg') no-repeat center center;
+  }
+}
+
+.clickable-open {
+  @extend .clickable;
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  background: linear-gradient(90deg, $input-overlay 20%, $primary-color 95%);
+  &::after {
+    background: url('static/open.svg') no-repeat center center;
+  }
+}
+
+.clickable-delete {
+  @extend .clickable;
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  background: linear-gradient(90deg, $primary-color 5%, $input-overlay 80%);
+  &::after {
+    background: url('static/delete.svg') no-repeat center center;
+  }
+}
+
+.clickable-block {
+  @extend .clickable;
+  min-width: 100%;
+  background: linear-gradient(0deg, $input-overlay 25%, $primary-color 100%);
+  &:hover {
+    transform: scale(1.01);
+  }
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.rollable {
+  @extend .clickable;
+  min-width: 56px;
+  background: linear-gradient(90deg, $input-overlay 50%, $primary-color 90%);
+  &:hover {
+    transform: scale(1.04);
+  }
+  &:active {
+    transform: scale(0.96);
+  }
+}
+
+.rollable-d100 {
+  @extend .rollable;
+  &::after {
+    background: url('static/d100.svg') no-repeat center center;
+  }
+}
+
+.rollable-d10 {
+  @extend .rollable;
+  &::after {
+    background: url('static/d10.svg') no-repeat center center;
+  }
+
+  // TODO: Add rollable-d4, rollable-6, rollable-d8, rollable-d12, rollable2d6, etc. icons.
+}

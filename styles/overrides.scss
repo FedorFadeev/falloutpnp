@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+// Global styles and FoundryVTT overrides.
+:root {
+  --primary-color: #{$primary-color};
+  --input-overlay: #{$input-overlay};
+  --color-border-light-tertiary: #{$border-light-color};
+  --color-shadow-primary: #{$primary-color};
+  --border-default: #{$border-default};
+}
+
+.sheet .window-content {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $font-family-headings;
+    font-style: italic;
+    font-weight: 400;
+    border: none;
+    text-align: center;
+  }
+
+  p {
+    border: none;
+    margin: 0;
+  }
+
+  table {
+    margin: 0;
+    border: none;
+    border-spacing: 6px 0;
+    border-collapse: separate;
+    background: none;
+
+    thead,
+    tr {
+      background: none;
+    }
+  }
+}

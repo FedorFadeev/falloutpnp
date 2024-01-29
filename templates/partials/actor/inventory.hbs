@@ -1,0 +1,102 @@
+<h2>Inventory</h2>
+<table style="table-layout: fixed; margin-bottom: 1rem;">
+  <tr>
+    <td colspan="2">
+      <div class="flex">
+        <span class="inline-icon">
+          <img src="systems/falloutpnp/static/icons/icon-status-poison-resist.png" alt="Caps" />
+        </span>
+        <div class="input-field" style="max-width: 80px;">
+          <input type="number" name="system.caps" data-dtype="Number" value="{{system.caps}}" max="0" />
+          <span class="undertext">Caps</span>
+        </div>
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <span class="inline-icon">
+          <img src="systems/falloutpnp/static/icons/icon-status-poison-resist.png" alt="Weight" />
+        </span>
+        <div class="input-field">
+          <input type="number" name="system.carryWeight" data-dtype="Number" value="{{system.carryWeight}}" min="0" />
+          <span class="undertext">Current Weight</span>
+        </div>
+      </div>
+    </td>
+    <td title="Formula: ">
+      <div class="flex">
+        <span class="large-text">/&nbsp;</span>
+        <div class="input-field">
+          <input
+            type="number"
+            name="system.maxCarryWeight"
+            data-dtype="Number"
+            value="{{system.maxCarryWeight}}"
+            min="15"
+          />
+          <span class="undertext">Max Weight</span>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <th colspan="2"><p>Item</p></th>
+    <th><p>Wgt</p></th>
+    <th><p>Qty</p></th>
+    <th></th>
+  </tr>
+  {{#each items as |item|}}
+    <tr>
+      <td>
+        <div class="data-field clickable-open" data-open-item="{{item._id}}"></div>
+      </td>
+      <td style="width: 100%;">
+        <div class="input-field">
+          <input
+            type="text"
+            name="item.name"
+            data-item-id="{{item._id}}"
+            data-update-item="name"
+            value="{{ifThen (eq item.name 'EMPTY_ITEM_NAME') '' item.name}}"
+          />
+        </div>
+      </td>
+      <td style="width: 32px;">
+        <div class="input-field">
+          <input
+            type="number"
+            name="item.system.weight"
+            data-dtype="Number"
+            data-item-id="{{item._id}}"
+            data-update-item="system.weight"
+            value="{{item.system.weight}}"
+          />
+        </div>
+      </td>
+      <td style="width: 32px;">
+        <div class="input-field">
+          <input
+            type="number"
+            name="item.system.quantity"
+            data-dtype="Number"
+            data-item-id="{{item._id}}"
+            data-update-item="system.quantity"
+            value="{{item.system.quantity}}"
+          />
+        </div>
+      </td>
+      <td>
+        <div class="data-field clickable-delete" data-delete-item="{{item._id}}"></div>
+      </td>
+    </tr>
+  {{/each}}
+  <tr>
+    <td colspan="5">
+      <div class="data-field clickable-block" style="text-align: center;" data-create-item="custom">
+        <strong>+</strong>
+      </div>
+    </td>
+  </tr>
+</table>

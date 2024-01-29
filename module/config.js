@@ -1,13 +1,10 @@
-import { RACES } from "./constants/races.js";
+import { RACES } from './constants/races.js'
+import { ATTACK_TYPES } from './constants/attackTypes.js'
+import { WEAPON_CONDITIONS } from './constants/weaponConditions.js'
 
+// Globally available variables for the system, available in all templates with "falloutpnp."
 export const falloutpnp = {
-  attackTypes: {
-    unarmed: "falloutpnp.attack.unarmed",
-    melee: "falloutpnp.attack.melee",
-    lightGuns: "falloutpnp.attack.lightGuns",
-    heavyGuns: "falloutpnp.attack.heavyGuns",
-    energyWeapon: "falloutpnp.attack.energyWeapon",
-    throwable: "falloutpnp.attack,throwable",
-  },
+  attackTypes: ATTACK_TYPES,
   races: RACES,
-};
+  weaponConditions: WEAPON_CONDITIONS,
+}

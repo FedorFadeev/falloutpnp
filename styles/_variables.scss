@@ -1,0 +1,29 @@
+// Typography
+@import url('fonts/Overseer Bold.otf');
+@font-face {
+  font-family: 'Overseer';
+  src: url('fonts/Overseer Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@import url('fonts/Overseer Bold Italic.otf');
+@font-face {
+  font-family: 'Overseer';
+  src: url('fonts/Overseer Bold Italic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+$font-family-headings: Overseer, sans-serif;
+$font-size-base: 16px;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+// Colors
+$primary-color: #ff6400;
+$input-overlay: rgba(0, 0, 0, 0.05);
+$border-light-color: #a5a5a5;
+
+// Borders
+$border-default: 1px solid #525252;

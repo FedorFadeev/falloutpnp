@@ -1,0 +1,9 @@
+@use 'variables' as *;
+
+// FoundryVTT overrides, helper utilities, and styles shared between all sheets.
+@import 'helpers.scss';
+@import 'overrides.scss';
+@import 'shared.scss';
+
+// Sheet-specific styles
+@import 'sheets/character-sheet.scss';

@@ -1,27 +1,34 @@
-<div class="special-info">
-  <h2>S.P.E.C.I.A.L.</h2>
-  {{#if system.general.remainingSpecial}}
-    <p class="special-unassigned">Unassigned: {{system.general.remainingSpecial}}</p>
-  {{/if}}
-  <div class="special-list">
-    <table>
-      <tr>
-        <th><p>Min</p></th>
-        <th><p>Base</p></th>
-        <th><p>Max</p></th>
-        <th><p>+</p></th>
-        <th><p>-</p></th>
-        <th><p>&nbsp;</p></th>
-        <th><p>Total</p></th>
-      </tr>
+{{! TODO: Add .vault-boy icons to the S.P.E.C.I.A.L.s }}
+<h2>S.P.E.C.I.A.L.</h2>
+{{!-- {{#if system.general.remainingSpecial}}
+  <p class="special-unassigned">Unassigned: {{system.general.remainingSpecial}}</p>
+{{/if}} --}}
+<table>
+  <tr>
+    <th><p>&nbsp;</p></th>
+    <th><p>Min</p></th>
+    <th><p>Base</p></th>
+    <th><p>Max</p></th>
+    <th><p>Modifier</p></th>
+    <th><p>&nbsp;</p></th>
+    <th><p>Total</p></th>
+  </tr>
 
-      <tr>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.str.min}}
-          </div>
-        </td>
-        <td>
+  <tr>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.str.min}}
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="str"></div>
+        <div class="input-field">
           <input
             type="number"
             name="system.special.str.base"
@@ -30,45 +37,49 @@
             max="{{system.race.special.str.max}}"
             data-dtype="Number"
           />
-        </td>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.str.max}}
-          </div>
-        </td>
-        <td class="special-cell special-cell_small">
-          <input
-            type="number"
-            name="system.special.str.diffPositive"
-            value="{{system.special.str.diffPositive}}"
-            data-dtype="Number"
-          />
-        </td>
-        <td class="special-cell special-cell_small">
-          <input
-            type="number"
-            name="system.special.str.diffNegative"
-            value="{{system.special.str.diffNegative}}"
-            data-dtype="Number"
-          />
-        </td>
-        <td>
-          <p>ST</p>
-        </td>
-        <td>
-          <div class="styled-div_input-like rollable rollable-special" data-roll="str" data-label="Strength">
-            {{system.special.str.total}}
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.per.min}}
-          </div>
-        </td>
-        <td>
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="str"></div>
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.str.max}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.str.modifier"
+          value="{{system.special.str.modifier}}"
+        />
+      </div>
+    </td>
+    <td>
+      <p class="large-text">ST</p>
+    </td>
+    <td>
+      <div class="data-field rollable-d10" data-roll="str" data-label="Strength">
+        {{system.special.str.total}}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.per.min}}
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="per"></div>
+        <div class="input-field">
           <input
             type="number"
             name="system.special.per.base"
@@ -77,35 +88,49 @@
             max="{{system.race.special.per.max}}"
             data-dtype="Number"
           />
-        </td>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.per.max}}
-          </div>
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.per.diffPositive" value="{{system.special.per.diffPositive}}" />
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.per.diffNegative" value="{{system.special.per.diffNegative}}" />
-        </td>
-        <td>
-          <p>PE</p>
-        </td>
-        <td>
-          <div class="styled-div_input-like rollable rollable-special" data-roll="per" data-label="Perception">
-            {{system.special.per.total}}
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.end.min}}
-          </div>
-        </td>
-        <td>
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="per"></div>
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.per.max}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.per.modifier"
+          value="{{system.special.per.modifier}}"
+        />
+      </div>
+    </td>
+    <td>
+      <p class="large-text">PE</p>
+    </td>
+    <td>
+      <div class="data-field rollable-d10" data-roll="per" data-label="Perception">
+        {{system.special.per.total}}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.end.min}}
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="end"></div>
+        <div class="input-field">
           <input
             type="number"
             name="system.special.end.base"
@@ -114,35 +139,49 @@
             max="{{system.race.special.end.max}}"
             data-dtype="Number"
           />
-        </td>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.end.max}}
-          </div>
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.end.diffPositive" value="{{system.special.end.diffPositive}}" />
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.end.diffNegative" value="{{system.special.end.diffNegative}}" />
-        </td>
-        <td>
-          <p>EN</p>
-        </td>
-        <td>
-          <div class="styled-div_input-like rollable rollable-special" data-roll="end" data-label="Endurance">
-            {{system.special.end.total}}
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.cha.min}}
-          </div>
-        </td>
-        <td>
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="end"></div>
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.end.max}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.end.modifier"
+          value="{{system.special.end.modifier}}"
+        />
+      </div>
+    </td>
+    <td>
+      <p class="large-text">EN</p>
+    </td>
+    <td>
+      <div class="data-field rollable-d10" data-roll="end" data-label="Endurance">
+        {{system.special.end.total}}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.cha.min}}
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="cha"></div>
+        <div class="input-field">
           <input
             type="number"
             name="system.special.cha.base"
@@ -151,35 +190,49 @@
             max="{{system.race.special.cha.max}}"
             data-dtype="Number"
           />
-        </td>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.cha.max}}
-          </div>
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.cha.diffPositive" value="{{system.special.cha.diffPositive}}" />
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.cha.diffNegative" value="{{system.special.cha.diffNegative}}" />
-        </td>
-        <td>
-          <p>CH</p>
-        </td>
-        <td>
-          <div class="styled-div_input-like rollable rollable-special" data-roll="cha" data-label="Charisma">
-            {{system.special.cha.total}}
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.int.min}}
-          </div>
-        </td>
-        <td>
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="cha"></div>
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.cha.max}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.cha.modifier"
+          value="{{system.special.cha.modifier}}"
+        />
+      </div>
+    </td>
+    <td>
+      <p class="large-text">CH</p>
+    </td>
+    <td>
+      <div class="data-field rollable-d10" data-roll="cha" data-label="Charisma">
+        {{system.special.cha.total}}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.int.min}}
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="int"></div>
+        <div class="input-field">
           <input
             type="number"
             name="system.special.int.base"
@@ -188,35 +241,49 @@
             max="{{system.race.special.int.max}}"
             data-dtype="Number"
           />
-        </td>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.int.max}}
-          </div>
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.int.diffPositive" value="{{system.special.int.diffPositive}}" />
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.int.diffNegative" value="{{system.special.int.diffNegative}}" />
-        </td>
-        <td>
-          <p>IN</p>
-        </td>
-        <td>
-          <div class="styled-div_input-like rollable rollable-special" data-roll="int" data-label="Intelligence">
-            {{system.special.int.total}}
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.agi.min}}
-          </div>
-        </td>
-        <td>
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="int"></div>
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.int.max}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.int.modifier"
+          value="{{system.special.int.modifier}}"
+        />
+      </div>
+    </td>
+    <td>
+      <p class="large-text">IN</p>
+    </td>
+    <td>
+      <div class="data-field rollable-d10" data-roll="int" data-label="Intelligence">
+        {{system.special.int.total}}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.agi.min}}
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="agi"></div>
+        <div class="input-field">
           <input
             type="number"
             name="system.special.agi.base"
@@ -225,35 +292,49 @@
             max="{{system.race.special.agi.max}}"
             data-dtype="Number"
           />
-        </td>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.agi.max}}
-          </div>
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.agi.diffPositive" value="{{system.special.agi.diffPositive}}" />
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.agi.diffNegative" value="{{system.special.agi.diffNegative}}" />
-        </td>
-        <td>
-          <p>AG</p>
-        </td>
-        <td>
-          <div class="styled-div_input-like rollable rollable-special" data-roll="agi" data-label="Agility">
-            {{system.special.agi.total}}
-          </div>
-        </td>
-      </tr>
-
-      <tr>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.luc.min}}
-          </div>
-        </td>
-        <td>
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="agi"></div>
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.agi.max}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.agi.modifier"
+          value="{{system.special.agi.modifier}}"
+        />
+      </div>
+    </td>
+    <td>
+      <p class="large-text">AG</p>
+    </td>
+    <td>
+      <div class="data-field rollable-d10" data-roll="agi" data-label="Agility">
+        {{system.special.agi.total}}
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <div class="vault-boy">
+        <img src="systems/falloutpnp/static/icons/icon-skill-repair.png" />
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.luc.min}}
+      </div>
+    </td>
+    <td>
+      <div class="flex">
+        <div class="data-field clickable-minus" data-decrement-special="luc"></div>
+        <div class="input-field">
           <input
             type="number"
             name="system.special.luc.base"
@@ -262,27 +343,32 @@
             max="{{system.race.special.luc.max}}"
             data-dtype="Number"
           />
-        </td>
-        <td>
-          <div class="styled-div_input-like">
-            {{system.race.special.luc.max}}
-          </div>
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.luc.diffPositive" value="{{system.special.luc.diffPositive}}" />
-        </td>
-        <td class="special-cell special-cell_small">
-          <input type="number" name="system.special.luc.diffNegative" value="{{system.special.luc.diffNegative}}" />
-        </td>
-        <td>
-          <p>LK</p>
-        </td>
-        <td>
-          <div class="styled-div_input-like rollable rollable-special" data-roll="luc" data-label="Luck">
-            {{system.special.luc.total}}
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
-</div>
+        </div>
+        <div class="data-field clickable-plus" data-increment-special="luc"></div>
+      </div>
+    </td>
+    <td>
+      <div class="data-field">
+        {{system.race.special.luc.max}}
+      </div>
+    </td>
+    <td>
+      <div class="input-field">
+        <input
+          type="number"
+          data-dtype="Number"
+          name="system.special.luc.modifier"
+          value="{{system.special.luc.modifier}}"
+        />
+      </div>
+    </td>
+    <td>
+      <p class="large-text">LK</p>
+    </td>
+    <td>
+      <div class="data-field rollable-d10" data-roll="luc" data-label="Luck">
+        {{system.special.luc.total}}
+      </div>
+    </td>
+  </tr>
+</table>

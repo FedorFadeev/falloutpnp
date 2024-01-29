@@ -1,528 +1,321 @@
+@import url("fonts/Overseer Bold.otf");
+@import url("fonts/Overseer Bold Italic.otf");
+@import url("fonts/Overseer Bold.otf");
+@import url("fonts/Overseer Bold Italic.otf");
+@import url("fonts/Overseer Bold.otf");
+@import url("fonts/Overseer Bold Italic.otf");
+@import url("fonts/Overseer Bold.otf");
+@import url("fonts/Overseer Bold Italic.otf");
 @font-face {
-  font-family: 'Overseer';
-  src: url('fonts/Overseer Bold.otf');
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
 }
-
 @font-face {
-  font-family: 'Overseer';
-  src: url('fonts/Overseer Bold Italic.otf');
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold Italic.otf") format("opentype");
+  font-weight: 700;
   font-style: italic;
 }
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
+.flex-grow {
+  flex-grow: 1;
+}
+
+.relative {
+  position: relative;
+}
+
+@font-face {
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold Italic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
 :root {
   --primary-color: #ff6400;
   --input-overlay: rgba(0, 0, 0, 0.05);
   --color-border-light-tertiary: #a5a5a5;
   --color-shadow-primary: #ff6400;
+  --border-default: 1px solid #525252;
 }
 
-.falloutpnp.sheet.item form {
-  display: flex;
-  flex-direction: column;
-}
-
-.falloutpnp.sheet.item .sheet-content {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.falloutpnp.sheet.item .sheet-content .editor {
-  height: 100%;
-}
-
-/*Character sheet*/
-.falloutpnp.sheet.character form {
-  display: flex;
-  flex-direction: row;
-}
-
-.falloutpnp.sheet.character form h1,
-.falloutpnp.sheet.character form h2,
-.falloutpnp.sheet.character form h3,
-.falloutpnp.sheet.character form h4,
-.falloutpnp.sheet.character form p,
-.falloutpnp.sheet.character form h5 {
-  border: 0;
-  margin: 0 auto;
-}
-
-.falloutpnp.sheet.character form h2 {
-  font: italic 24px 'Overseer';
-  margin-bottom: 4px;
+.sheet .window-content h1,
+.sheet .window-content h2,
+.sheet .window-content h3,
+.sheet .window-content h4,
+.sheet .window-content h5,
+.sheet .window-content h6 {
+  font-family: Overseer, sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  border: none;
   text-align: center;
 }
-
-.falloutpnp.sheet.character .styled-div_input-like {
-  width: calc(100% - 2px);
-  min-width: 55px;
-  height: var(--form-field-height);
-  background: var(--input-overlay);
-  padding: 1px 3px;
+.sheet .window-content p {
+  border: none;
   margin: 0;
-  color: var(--color-text-dark-primary);
-  font-family: inherit;
-  font-size: inherit;
-  text-align: inherit;
-  line-height: var(--form-field-height);
-  border-radius: 3px;
 }
-
-/*Left*/
-
-.falloutpnp.sheet.character .left-side {
-  border: 1px solid #525252;
-}
-
-/*bio*/
-
-.falloutpnp.sheet.character .left-bio {
-  border-bottom: 1px solid #525252;
-  padding: 5px 7px;
-}
-
-/*padding: 7px*/
-/*height 24px*/
-/*width 36px*/
-
-.falloutpnp.sheet.character .bio-bottom {
-  display: flex;
-  flex-direction: row;
-}
-
-.falloutpnp.sheet.character .bio-image {
-  max-width: 9rem;
-}
-
-.falloutpnp.sheet.character .bio-top table,
-.falloutpnp.sheet.character .bio-row table {
-  border: 0;
-  border-spacing: 5px 0;
+.sheet .window-content table {
+  margin: 0;
+  border: none;
+  border-spacing: 6px 0;
   border-collapse: separate;
   background: none;
 }
-
-.falloutpnp.sheet.character .bio-row:first-child table {
-  margin: 0;
-}
-.falloutpnp.sheet.character .bio-row:first-child table td {
-  padding: 0;
-}
-
-.falloutpnp.sheet.character .bio-top table tr,
-.falloutpnp.sheet.character .bio-row table tr {
+.sheet .window-content table thead,
+.sheet .window-content table tr {
   background: none;
 }
 
-.falloutpnp.sheet.character .bio-top input,
-.falloutpnp.sheet.character .bio-row input {
-  border: 0;
+@font-face {
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold Italic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+.large-text {
+  font-family: Overseer, sans-serif;
+  font-size: 22px;
 }
 
-.falloutpnp.sheet.character .bio-box {
-  position: relative;
-  display: flex;
+.sheet-column {
+  width: 100%;
 }
-
-.falloutpnp.sheet.character .undertext {
-  position: absolute;
-  bottom: -5px;
-  right: 0;
-  font-size: 10px;
-  font-weight: bold;
-  color: #000000;
-}
-
-.falloutpnp.sheet.character .undertext-radio {
-  position: absolute;
-  bottom: -8px;
-  right: -2px;
-  font-size: 10px;
-  font-weight: bold;
-  color: #000000;
-}
-
-/*special*/
-
-.falloutpnp.sheet.character .special-info {
-  position: relative;
-  width: 75%;
-  padding: 5px 5px 5px 0;
-}
-
-.falloutpnp.sheet.character .special-unassigned {
-  position: absolute;
-  top: 0;
-  right: 0;
+.sheet-column section {
   padding: 4px;
 }
-
-.falloutpnp.sheet.character .span-text {
-  font: 22px 'Overseer';
-  line-height: 26px;
-  margin-right: 5px;
+.sheet-column:first-child {
+  border-right: 1px solid #525252;
 }
-
-.falloutpnp.sheet.character .left-special {
+.sheet-column section:not(:last-child) {
   border-bottom: 1px solid #525252;
-  padding: 0 7px;
-  display: flex;
-  flex-direction: row;
 }
 
-.falloutpnp.sheet.character .special-list table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-}
-
-.falloutpnp.sheet.character .special-list table tr {
-  background: none;
-}
-
-.falloutpnp.sheet.character .special-list table .special-cell_small {
-  width: 30px;
-  /*width: 24px;*/
-}
-
-.falloutpnp.sheet.character .special-list table .special-cell_small input {
-  min-width: 30px;
-}
-
-.falloutpnp.sheet.character .special-list table td p {
-  font: 22px 'Overseer';
-  text-align: center;
-}
-
-/*Secondary*/
-
-.falloutpnp.sheet.character .secondary-info {
-  padding: 5px 0 5px 5px;
-  border-left: 1px solid #525252;
-  width: 25%;
-}
-
-.falloutpnp.sheet.character .secondary-list table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-}
-
-.falloutpnp.sheet.character .secondary-list table tr {
-  background: none;
-}
-
-.falloutpnp.sheet.character .secondary-list .secondary-box {
-  position: relative;
-}
-
-.falloutpnp.sheet.character .secondary-list .secondary-box span {
+.undertext {
   position: absolute;
-  bottom: -5px;
-  right: 0;
+  bottom: -8px;
+  right: -1px;
   font-size: 10px;
   font-weight: bold;
+  text-align: right;
+  line-height: 1rem;
+  white-space: nowrap;
   color: #000000;
 }
-
-/*skills*/
-
-.falloutpnp.sheet.character .skills-info {
-  position: relative;
+.undertext-radio {
+  bottom: -8px;
+  right: -2px;
 }
 
-.falloutpnp.sheet.character .skills-unassigned {
-  position: absolute;
-  top: 0;
-  right: 0;
+.vault-boy {
+  max-height: 26px;
+  max-width: 26px;
 }
-
-.falloutpnp.sheet.character .left-skills {
-  padding: 5px 7px;
-}
-
-.falloutpnp.sheet.character .left-skills table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-}
-
-.falloutpnp.sheet.character .left-skills table tr {
-  background: none;
-}
-
-.falloutpnp.sheet.character .left-skills table .skills-cell_small {
-  width: 34px;
-}
-
-/* First Aid and Doctor require additional input fields. */
-.falloutpnp.sheet.character .skill-with-uses-cell {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.falloutpnp.sheet.character .skill-with-uses-cell div {
-  display: flex;
-  align-items: center;
-}
-
-.falloutpnp.sheet.character .skill-with-uses-cell__radio-container {
-  position: relative;
-}
-
-.falloutpnp.sheet.character .left-skills table td p {
-  font: 20px 'Overseer';
-  white-space: nowrap;
-  margin: 0;
-}
-
-.falloutpnp.sheet.character .left-skills table .skill-icon {
-  max-height: 28px;
-  max-width: 28px;
-}
-
-.falloutpnp.sheet.character .left-skills table .skill-icon img {
-  border: 0;
+.vault-boy img {
+  border: none;
   max-width: 34px;
   position: relative;
-  left: -3px;
+  left: -4px;
   top: -3px;
 }
 
-/*Right*/
-
-.falloutpnp.sheet.character .right-side {
-  border: 1px solid #525252;
-  border-left: 0;
-}
-
-.falloutpnp.sheet.character .right-status {
-  border-bottom: 1px solid #525252;
-  padding: 5px 7px;
-}
-
-.falloutpnp.sheet.character .right-armor {
-  border-bottom: 1px solid #525252;
-  padding: 5px 7px;
-}
-
-.falloutpnp.sheet.character .right-weapons {
-  padding: 5px 7px;
-}
-
-/* Status */
-
-.falloutpnp.sheet.character .status-table .status-box {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-}
-
-.falloutpnp.sheet.character .span-icon {
+.inline-icon {
   min-width: 26px;
   max-width: 26px;
   width: 26px;
   height: 26px;
   margin-right: 5px;
 }
-
-.falloutpnp.sheet.character .span-icon img {
+.inline-icon > img {
   border: 0;
 }
 
-.falloutpnp.sheet.character .status-box input {
-  border: 0;
-}
-
-.falloutpnp.sheet.character .status-table table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-}
-
-.falloutpnp.sheet.character .status-table table tr {
-  background: none;
-}
-
-/* Enemy sheet */
-
-/*.falloutpnp.sheet.character-enemy{}*/
-
-.falloutpnp.sheet.character-enemy .enemy-top {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-image {
-  max-width: 186px;
-  min-width: 186px;
-  height: 186px;
-  margin-top: 9px;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-image img {
-  display: block;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-info .enemy-box,
-.falloutpnp.sheet.character-enemy .enemy-weapons .enemy-box,
-.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box {
+.data-field {
   position: relative;
-  display: flex;
-  flex-direction: row;
+  width: 100%;
+  min-width: 48px;
+  height: var(--form-field-height);
+  background: rgba(0, 0, 0, 0.05);
+  padding: 1px 3px;
+  color: var(--color-text-dark-primary);
+  line-height: var(--form-field-height);
+  border-radius: 4px;
+}
+.data-field .undertext {
+  right: -3px;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info .enemy-box input,
-.falloutpnp.sheet.character-enemy .enemy-weapons .enemy-box input,
-.falloutpnp.sheet.character-enemy .enemy-attack .enemy-box input {
-  border: 0;
+.input-field {
+  position: relative;
+  width: 100%;
+  min-width: 32px;
+}
+.input-field > input {
+  width: 100%;
 }
 
-.falloutpnp.sheet.character-enemy .span-text {
-  font: 22px 'Overseer';
-  line-height: 26px;
-  margin-right: 5px;
+.radio-field {
+  position: relative;
 }
 
-.falloutpnp.sheet.character-enemy .enemy-info {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-info table,
-.falloutpnp.sheet.character-enemy .enemy-attack table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-  margin: 0 auto;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-info table table {
-  border-spacing: 0;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-info table table td:first-child {
-  padding-right: 3px;
-  padding-left: 2px;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-info table table td:last-child {
-  padding-left: 3px;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-info table thead {
-  background: none;
-  text-shadow: none;
-  border: 0;
-  color: #000000;
-  font: 20px 'Overseer';
-  font-style: italic;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-info table tr,
-.falloutpnp.sheet.character-enemy .enemy-attack table tr {
-  background: none;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-stats {
-  min-width: 150px;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-notes textarea {
-  resize: none;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-weapons table {
-  border: 0;
-  border-spacing: 5px 0;
-  border-collapse: separate;
-  background: none;
-  margin: 0 auto;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-weapons table tr {
-  background: none;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-title {
-  font: 22px 'Overseer';
-  font-style: italic;
-  margin: 0 auto;
-  border: 0;
-  padding-top: 10px;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-attack {
-  border-top: 1px solid #555555;
-  padding-top: 10px;
-  margin-top: 10px;
-}
-
-.falloutpnp.sheet.character-enemy .enemy-attack:first-child {
-  border: 0;
-  padding-top: 0;
-  margin-top: 0;
-}
-
-/* Rollable Fields */
-.falloutpnp.sheet.character .rollable {
+.clickable, .rollable, .rollable-d10, .rollable-d100, .clickable-block, .clickable-delete, .clickable-open, .clickable-minus, .clickable-plus {
+  border: none;
   position: relative;
   transition: all 0.1s ease-in-out;
   transition-property: background-color box-shadow;
-  background: linear-gradient(90deg, var(--input-overlay) 0%, var(--input-overlay) 45%, var(--primary-color) 100%);
   cursor: pointer;
+  z-index: 2;
 }
-.falloutpnp.sheet.character .rollable:hover {
+.clickable:hover, .rollable:hover, .rollable-d10:hover, .rollable-d100:hover, .clickable-block:hover, .clickable-delete:hover, .clickable-open:hover, .clickable-minus:hover, .clickable-plus:hover {
   transform: scale(1.04);
-  box-shadow: 0 0 4px 1px var(--primary-color);
-  background: linear-gradient(
-    90deg,
-    var(--input-overlay) 0%,
-    var(--input-overlay) 45%,
-    var(--primary-color) 95%,
-    var(--primary-color) 100%
-  );
+  box-shadow: 0 0 4px 1px #ff6400;
 }
-.falloutpnp.sheet.character .rollable:active {
+.clickable:active, .rollable:active, .rollable-d10:active, .rollable-d100:active, .clickable-block:active, .clickable-delete:active, .clickable-open:active, .clickable-minus:active, .clickable-plus:active {
   transform: scale(0.96);
-  box-shadow: 0 0 4px 2px var(--primary-color);
-  background: linear-gradient(
-    90deg,
-    var(--input-overlay) 0%,
-    var(--input-overlay) 40%,
-    var(--primary-color) 90%,
-    var(--primary-color) 100%
-  );
+  box-shadow: 0 0 4px 2px #ff6400;
+}
+.clickable::after, .rollable::after, .rollable-d10::after, .rollable-d100::after, .clickable-block::after, .clickable-delete::after, .clickable-open::after, .clickable-minus::after, .clickable-plus::after {
+  content: "";
+  position: absolute;
+  background-size: cover;
+  width: 20px;
+  height: 20px;
+  right: 0.2rem;
+  top: 0.2rem;
 }
 
-/* Rollable Field Dice Icons */
-.falloutpnp.sheet.character .rollable-skill::after {
-  content: '';
-  position: absolute;
-  background: url('static/d100.svg') no-repeat center center;
-  filter: invert(85%);
-  background-size: cover;
-  width: 20px;
-  height: 20px;
-  right: 0.2rem;
-  top: 0.2rem;
+.clickable-plus {
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  margin-left: 0.2rem;
+  background: linear-gradient(90deg, #ff6400 5%, rgba(0, 0, 0, 0.05) 80%);
 }
-.falloutpnp.sheet.character .rollable-special::after {
-  content: '';
+.clickable-plus::after {
+  background: url("static/plus.svg") no-repeat center center;
+}
+
+.clickable-minus {
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  margin-right: 0.2rem;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 20%, #ff6400 95%);
+}
+.clickable-minus::after {
+  background: url("static/minus.svg") no-repeat center center;
+}
+
+.clickable-open {
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 20%, #ff6400 95%);
+}
+.clickable-open::after {
+  background: url("static/open.svg") no-repeat center center;
+}
+
+.clickable-delete {
+  width: var(--form-field-height);
+  min-width: var(--form-field-height);
+  background: linear-gradient(90deg, #ff6400 5%, rgba(0, 0, 0, 0.05) 80%);
+}
+.clickable-delete::after {
+  background: url("static/delete.svg") no-repeat center center;
+}
+
+.clickable-block {
+  min-width: 100%;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 25%, #ff6400 100%);
+}
+.clickable-block:hover {
+  transform: scale(1.01);
+}
+.clickable-block:active {
+  transform: scale(0.99);
+}
+
+.rollable, .rollable-d10, .rollable-d100 {
+  min-width: 56px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 50%, #ff6400 90%);
+}
+.rollable:hover, .rollable-d10:hover, .rollable-d100:hover {
+  transform: scale(1.04);
+}
+.rollable:active, .rollable-d10:active, .rollable-d100:active {
+  transform: scale(0.96);
+}
+
+.rollable-d100::after {
+  background: url("static/d100.svg") no-repeat center center;
+}
+
+.rollable-d10::after {
+  background: url("static/d10.svg") no-repeat center center;
+}
+
+@font-face {
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Overseer";
+  src: url("fonts/Overseer Bold Italic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+}
+.character-sheet {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #525252;
+}
+.character-sheet .special-and-secondary {
+  display: flex;
+  flex-direction: row;
+}
+.character-sheet .special-and-secondary .special {
+  flex-grow: 3;
+  border-right: 1px solid #525252;
+}
+.character-sheet .special-and-secondary .secondary {
+  flex-grow: 1;
+}
+.character-sheet .skills .skill-name {
+  font-family: Overseer, sans-serif;
+  font-size: 19px;
+  white-space: nowrap;
+}
+.character-sheet .bio {
+  display: flex;
+  flex-direction: column;
+}
+.character-sheet .bio .token-image {
+  max-width: 8rem;
+  margin-left: 6px;
+  margin-bottom: 2px;
+}
+.character-sheet .skills-unassigned {
   position: absolute;
-  background: url('static/d10.svg') no-repeat center center;
-  background-size: cover;
-  filter: invert(85%);
-  width: 20px;
-  height: 20px;
-  right: 0.2rem;
-  top: 0.2rem;
+  top: 0;
+  right: 0;
 }
