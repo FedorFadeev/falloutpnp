@@ -4,7 +4,7 @@
     <td colspan="2">
       <div class="flex">
         <span class="inline-icon">
-          <img src="systems/falloutpnp/static/icons/icon-status-poison-resist.png" alt="Caps" />
+          <img src="systems/falloutpnp/static/icons/icon-inventory-caps.png" alt="Caps" />
         </span>
         <div class="input-field" style="max-width: 80px;">
           <input type="number" name="system.caps" data-dtype="Number" value="{{system.caps}}" max="0" />
@@ -13,12 +13,12 @@
       </div>
     </td>
     <td>
-      <div class="flex">
-        <span class="inline-icon">
-          <img src="systems/falloutpnp/static/icons/icon-status-poison-resist.png" alt="Weight" />
-        </span>
-        <div class="input-field">
-          <input type="number" name="system.carryWeight" data-dtype="Number" value="{{system.carryWeight}}" min="0" />
+      <div class="flex" style="gap: 4px;">
+        <div class="vault-boy">
+          <img src="systems/falloutpnp/static/icons/icon-inventory-carry-weight.png" />
+        </div>
+        <div class="data-field">
+          {{system.carryWeight}}
           <span class="undertext">Current Weight</span>
         </div>
       </div>
@@ -94,9 +94,7 @@
   {{/each}}
   <tr>
     <td colspan="5">
-      <div class="data-field clickable-block" style="text-align: center;" data-create-item="custom">
-        <strong>+</strong>
-      </div>
+      <div class="data-field clickable-block" style="text-align: center;" data-create-item="custom"></div>
     </td>
   </tr>
 </table>

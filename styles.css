@@ -80,6 +80,17 @@
 .sheet .window-content table tr {
   background: none;
 }
+.sheet .window-content textarea {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 3px 3px;
+  margin: 0;
+  color: var(--color-text-dark-primary);
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  border: 1px solid var(--color-border-light-tertiary);
+  border-radius: 3px;
+}
 
 @font-face {
   font-family: "Overseer";
@@ -174,49 +185,49 @@
   width: 100%;
 }
 
+.unassigned {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  padding: 0.2rem 0.3rem;
+  background-color: rgba(255, 0, 0, 0.15);
+  border-radius: 3px;
+  border: 1px solid #9c0000 !important;
+}
+
 .radio-field {
   position: relative;
 }
 
-.clickable, .rollable, .rollable-d10, .rollable-d100, .clickable-block, .clickable-delete, .clickable-open, .clickable-minus, .clickable-plus {
-  border: none;
+.clickable, .rollable, .rollable-d10, .rollable-d100, .clickable-block, .clickable-delete, .clickable-open, .clickable-plus, .clickable-minus {
   position: relative;
   transition: all 0.1s ease-in-out;
   transition-property: background-color box-shadow;
   cursor: pointer;
   z-index: 2;
+  min-width: var(--form-field-height);
 }
-.clickable:hover, .rollable:hover, .rollable-d10:hover, .rollable-d100:hover, .clickable-block:hover, .clickable-delete:hover, .clickable-open:hover, .clickable-minus:hover, .clickable-plus:hover {
+.clickable:hover, .rollable:hover, .rollable-d10:hover, .rollable-d100:hover, .clickable-block:hover, .clickable-delete:hover, .clickable-open:hover, .clickable-plus:hover, .clickable-minus:hover {
   transform: scale(1.04);
   box-shadow: 0 0 4px 1px #ff6400;
 }
-.clickable:active, .rollable:active, .rollable-d10:active, .rollable-d100:active, .clickable-block:active, .clickable-delete:active, .clickable-open:active, .clickable-minus:active, .clickable-plus:active {
+.clickable:active, .rollable:active, .rollable-d10:active, .rollable-d100:active, .clickable-block:active, .clickable-delete:active, .clickable-open:active, .clickable-plus:active, .clickable-minus:active {
   transform: scale(0.96);
   box-shadow: 0 0 4px 2px #ff6400;
 }
-.clickable::after, .rollable::after, .rollable-d10::after, .rollable-d100::after, .clickable-block::after, .clickable-delete::after, .clickable-open::after, .clickable-minus::after, .clickable-plus::after {
+.clickable::after, .rollable::after, .rollable-d10::after, .rollable-d100::after, .clickable-block::after, .clickable-delete::after, .clickable-open::after, .clickable-plus::after, .clickable-minus::after {
   content: "";
   position: absolute;
-  background-size: cover;
-  width: 20px;
-  height: 20px;
-  right: 0.2rem;
-  top: 0.2rem;
-}
-
-.clickable-plus {
-  width: var(--form-field-height);
-  min-width: var(--form-field-height);
-  margin-left: 0.2rem;
-  background: linear-gradient(90deg, #ff6400 5%, rgba(0, 0, 0, 0.05) 80%);
-}
-.clickable-plus::after {
-  background: url("static/plus.svg") no-repeat center center;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 90%;
+  height: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .clickable-minus {
-  width: var(--form-field-height);
-  min-width: var(--form-field-height);
   margin-right: 0.2rem;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 20%, #ff6400 95%);
 }
@@ -224,27 +235,34 @@
   background: url("static/minus.svg") no-repeat center center;
 }
 
+.clickable-plus {
+  margin-left: 0.2rem;
+  background: linear-gradient(90deg, #ff6400 5%, rgba(0, 0, 0, 0.05) 80%);
+}
+.clickable-plus::after {
+  background-image: url("static/plus.svg");
+}
+
 .clickable-open {
-  width: var(--form-field-height);
-  min-width: var(--form-field-height);
   background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 20%, #ff6400 95%);
 }
 .clickable-open::after {
-  background: url("static/open.svg") no-repeat center center;
+  background-image: url("static/open.svg");
 }
 
 .clickable-delete {
-  width: var(--form-field-height);
-  min-width: var(--form-field-height);
   background: linear-gradient(90deg, #ff6400 5%, rgba(0, 0, 0, 0.05) 80%);
 }
 .clickable-delete::after {
-  background: url("static/delete.svg") no-repeat center center;
+  background-image: url("static/delete.svg");
 }
 
 .clickable-block {
-  min-width: 100%;
+  width: 100%;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 25%, #ff6400 100%);
+}
+.clickable-block::after {
+  background-image: url("static/plus.svg");
 }
 .clickable-block:hover {
   transform: scale(1.01);
@@ -254,8 +272,11 @@
 }
 
 .rollable, .rollable-d10, .rollable-d100 {
-  min-width: 56px;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 50%, #ff6400 90%);
+  min-width: calc(2 * var(--form-field-height));
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.05) 25%, #ff6400 90%);
+}
+.rollable::after, .rollable-d10::after, .rollable-d100::after {
+  left: 72%;
 }
 .rollable:hover, .rollable-d10:hover, .rollable-d100:hover {
   transform: scale(1.04);
@@ -292,13 +313,16 @@
 .character-sheet .special-and-secondary {
   display: flex;
   flex-direction: row;
+  padding: 0 !important;
 }
 .character-sheet .special-and-secondary .special {
   flex-grow: 3;
   border-right: 1px solid #525252;
+  padding: 4px;
 }
 .character-sheet .special-and-secondary .secondary {
   flex-grow: 1;
+  padding: 4px;
 }
 .character-sheet .skills .skill-name {
   font-family: Overseer, sans-serif;
@@ -310,9 +334,12 @@
   flex-direction: column;
 }
 .character-sheet .bio .token-image {
+  border-color: var(--color-border-light-tertiary);
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-top: 4px;
   max-width: 8rem;
   margin-left: 6px;
-  margin-bottom: 2px;
+  margin-bottom: 6px;
 }
 .character-sheet .skills-unassigned {
   position: absolute;

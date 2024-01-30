@@ -89,6 +89,16 @@
   }
 }
 
+.unassigned {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.25rem;
+  padding: 0.2rem 0.3rem;
+  background-color: $warning-overlay;
+  border-radius: 3px;
+  border: $border-warning !important;
+}
+
 // TODO: Build out a class for weapon/armor condition and skill uses, like in the character sheet.
 .radio-field {
   position: relative;
@@ -97,12 +107,12 @@
 // Apply the .rollable class to make the div look like a button.
 // Optionally, modify it with -d100 or -d10 to change the icon to the dice being rolled.
 .clickable {
-  border: none;
   position: relative;
   transition: all 0.1s ease-in-out;
   transition-property: background-color box-shadow;
   cursor: pointer;
   z-index: 2;
+  min-width: var(--form-field-height);
   &:hover {
     transform: scale(1.04);
     box-shadow: 0 0 4px 1px $primary-color;
@@ -114,29 +124,18 @@
   &::after {
     content: '';
     position: absolute;
-    background-size: cover;
-    width: 20px;
-    height: 20px;
-    right: 0.2rem;
-    top: 0.2rem;
-  }
-}
-
-.clickable-plus {
-  @extend .clickable;
-  width: var(--form-field-height);
-  min-width: var(--form-field-height);
-  margin-left: 0.2rem;
-  background: linear-gradient(90deg, $primary-color 5%, $input-overlay 80%);
-  &::after {
-    background: url('static/plus.svg') no-repeat center center;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 90%;
+    height: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 }
 
 .clickable-minus {
   @extend .clickable;
-  width: var(--form-field-height);
-  min-width: var(--form-field-height);
   margin-right: 0.2rem;
   background: linear-gradient(90deg, $input-overlay 20%, $primary-color 95%);
   &::after {
@@ -144,30 +143,38 @@
   }
 }
 
+.clickable-plus {
+  @extend .clickable;
+  margin-left: 0.2rem;
+  background: linear-gradient(90deg, $primary-color 5%, $input-overlay 80%);
+  &::after {
+    background-image: url('static/plus.svg');
+  }
+}
+
 .clickable-open {
   @extend .clickable;
-  width: var(--form-field-height);
-  min-width: var(--form-field-height);
   background: linear-gradient(90deg, $input-overlay 20%, $primary-color 95%);
   &::after {
-    background: url('static/open.svg') no-repeat center center;
+    background-image: url('static/open.svg');
   }
 }
 
 .clickable-delete {
   @extend .clickable;
-  width: var(--form-field-height);
-  min-width: var(--form-field-height);
   background: linear-gradient(90deg, $primary-color 5%, $input-overlay 80%);
   &::after {
-    background: url('static/delete.svg') no-repeat center center;
+    background-image: url('static/delete.svg');
   }
 }
 
 .clickable-block {
   @extend .clickable;
-  min-width: 100%;
+  width: 100%;
   background: linear-gradient(0deg, $input-overlay 25%, $primary-color 100%);
+  &::after {
+    background-image: url('static/plus.svg');
+  }
   &:hover {
     transform: scale(1.01);
   }
@@ -178,8 +185,11 @@
 
 .rollable {
   @extend .clickable;
-  min-width: 56px;
-  background: linear-gradient(90deg, $input-overlay 50%, $primary-color 90%);
+  min-width: calc(2 * var(--form-field-height));
+  background: linear-gradient(90deg, $input-overlay 25%, $primary-color 90%);
+  &::after {
+    left: 72%;
+  }
   &:hover {
     transform: scale(1.04);
   }

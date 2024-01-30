@@ -83,12 +83,19 @@ export class CustomActor extends Actor {
   setStatus() {
     const { status, special, secondary, general } = this.system
 
-    status.health.maximum = 15 + special.str.total + special.end.total * 2 + (secondary.hpPerLevel * (general.level - 1))
+    status.health.maximum = 15 + special.str.total + special.end.total * 2 + secondary.hpPerLevel * (general.level - 1)
     status.rads.resist = special.end.total * 2
     status.poison.resist = special.end.total * 5
     status.experienceToLevel =
       EXPERIENCE_TO_LEVEL[general.level] ??
       EXPERIENCE_TO_LEVEL[EXPERIENCE_TO_LEVEL.length - 1] + 40000 * (general.level - 20)
+  }
+
+  setInventory() {
+    this.system.carryWeight = this.items.reduce(
+      (acc, item) => acc + parseInt(item.system.quantity) * parseInt(item.system.weight),
+      0
+    )
   }
 
   prepareDerivedData() {
@@ -98,6 +105,7 @@ export class CustomActor extends Actor {
       this.setSecondary()
       this.setSkills()
       this.setStatus()
+      this.setInventory()
 
       const taggedSkillsCount = Object.keys(this.system.skills).reduce(
         (acc, key) => (this.system.skills[key].isTagged ? acc + 1 : acc),
