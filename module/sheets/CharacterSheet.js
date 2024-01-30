@@ -153,7 +153,7 @@ export default class CharacterSheet extends ActorSheet {
   async onUpdateItem(event) {
     const { itemId, updateItem } = event.currentTarget.dataset
     const item = this.actor.items.get(itemId)
-    await item.update({ [updateItem]: event.target.value }, { render: false })
+    await item.update({ [updateItem]: event.target.value }, { render: updateItem !== 'name' })
     item.render()
   }
 

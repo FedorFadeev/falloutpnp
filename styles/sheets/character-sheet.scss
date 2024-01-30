@@ -8,14 +8,17 @@
   & .special-and-secondary {
     display: flex;
     flex-direction: row;
+    padding: 0 !important;
 
     & .special {
       flex-grow: 3;
       border-right: $border-default;
+      padding: 4px;
     }
 
     & .secondary {
       flex-grow: 1;
+      padding: 4px;
     }
   }
 
@@ -32,9 +35,12 @@
     flex-direction: column;
 
     & .token-image {
+      border-color: var(--color-border-light-tertiary);
+      background-color: $input-overlay;
+      margin-top: 4px;
       max-width: 8rem;
       margin-left: 6px;
-      margin-bottom: 2px;
+      margin-bottom: 6px;
     }
   }
 
