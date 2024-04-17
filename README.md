@@ -37,6 +37,7 @@ Here is an incomplete roadmap of the project:
 
 - Fallout PnP created by Jason Mical.
 - Some names are copyright Interplay Productions, Inc.
+- Overseer Font by [Pixel Sagas](https://www.pixelsagas.com/?page_id=8484)
 
 **Virtual Table Top Platform License:**
 
