@@ -35,6 +35,6 @@
   "primaryTokenAttribute": "hp",
   "url": "https://github.com/FedorFadeev/falloutpnp",
   "manifest": "https://raw.githubusercontent.com/FedorFadeev/falloutpnp/main/system.json",
-  "dpwnload": "https://raw.githubusercontent.com/FedorFadeev/falloutpnp/archive/refs/heads/main.zip",
+  "download": "https://raw.githubusercontent.com/FedorFadeev/falloutpnp/archive/refs/heads/main.zip",
   "initiative": "@sequence"
 }
