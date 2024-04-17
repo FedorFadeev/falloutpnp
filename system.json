@@ -2,6 +2,7 @@
   "id": "falloutpnp",
   "title": "Fallout PnP 2.0",
   "description": "From Ukraine with love. Fallout PnP created by Jason Mical.",
+  "license": "LICENSE.md",
   "version": "0.1.0",
   "compatibility": {
     "minimum": "11",
