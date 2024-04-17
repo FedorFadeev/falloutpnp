@@ -7,7 +7,9 @@ If you ever wanted to play Fallout 1 or 2 in a tabletop setting, this is the sys
 
 It features a complete SPECIAL system and has several races of characters including humans, ghouls, super mutants, half mutants, deathclaws, dogs and robots. It contains a large variety of weapons and armor from both the Fallout universe and Fallout predecessor, Wasteland.
 
-This project attempts to simplify character creationg and play by auto-calculating 
+This project attempts to simplify character creation and play by auto-calculating a bunch of statistics and providing roll macros, as well as a detailed character sheet.
+
+![Character Sheet](https://i.imgur.com/LxkPHVS.png)
 
 ## Changelog And Roadmap
 
