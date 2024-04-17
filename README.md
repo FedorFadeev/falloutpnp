@@ -7,6 +7,8 @@ If you ever wanted to play Fallout 1 or 2 in a tabletop setting, this is the sys
 
 It features a complete SPECIAL system and has several races of characters including humans, ghouls, super mutants, half mutants, deathclaws, dogs and robots. It contains a large variety of weapons and armor from both the Fallout universe and Fallout predecessor, Wasteland.
 
+This project attempts to simplify character creationg and play by auto-calculating 
+
 ## Changelog And Roadmap
 
 > ⚠️ This project is unfinished and may update with breaking changes.
@@ -37,6 +39,7 @@ Here is an incomplete roadmap of the project:
 
 - Fallout PnP created by Jason Mical.
 - Some names are copyright Interplay Productions, Inc.
+- Some images are copyright Bethesda Softworks LLC, a ZeniMax Media company.
 - Overseer Font by [Pixel Sagas](https://www.pixelsagas.com/?page_id=8484)
 
 **Virtual Table Top Platform License:**
