@@ -7,7 +7,7 @@ https://raw.githubusercontent.com/FedorFadeev/falloutpnp/main/system.json
 
 *From Ukraine with love.*
 
-Fallout Pen and Paper 2.0 is a Fallout-themed Pen and Paper roleplaying game which was created by Jason Mical, can be found [here]([http://www.paforge.com/fallout.html](https://static.wikia.nocookie.net/falloutpnp/images/4/43/Fallout_pnp_2_0.pdf/revision/latest?cb=20210308185741)).
+Fallout Pen and Paper 2.0 is a Fallout-themed Pen and Paper roleplaying game which was created by Jason Mical, can be found [here](https://static.wikia.nocookie.net/falloutpnp/images/4/43/Fallout_pnp_2_0.pdf/revision/latest?cb=20210308185741).
 
 If you ever wanted to play Fallout 1 or 2 in a tabletop setting, this is the system for you. As such, any 'broken' or 'unbalanced' mechanics are translated over, as they are part of the original games.
 
