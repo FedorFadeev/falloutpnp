@@ -1,6 +1,6 @@
 # Fallout PnP 2.0 for Foundry Virtual Tabletop
 
-#### Due to the system being unpublishable on Foundry (copyright), install it using this manifest link as a custom package:
+#### Due to the system being unpublishable on Foundry, install it using this manifest link as a custom package:
 ```
 https://raw.githubusercontent.com/FedorFadeev/falloutpnp/main/system.json
 ```
