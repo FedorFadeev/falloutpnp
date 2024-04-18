@@ -47,7 +47,7 @@ Here is an incomplete roadmap of the project:
 
 - Fallout PnP created by Jason Mical.
 - Some names and images are copyright Bethesda Softworks LLC, a ZeniMax Media company.
-- Overseer Font by [Pixel Sagas](https://www.pixelsagas.com/?page_id=8484)
+- Overseer Font by [Pixel Sagas](https://www.pixelsagas.com/?page_id=8484).
 
 **Virtual Table Top Platform License:**
 
@@ -67,7 +67,7 @@ Install dependencies:
 1. [Node.js](https://nodejs.org/en/)
 2. [pnpm](https://pnpm.io/)
 
-Make sure you have a local Foundry VTT installation.
+Make sure you have a local Foundry VTT tion.
 
 Clone the repo into a local folder in your dev environment:
 
