@@ -1,4 +1,10 @@
 # Fallout PnP 2.0 for Foundry Virtual Tabletop
+
+#### Due to the system being unpublishable on Foundry (copyright), install it using this manifest link as a custom package:
+```
+https://raw.githubusercontent.com/FedorFadeev/falloutpnp/main/system.json
+```
+
 *From Ukraine with love.*
 
 Fallout Pen and Paper 2.0 is a Fallout-themed Pen and Paper roleplaying game which was created by Jason Mical, originally found [here](http://www.paforge.com/fallout.html).
