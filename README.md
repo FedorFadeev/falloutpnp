@@ -46,8 +46,7 @@ Here is an incomplete roadmap of the project:
 **Content Usage and Licensing:**
 
 - Fallout PnP created by Jason Mical.
-- Some names are copyright Interplay Productions, Inc.
-- Some images are copyright Bethesda Softworks LLC, a ZeniMax Media company.
+- Some names and images are copyright Bethesda Softworks LLC, a ZeniMax Media company.
 - Overseer Font by [Pixel Sagas](https://www.pixelsagas.com/?page_id=8484)
 
 **Virtual Table Top Platform License:**
